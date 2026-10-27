@@ -1,0 +1,883 @@
+[
+  {
+    "fileName": "사회과.ttl",
+    "domain": "curriculum-social",
+    "totalTriples": 361,
+    "prefixes": {
+      "ex": "https://example.org/curriculum/social-studies#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "dc": "http://purl.org/dc/elements/1.1/"
+    },
+    "predicates": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "http://purl.org/dc/elements/1.1/title",
+      "http://purl.org/dc/elements/1.1/description",
+      "http://www.w3.org/2000/01/rdf-schema#label",
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "http://www.w3.org/2000/01/rdf-schema#domain",
+      "http://www.w3.org/2000/01/rdf-schema#range",
+      "http://www.w3.org/2002/07/owl#disjointWith",
+      "http://www.w3.org/2002/07/owl#onProperty",
+      "http://www.w3.org/2002/07/owl#qualifiedCardinality",
+      "http://www.w3.org/2002/07/owl#onClass",
+      "https://example.org/curriculum/social-studies#description",
+      "https://example.org/curriculum/social-studies#hasArea",
+      "https://example.org/curriculum/social-studies#developsCompetency",
+      "https://example.org/curriculum/social-studies#hasCoreIdea",
+      "https://example.org/curriculum/social-studies#hasContentElement",
+      "https://example.org/curriculum/social-studies#relatedToArea",
+      "https://example.org/curriculum/social-studies#gradeBand"
+    ],
+    "classCount": 10,
+    "classes": [
+      "https://example.org/curriculum/social-studies#Curriculum",
+      "https://example.org/curriculum/social-studies#Subject",
+      "https://example.org/curriculum/social-studies#LearningArea",
+      "https://example.org/curriculum/social-studies#CoreIdea",
+      "https://example.org/curriculum/social-studies#ContentElement",
+      "https://example.org/curriculum/social-studies#Competency",
+      "https://example.org/curriculum/social-studies#ProcessSkill",
+      "https://example.org/curriculum/social-studies#ValueAttitude",
+      "https://example.org/curriculum/social-studies#KnowledgeUnderstanding",
+      "https://example.org/curriculum/social-studies#SocialStudiesSubject"
+    ],
+    "instancesByType": {
+      "http://www.w3.org/2002/07/owl#Ontology": [
+        "https://example.org/curriculum/social-studies#MiddleSchoolSocialStudiesCurriculum"
+      ],
+      "http://www.w3.org/2002/07/owl#ObjectProperty": [
+        "https://example.org/curriculum/social-studies#hasArea",
+        "https://example.org/curriculum/social-studies#hasCoreIdea",
+        "https://example.org/curriculum/social-studies#hasContentElement",
+        "https://example.org/curriculum/social-studies#developsCompetency",
+        "https://example.org/curriculum/social-studies#relatedToArea"
+      ],
+      "http://www.w3.org/2002/07/owl#DatatypeProperty": [
+        "https://example.org/curriculum/social-studies#gradeBand",
+        "https://example.org/curriculum/social-studies#description"
+      ],
+      "http://www.w3.org/2002/07/owl#Restriction": [
+        "n3-0"
+      ],
+      "https://example.org/curriculum/social-studies#Subject": [
+        "https://example.org/curriculum/social-studies#SocialStudies"
+      ],
+      "https://example.org/curriculum/social-studies#SocialStudiesSubject": [
+        "https://example.org/curriculum/social-studies#SocialStudies"
+      ],
+      "https://example.org/curriculum/social-studies#LearningArea": [
+        "https://example.org/curriculum/social-studies#GeographicAwareness",
+        "https://example.org/curriculum/social-studies#NaturalEnvironmentHumanLife",
+        "https://example.org/curriculum/social-studies#HumanEnvironmentHumanLife",
+        "https://example.org/curriculum/social-studies#SustainableWorld",
+        "https://example.org/curriculum/social-studies#Politics",
+        "https://example.org/curriculum/social-studies#Law",
+        "https://example.org/curriculum/social-studies#Economics",
+        "https://example.org/curriculum/social-studies#SocietyCulture",
+        "https://example.org/curriculum/social-studies#GeneralHistory",
+        "https://example.org/curriculum/social-studies#RegionalHistory",
+        "https://example.org/curriculum/social-studies#KoreanHistory"
+      ],
+      "https://example.org/curriculum/social-studies#CoreIdea": [
+        "https://example.org/curriculum/social-studies#LocationPlaceRegionCoreIdea",
+        "https://example.org/curriculum/social-studies#SpatialDataCoreIdea",
+        "https://example.org/curriculum/social-studies#ClimateHumanLifeCoreIdea",
+        "https://example.org/curriculum/social-studies#LandformHumanLifeCoreIdea",
+        "https://example.org/curriculum/social-studies#HumanNatureInteractionCoreIdea",
+        "https://example.org/curriculum/social-studies#PopulationCultureCoreIdea",
+        "https://example.org/curriculum/social-studies#CityVillageCoreIdea",
+        "https://example.org/curriculum/social-studies#EconomicTransportCoreIdea",
+        "https://example.org/curriculum/social-studies#ConflictInequalityCoreIdea",
+        "https://example.org/curriculum/social-studies#SustainableEnvironmentCoreIdea",
+        "https://example.org/curriculum/social-studies#GlobalCooperationCoreIdea",
+        "https://example.org/curriculum/social-studies#DemocracyInstitutionsCoreIdea",
+        "https://example.org/curriculum/social-studies#PoliticalParticipationCoreIdea",
+        "https://example.org/curriculum/social-studies#InternationalActorsCoreIdea",
+        "https://example.org/curriculum/social-studies#LawRightsCoreIdea",
+        "https://example.org/curriculum/social-studies#HumanRightsCoreIdea",
+        "https://example.org/curriculum/social-studies#ConstitutionInstitutionsCoreIdea",
+        "https://example.org/curriculum/social-studies#ChoiceMarketCoreIdea",
+        "https://example.org/curriculum/social-studies#SupplyDemandCoreIdea",
+        "https://example.org/curriculum/social-studies#NationalEconomyCoreIdea",
+        "https://example.org/curriculum/social-studies#SocialRelationsCultureCoreIdea",
+        "https://example.org/curriculum/social-studies#HistoricalInterpretationCoreIdea",
+        "https://example.org/curriculum/social-studies#RegionalPastCoreIdea",
+        "https://example.org/curriculum/social-studies#KoreanHistoricalChangeCoreIdea"
+      ],
+      "https://example.org/curriculum/social-studies#KnowledgeUnderstanding": [
+        "https://example.org/curriculum/social-studies#LocationTerritory",
+        "https://example.org/curriculum/social-studies#PlaceRegion",
+        "https://example.org/curriculum/social-studies#SpatialAnalysis",
+        "https://example.org/curriculum/social-studies#DigitalMaps",
+        "https://example.org/curriculum/social-studies#ClimateEnvironment",
+        "https://example.org/curriculum/social-studies#LandformEnvironment",
+        "https://example.org/curriculum/social-studies#ClimateChange",
+        "https://example.org/curriculum/social-studies#NaturalDisaster",
+        "https://example.org/curriculum/social-studies#Population",
+        "https://example.org/curriculum/social-studies#CulturalDiversity",
+        "https://example.org/curriculum/social-studies#UrbanIssues",
+        "https://example.org/curriculum/social-studies#TransportCommunication",
+        "https://example.org/curriculum/social-studies#GlobalConflict",
+        "https://example.org/curriculum/social-studies#RegionalInequality",
+        "https://example.org/curriculum/social-studies#SustainableCity",
+        "https://example.org/curriculum/social-studies#ClimateSustainability",
+        "https://example.org/curriculum/social-studies#PeaceAndUnification",
+        "https://example.org/curriculum/social-studies#Democracy",
+        "https://example.org/curriculum/social-studies#Elections",
+        "https://example.org/curriculum/social-studies#LocalAutonomy",
+        "https://example.org/curriculum/social-studies#InternationalConflict",
+        "https://example.org/curriculum/social-studies#LegalSystem",
+        "https://example.org/curriculum/social-studies#HumanRights",
+        "https://example.org/curriculum/social-studies#BasicRights",
+        "https://example.org/curriculum/social-studies#SeparationOfPowers",
+        "https://example.org/curriculum/social-studies#FairTrial",
+        "https://example.org/curriculum/social-studies#RationalChoice",
+        "https://example.org/curriculum/social-studies#HouseholdBusiness",
+        "https://example.org/curriculum/social-studies#SupplyDemand",
+        "https://example.org/curriculum/social-studies#MarketPrice",
+        "https://example.org/curriculum/social-studies#InflationUnemployment",
+        "https://example.org/curriculum/social-studies#InternationalTradeExchange",
+        "https://example.org/curriculum/social-studies#CultureDiversity",
+        "https://example.org/curriculum/social-studies#SocialRelations",
+        "https://example.org/curriculum/social-studies#SocialProblems",
+        "https://example.org/curriculum/social-studies#HistoricalSources",
+        "https://example.org/curriculum/social-studies#HistoricalContext",
+        "https://example.org/curriculum/social-studies#PastPresentConnection",
+        "https://example.org/curriculum/social-studies#LocalHistory",
+        "https://example.org/curriculum/social-studies#HistoricalRecords",
+        "https://example.org/curriculum/social-studies#KoreanHistoricalEvents",
+        "https://example.org/curriculum/social-studies#HistoricalChange"
+      ],
+      "https://example.org/curriculum/social-studies#ProcessSkill": [
+        "https://example.org/curriculum/social-studies#MediaAnalysis",
+        "https://example.org/curriculum/social-studies#CollectInterpretUseInformation",
+        "https://example.org/curriculum/social-studies#InvestigateSocialIssues",
+        "https://example.org/curriculum/social-studies#EvaluatePerspectives",
+        "https://example.org/curriculum/social-studies#ParticipateInCommunity"
+      ],
+      "https://example.org/curriculum/social-studies#Competency": [
+        "https://example.org/curriculum/social-studies#CreativeThinking",
+        "https://example.org/curriculum/social-studies#CriticalThinking",
+        "https://example.org/curriculum/social-studies#ProblemSolvingDecisionMaking",
+        "https://example.org/curriculum/social-studies#CommunicationCollaboration",
+        "https://example.org/curriculum/social-studies#InformationLiteracy"
+      ],
+      "https://example.org/curriculum/social-studies#ValueAttitude": [
+        "https://example.org/curriculum/social-studies#RespectDiversity",
+        "https://example.org/curriculum/social-studies#DemocraticValues",
+        "https://example.org/curriculum/social-studies#SustainabilityPractice"
+      ]
+    },
+    "unlabeledNodes": [
+      "https://example.org/curriculum/social-studies#SocialStudiesSubject",
+      "n3-0",
+      "https://example.org/curriculum/social-studies#LocationPlaceRegionCoreIdea",
+      "https://example.org/curriculum/social-studies#SpatialDataCoreIdea",
+      "https://example.org/curriculum/social-studies#ClimateHumanLifeCoreIdea",
+      "https://example.org/curriculum/social-studies#LandformHumanLifeCoreIdea",
+      "https://example.org/curriculum/social-studies#HumanNatureInteractionCoreIdea",
+      "https://example.org/curriculum/social-studies#PopulationCultureCoreIdea",
+      "https://example.org/curriculum/social-studies#CityVillageCoreIdea",
+      "https://example.org/curriculum/social-studies#EconomicTransportCoreIdea",
+      "https://example.org/curriculum/social-studies#ConflictInequalityCoreIdea",
+      "https://example.org/curriculum/social-studies#SustainableEnvironmentCoreIdea",
+      "https://example.org/curriculum/social-studies#GlobalCooperationCoreIdea",
+      "https://example.org/curriculum/social-studies#DemocracyInstitutionsCoreIdea",
+      "https://example.org/curriculum/social-studies#PoliticalParticipationCoreIdea",
+      "https://example.org/curriculum/social-studies#InternationalActorsCoreIdea",
+      "https://example.org/curriculum/social-studies#LawRightsCoreIdea",
+      "https://example.org/curriculum/social-studies#HumanRightsCoreIdea",
+      "https://example.org/curriculum/social-studies#ConstitutionInstitutionsCoreIdea",
+      "https://example.org/curriculum/social-studies#ChoiceMarketCoreIdea",
+      "https://example.org/curriculum/social-studies#SupplyDemandCoreIdea",
+      "https://example.org/curriculum/social-studies#NationalEconomyCoreIdea",
+      "https://example.org/curriculum/social-studies#SocialRelationsCultureCoreIdea",
+      "https://example.org/curriculum/social-studies#HistoricalInterpretationCoreIdea",
+      "https://example.org/curriculum/social-studies#RegionalPastCoreIdea",
+      "https://example.org/curriculum/social-studies#KoreanHistoricalChangeCoreIdea"
+    ],
+    "duplicateLabels": [
+      [
+        "핵심 아이디어",
+        [
+          "https://example.org/curriculum/social-studies#CoreIdea",
+          "https://example.org/curriculum/social-studies#hasCoreIdea"
+        ]
+      ],
+      [
+        "내용 요소",
+        [
+          "https://example.org/curriculum/social-studies#ContentElement",
+          "https://example.org/curriculum/social-studies#hasContentElement"
+        ]
+      ],
+      [
+        "지역사",
+        [
+          "https://example.org/curriculum/social-studies#RegionalHistory",
+          "https://example.org/curriculum/social-studies#LocalHistory"
+        ]
+      ]
+    ],
+    "nonRootSubjects": [
+      "https://example.org/curriculum/social-studies#hasCoreIdea",
+      "https://example.org/curriculum/social-studies#hasContentElement",
+      "https://example.org/curriculum/social-studies#developsCompetency",
+      "https://example.org/curriculum/social-studies#relatedToArea",
+      "https://example.org/curriculum/social-studies#gradeBand",
+      "https://example.org/curriculum/social-studies#description",
+      "n3-0",
+      "https://example.org/curriculum/social-studies#SocialStudies"
+    ]
+  },
+  {
+    "fileName": "과학과.ttl",
+    "domain": "curriculum-science",
+    "totalTriples": 327,
+    "prefixes": {
+      "ex": "https://example.org/curriculum/science#",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "dc": "http://purl.org/dc/elements/1.1/"
+    },
+    "predicates": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "http://purl.org/dc/elements/1.1/title",
+      "http://purl.org/dc/elements/1.1/description",
+      "http://www.w3.org/2000/01/rdf-schema#label",
+      "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "http://www.w3.org/2000/01/rdf-schema#domain",
+      "http://www.w3.org/2000/01/rdf-schema#range",
+      "http://www.w3.org/2002/07/owl#disjointWith",
+      "http://www.w3.org/2002/07/owl#onProperty",
+      "http://www.w3.org/2002/07/owl#qualifiedCardinality",
+      "http://www.w3.org/2002/07/owl#onClass",
+      "https://example.org/curriculum/science#description",
+      "https://example.org/curriculum/science#hasArea",
+      "https://example.org/curriculum/science#developsCompetency",
+      "https://example.org/curriculum/science#hasCoreIdea",
+      "https://example.org/curriculum/science#hasContentElement",
+      "https://example.org/curriculum/science#relatedToArea",
+      "https://example.org/curriculum/science#gradeBand"
+    ],
+    "classCount": 10,
+    "classes": [
+      "https://example.org/curriculum/science#Curriculum",
+      "https://example.org/curriculum/science#Subject",
+      "https://example.org/curriculum/science#LearningArea",
+      "https://example.org/curriculum/science#CoreIdea",
+      "https://example.org/curriculum/science#ContentElement",
+      "https://example.org/curriculum/science#Competency",
+      "https://example.org/curriculum/science#ProcessSkill",
+      "https://example.org/curriculum/science#ValueAttitude",
+      "https://example.org/curriculum/science#KnowledgeUnderstanding",
+      "https://example.org/curriculum/science#ScienceSubject"
+    ],
+    "instancesByType": {
+      "http://www.w3.org/2002/07/owl#Ontology": [
+        "https://example.org/curriculum/science#MiddleSchoolScienceCurriculum"
+      ],
+      "http://www.w3.org/2002/07/owl#ObjectProperty": [
+        "https://example.org/curriculum/science#hasArea",
+        "https://example.org/curriculum/science#hasCoreIdea",
+        "https://example.org/curriculum/science#hasContentElement",
+        "https://example.org/curriculum/science#developsCompetency",
+        "https://example.org/curriculum/science#relatedToArea"
+      ],
+      "http://www.w3.org/2002/07/owl#DatatypeProperty": [
+        "https://example.org/curriculum/science#gradeBand",
+        "https://example.org/curriculum/science#description"
+      ],
+      "http://www.w3.org/2002/07/owl#Restriction": [
+        "n3-1"
+      ],
+      "https://example.org/curriculum/science#Subject": [
+        "https://example.org/curriculum/science#Science"
+      ],
+      "https://example.org/curriculum/science#ScienceSubject": [
+        "https://example.org/curriculum/science#Science"
+      ],
+      "https://example.org/curriculum/science#LearningArea": [
+        "https://example.org/curriculum/science#MotionEnergy",
+        "https://example.org/curriculum/science#Matter",
+        "https://example.org/curriculum/science#Life",
+        "https://example.org/curriculum/science#EarthSpace",
+        "https://example.org/curriculum/science#ScienceSociety"
+      ],
+      "https://example.org/curriculum/science#CoreIdea": [
+        "https://example.org/curriculum/science#MotionCoreIdea",
+        "https://example.org/curriculum/science#ElectricMagneticCoreIdea",
+        "https://example.org/curriculum/science#HeatCoreIdea",
+        "https://example.org/curriculum/science#LightWaveCoreIdea",
+        "https://example.org/curriculum/science#MatterStateCoreIdea",
+        "https://example.org/curriculum/science#ChemicalReactionEnergyCoreIdea",
+        "https://example.org/curriculum/science#MaterialPropertiesCoreIdea",
+        "https://example.org/curriculum/science#ChemicalChangeCoreIdea",
+        "https://example.org/curriculum/science#CellOrganizationCoreIdea",
+        "https://example.org/curriculum/science#PhotosynthesisRespirationCoreIdea",
+        "https://example.org/curriculum/science#StimulusResponseCoreIdea",
+        "https://example.org/curriculum/science#InheritanceCoreIdea",
+        "https://example.org/curriculum/science#BiodiversityCoreIdea",
+        "https://example.org/curriculum/science#EarthSystemCoreIdea",
+        "https://example.org/curriculum/science#GeologicChangeCoreIdea",
+        "https://example.org/curriculum/science#WaterCycleCoreIdea",
+        "https://example.org/curriculum/science#ClimateCoreIdea",
+        "https://example.org/curriculum/science#SolarSystemCoreIdea",
+        "https://example.org/curriculum/science#StarObservationCoreIdea",
+        "https://example.org/curriculum/science#ScienceHealthSafetyCoreIdea",
+        "https://example.org/curriculum/science#SustainableSocietyCoreIdea",
+        "https://example.org/curriculum/science#ScienceCareerCoreIdea"
+      ],
+      "https://example.org/curriculum/science#KnowledgeUnderstanding": [
+        "https://example.org/curriculum/science#Force",
+        "https://example.org/curriculum/science#Speed",
+        "https://example.org/curriculum/science#Gravity",
+        "https://example.org/curriculum/science#Buoyancy",
+        "https://example.org/curriculum/science#WorkEnergy",
+        "https://example.org/curriculum/science#ElectricCurrent",
+        "https://example.org/curriculum/science#Voltage",
+        "https://example.org/curriculum/science#HeatTransfer",
+        "https://example.org/curriculum/science#ReflectionRefraction",
+        "https://example.org/curriculum/science#ParticleMotion",
+        "https://example.org/curriculum/science#GasPressure",
+        "https://example.org/curriculum/science#Density",
+        "https://example.org/curriculum/science#Solubility",
+        "https://example.org/curriculum/science#PureSubstanceMixture",
+        "https://example.org/curriculum/science#ChemicalEquation",
+        "https://example.org/curriculum/science#ConservationOfMass",
+        "https://example.org/curriculum/science#AtomMoleculeIon",
+        "https://example.org/curriculum/science#CellStructure",
+        "https://example.org/curriculum/science#Photosynthesis",
+        "https://example.org/curriculum/science#Respiration",
+        "https://example.org/curriculum/science#NervousSystem",
+        "https://example.org/curriculum/science#HormoneHomeostasis",
+        "https://example.org/curriculum/science#CellDivision",
+        "https://example.org/curriculum/science#Inheritance",
+        "https://example.org/curriculum/science#Biodiversity",
+        "https://example.org/curriculum/science#EarthSystem",
+        "https://example.org/curriculum/science#RockCycle",
+        "https://example.org/curriculum/science#PlateTectonics",
+        "https://example.org/curriculum/science#AtmosphereOcean",
+        "https://example.org/curriculum/science#ClimateChange",
+        "https://example.org/curriculum/science#SolarSystem",
+        "https://example.org/curriculum/science#MoonPhases",
+        "https://example.org/curriculum/science#UniverseExpansion",
+        "https://example.org/curriculum/science#DiseasePrevention",
+        "https://example.org/curriculum/science#DisasterResponse",
+        "https://example.org/curriculum/science#EfficientResourceUse",
+        "https://example.org/curriculum/science#SustainableEnergy",
+        "https://example.org/curriculum/science#ScienceTechnologySociety",
+        "https://example.org/curriculum/science#ScienceCareer"
+      ],
+      "https://example.org/curriculum/science#Competency": [
+        "https://example.org/curriculum/science#ScientificInquiryProblemSolving",
+        "https://example.org/curriculum/science#ScientificDecisionMaking",
+        "https://example.org/curriculum/science#KnowledgeInformationProcessing",
+        "https://example.org/curriculum/science#CreativeThinking",
+        "https://example.org/curriculum/science#CollaborativeCommunication"
+      ],
+      "https://example.org/curriculum/science#ProcessSkill": [
+        "https://example.org/curriculum/science#RecognizeProblem",
+        "https://example.org/curriculum/science#DesignInquiry",
+        "https://example.org/curriculum/science#CollectAnalyzeData",
+        "https://example.org/curriculum/science#DrawConclusion",
+        "https://example.org/curriculum/science#CommunicateEvidence"
+      ],
+      "https://example.org/curriculum/science#ValueAttitude": [
+        "https://example.org/curriculum/science#ScientificEthics",
+        "https://example.org/curriculum/science#Openness",
+        "https://example.org/curriculum/science#SustainableParticipation",
+        "https://example.org/curriculum/science#EnjoyScienceCulture"
+      ]
+    },
+    "unlabeledNodes": [
+      "https://example.org/curriculum/science#ScienceSubject",
+      "n3-1",
+      "https://example.org/curriculum/science#MotionCoreIdea",
+      "https://example.org/curriculum/science#ElectricMagneticCoreIdea",
+      "https://example.org/curriculum/science#HeatCoreIdea",
+      "https://example.org/curriculum/science#LightWaveCoreIdea",
+      "https://example.org/curriculum/science#MatterStateCoreIdea",
+      "https://example.org/curriculum/science#ChemicalReactionEnergyCoreIdea",
+      "https://example.org/curriculum/science#MaterialPropertiesCoreIdea",
+      "https://example.org/curriculum/science#ChemicalChangeCoreIdea",
+      "https://example.org/curriculum/science#CellOrganizationCoreIdea",
+      "https://example.org/curriculum/science#PhotosynthesisRespirationCoreIdea",
+      "https://example.org/curriculum/science#StimulusResponseCoreIdea",
+      "https://example.org/curriculum/science#InheritanceCoreIdea",
+      "https://example.org/curriculum/science#BiodiversityCoreIdea",
+      "https://example.org/curriculum/science#EarthSystemCoreIdea",
+      "https://example.org/curriculum/science#GeologicChangeCoreIdea",
+      "https://example.org/curriculum/science#WaterCycleCoreIdea",
+      "https://example.org/curriculum/science#ClimateCoreIdea",
+      "https://example.org/curriculum/science#SolarSystemCoreIdea",
+      "https://example.org/curriculum/science#StarObservationCoreIdea",
+      "https://example.org/curriculum/science#ScienceHealthSafetyCoreIdea",
+      "https://example.org/curriculum/science#SustainableSocietyCoreIdea",
+      "https://example.org/curriculum/science#ScienceCareerCoreIdea"
+    ],
+    "duplicateLabels": [
+      [
+        "핵심 아이디어",
+        [
+          "https://example.org/curriculum/science#CoreIdea",
+          "https://example.org/curriculum/science#hasCoreIdea"
+        ]
+      ],
+      [
+        "내용 요소",
+        [
+          "https://example.org/curriculum/science#ContentElement",
+          "https://example.org/curriculum/science#hasContentElement"
+        ]
+      ]
+    ],
+    "nonRootSubjects": [
+      "https://example.org/curriculum/science#hasCoreIdea",
+      "https://example.org/curriculum/science#hasContentElement",
+      "https://example.org/curriculum/science#developsCompetency",
+      "https://example.org/curriculum/science#relatedToArea",
+      "https://example.org/curriculum/science#gradeBand",
+      "https://example.org/curriculum/science#description",
+      "n3-1",
+      "https://example.org/curriculum/science#Science"
+    ]
+  },
+  {
+    "fileName": "가네.ttl",
+    "domain": "gagne",
+    "totalTriples": 161,
+    "prefixes": {
+      "ex": "http://example.org/il-lesson/",
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#"
+    },
+    "predicates": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "http://www.w3.org/2000/01/rdf-schema#label",
+      "http://www.w3.org/2000/01/rdf-schema#comment",
+      "http://www.w3.org/2000/01/rdf-schema#domain",
+      "http://www.w3.org/2000/01/rdf-schema#range",
+      "http://example.org/il-lesson/hasEvent",
+      "http://example.org/il-lesson/sequenceNumber",
+      "http://example.org/il-lesson/hasStrategy",
+      "http://example.org/il-lesson/usesResource",
+      "http://example.org/il-lesson/exampleDescription",
+      "http://example.org/il-lesson/nextEvent",
+      "http://example.org/il-lesson/hasActivity",
+      "http://example.org/il-lesson/hasAssessment"
+    ],
+    "classCount": 6,
+    "classes": [
+      "http://example.org/il-lesson/InstructionalEvent",
+      "http://example.org/il-lesson/InformationLiteracyLesson",
+      "http://example.org/il-lesson/TeachingStrategy",
+      "http://example.org/il-lesson/LearningActivity",
+      "http://example.org/il-lesson/LearningResource",
+      "http://example.org/il-lesson/AssessmentMethod"
+    ],
+    "instancesByType": {
+      "http://www.w3.org/2002/07/owl#Ontology": [
+        "http://example.org/il-lesson/GagneInstructionalEventsOntology"
+      ],
+      "http://www.w3.org/2002/07/owl#ObjectProperty": [
+        "http://example.org/il-lesson/hasEvent",
+        "http://example.org/il-lesson/hasStrategy",
+        "http://example.org/il-lesson/hasActivity",
+        "http://example.org/il-lesson/usesResource",
+        "http://example.org/il-lesson/hasAssessment",
+        "http://example.org/il-lesson/nextEvent"
+      ],
+      "http://www.w3.org/2002/07/owl#DatatypeProperty": [
+        "http://example.org/il-lesson/sequenceNumber",
+        "http://example.org/il-lesson/exampleDescription"
+      ],
+      "http://www.w3.org/2002/07/owl#TransitiveProperty": [
+        "http://example.org/il-lesson/nextEvent"
+      ],
+      "http://example.org/il-lesson/InformationLiteracyLesson": [
+        "http://example.org/il-lesson/InformationLiteracyLesson1"
+      ],
+      "http://example.org/il-lesson/InstructionalEvent": [
+        "http://example.org/il-lesson/event1",
+        "http://example.org/il-lesson/event2",
+        "http://example.org/il-lesson/event3",
+        "http://example.org/il-lesson/event4",
+        "http://example.org/il-lesson/event5",
+        "http://example.org/il-lesson/event6",
+        "http://example.org/il-lesson/event7",
+        "http://example.org/il-lesson/event8",
+        "http://example.org/il-lesson/event9"
+      ],
+      "http://example.org/il-lesson/TeachingStrategy": [
+        "http://example.org/il-lesson/strategy1",
+        "http://example.org/il-lesson/strategy2",
+        "http://example.org/il-lesson/strategy3",
+        "http://example.org/il-lesson/strategy4",
+        "http://example.org/il-lesson/strategy5",
+        "http://example.org/il-lesson/strategy6",
+        "http://example.org/il-lesson/strategy7",
+        "http://example.org/il-lesson/strategy8",
+        "http://example.org/il-lesson/strategy9"
+      ],
+      "http://example.org/il-lesson/LearningResource": [
+        "http://example.org/il-lesson/video1",
+        "http://example.org/il-lesson/presentation2",
+        "http://example.org/il-lesson/conceptMap4",
+        "http://example.org/il-lesson/editorial4",
+        "http://example.org/il-lesson/organizer5"
+      ],
+      "http://example.org/il-lesson/LearningActivity": [
+        "http://example.org/il-lesson/activity3",
+        "http://example.org/il-lesson/activity6",
+        "http://example.org/il-lesson/activity7",
+        "http://example.org/il-lesson/activity9"
+      ],
+      "http://example.org/il-lesson/AssessmentMethod": [
+        "http://example.org/il-lesson/assessment8"
+      ]
+    },
+    "unlabeledNodes": [],
+    "duplicateLabels": [],
+    "nonRootSubjects": [
+      "http://example.org/il-lesson/hasEvent",
+      "http://example.org/il-lesson/hasStrategy",
+      "http://example.org/il-lesson/hasActivity",
+      "http://example.org/il-lesson/usesResource",
+      "http://example.org/il-lesson/hasAssessment",
+      "http://example.org/il-lesson/sequenceNumber",
+      "http://example.org/il-lesson/exampleDescription",
+      "http://example.org/il-lesson/nextEvent",
+      "http://example.org/il-lesson/InformationLiteracyLesson1"
+    ]
+  },
+  {
+    "fileName": "readstrategy.ttl",
+    "domain": "reading-strategy",
+    "totalTriples": 460,
+    "prefixes": {
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "ex": "http://example.org/reading#"
+    },
+    "predicates": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "http://www.w3.org/2000/01/rdf-schema#label",
+      "http://www.w3.org/2000/01/rdf-schema#comment",
+      "http://www.w3.org/2000/01/rdf-schema#domain",
+      "http://www.w3.org/2000/01/rdf-schema#range",
+      "http://example.org/reading#hasVerb",
+      "http://example.org/reading#hasStrategy"
+    ],
+    "classCount": 3,
+    "classes": [
+      "http://example.org/reading#ReadingFunction",
+      "http://example.org/reading#ReadingVerb",
+      "http://example.org/reading#ReadingStrategy"
+    ],
+    "instancesByType": {
+      "http://www.w3.org/2002/07/owl#Ontology": [
+        "http://example.org/reading#ReadingStrategyOntology"
+      ],
+      "http://www.w3.org/2002/07/owl#ObjectProperty": [
+        "http://example.org/reading#hasVerb",
+        "http://example.org/reading#hasStrategy"
+      ],
+      "http://example.org/reading#ReadingFunction": [
+        "http://example.org/reading#Func_Understanding",
+        "http://example.org/reading#Func_Exploration",
+        "http://example.org/reading#Func_Inference",
+        "http://example.org/reading#Func_Prediction",
+        "http://example.org/reading#Func_Comparison",
+        "http://example.org/reading#Func_Contrast",
+        "http://example.org/reading#Func_Classification",
+        "http://example.org/reading#Func_Relation",
+        "http://example.org/reading#Func_Analysis",
+        "http://example.org/reading#Func_Synthesis",
+        "http://example.org/reading#Func_Evaluation",
+        "http://example.org/reading#Func_Application",
+        "http://example.org/reading#Func_Creation",
+        "http://example.org/reading#Func_Expression",
+        "http://example.org/reading#Func_Regulation"
+      ],
+      "http://example.org/reading#ReadingVerb": [
+        "http://example.org/reading#Verb_이해하다",
+        "http://example.org/reading#Verb_파악하다",
+        "http://example.org/reading#Verb_설명하다",
+        "http://example.org/reading#Verb_의미를_연결하다",
+        "http://example.org/reading#Verb_해석하다",
+        "http://example.org/reading#Verb_살펴보다",
+        "http://example.org/reading#Verb_훑어보다",
+        "http://example.org/reading#Verb_질문하다",
+        "http://example.org/reading#Verb_조사하다",
+        "http://example.org/reading#Verb_예상하다",
+        "http://example.org/reading#Verb_찾아보다",
+        "http://example.org/reading#Verb_추리하다",
+        "http://example.org/reading#Verb_유추하다",
+        "http://example.org/reading#Verb_근거를_찾다",
+        "http://example.org/reading#Verb_맥락을_파악하다",
+        "http://example.org/reading#Verb_숨은_의미를_발견하다",
+        "http://example.org/reading#Verb_가정하다",
+        "http://example.org/reading#Verb_전망하다",
+        "http://example.org/reading#Verb_추측하다",
+        "http://example.org/reading#Verb_미리_생각하다",
+        "http://example.org/reading#Verb_비교하다",
+        "http://example.org/reading#Verb_공통점을_찾다",
+        "http://example.org/reading#Verb_유사성을_분석하다",
+        "http://example.org/reading#Verb_연결하다",
+        "http://example.org/reading#Verb_대비하다",
+        "http://example.org/reading#Verb_차이점을_찾다",
+        "http://example.org/reading#Verb_구별하다",
+        "http://example.org/reading#Verb_구분하다",
+        "http://example.org/reading#Verb_나누다",
+        "http://example.org/reading#Verb_범주화하다",
+        "http://example.org/reading#Verb_묶다",
+        "http://example.org/reading#Verb_유형화하다",
+        "http://example.org/reading#Verb_체계화하다",
+        "http://example.org/reading#Verb_관련짓다",
+        "http://example.org/reading#Verb_구조화하다",
+        "http://example.org/reading#Verb_흐름을_파악하다",
+        "http://example.org/reading#Verb_맥락화하다",
+        "http://example.org/reading#Verb_분석하다",
+        "http://example.org/reading#Verb_분해하다",
+        "http://example.org/reading#Verb_구조를_파악하다",
+        "http://example.org/reading#Verb_원인을_찾다",
+        "http://example.org/reading#Verb_검토하다",
+        "http://example.org/reading#Verb_종합하다",
+        "http://example.org/reading#Verb_통합하다",
+        "http://example.org/reading#Verb_요약하다",
+        "http://example.org/reading#Verb_재구성하다",
+        "http://example.org/reading#Verb_핵심화하다",
+        "http://example.org/reading#Verb_판단하다",
+        "http://example.org/reading#Verb_비판하다",
+        "http://example.org/reading#Verb_검증하다",
+        "http://example.org/reading#Verb_근거를_따지다",
+        "http://example.org/reading#Verb_가치화하다",
+        "http://example.org/reading#Verb_활용하다",
+        "http://example.org/reading#Verb_실행하다",
+        "http://example.org/reading#Verb_실천하다",
+        "http://example.org/reading#Verb_전이하다",
+        "http://example.org/reading#Verb_창조하다",
+        "http://example.org/reading#Verb_상상하다",
+        "http://example.org/reading#Verb_구안하다",
+        "http://example.org/reading#Verb_발명하다",
+        "http://example.org/reading#Verb_생성하다",
+        "http://example.org/reading#Verb_표현하다",
+        "http://example.org/reading#Verb_말하다",
+        "http://example.org/reading#Verb_서술하다",
+        "http://example.org/reading#Verb_재현하다",
+        "http://example.org/reading#Verb_발표하다",
+        "http://example.org/reading#Verb_점검하다",
+        "http://example.org/reading#Verb_반성하다",
+        "http://example.org/reading#Verb_계획하다",
+        "http://example.org/reading#Verb_조정하다",
+        "http://example.org/reading#Verb_성찰하다"
+      ],
+      "http://example.org/reading#ReadingStrategy": [
+        "http://example.org/reading#Strat_단어의_나무",
+        "http://example.org/reading#Strat_낱말_접사_만들기",
+        "http://example.org/reading#Strat_손_그리기_활동",
+        "http://example.org/reading#Strat_감정표",
+        "http://example.org/reading#Strat_개념_정의_지도그리기",
+        "http://example.org/reading#Strat_LEAD_어휘연습",
+        "http://example.org/reading#Strat_밑줄_긋기",
+        "http://example.org/reading#Strat_빈칸_메우기",
+        "http://example.org/reading#Strat_중심생각_수레바퀴",
+        "http://example.org/reading#Strat_수학책을_읽는_열쇠",
+        "http://example.org/reading#Strat_SQ3R",
+        "http://example.org/reading#Strat_과학책_훑어보기",
+        "http://example.org/reading#Strat_미리보기",
+        "http://example.org/reading#Strat_앙케이트_질문표",
+        "http://example.org/reading#Strat_질문의_답은_어디에_QAR",
+        "http://example.org/reading#Strat_KWL",
+        "http://example.org/reading#Strat_정교한_질문",
+        "http://example.org/reading#Strat_실마리_낱말로_유추하기",
+        "http://example.org/reading#Strat_경계_어휘전략",
+        "http://example.org/reading#Strat_예측_안내하기",
+        "http://example.org/reading#Strat_A_QU_A",
+        "http://example.org/reading#Strat_어휘_예상하기",
+        "http://example.org/reading#Strat_사진_속으로",
+        "http://example.org/reading#Strat_상상_속으로",
+        "http://example.org/reading#Strat_벤다이어그램",
+        "http://example.org/reading#Strat_의미자질_분석하기",
+        "http://example.org/reading#Strat_대조표",
+        "http://example.org/reading#Strat_대립_척도표",
+        "http://example.org/reading#Strat_단어_분류하기",
+        "http://example.org/reading#Strat_피라미드_다이어그램",
+        "http://example.org/reading#Strat_닿소리표_그리기",
+        "http://example.org/reading#Strat_역사의_흐름_파악하기",
+        "http://example.org/reading#Strat_플롯_조직표",
+        "http://example.org/reading#Strat_이야기_지도_그리기",
+        "http://example.org/reading#Strat_의미_구조도_그리기",
+        "http://example.org/reading#Strat_인물망",
+        "http://example.org/reading#Strat_생각_그물",
+        "http://example.org/reading#Strat_상호텍스트_전략",
+        "http://example.org/reading#Strat_글_구조_전략",
+        "http://example.org/reading#Strat_오류_찾기",
+        "http://example.org/reading#Strat_단어_유래_찾기",
+        "http://example.org/reading#Strat_인물지도",
+        "http://example.org/reading#Strat_요약하기",
+        "http://example.org/reading#Strat_자석_요약하기",
+        "http://example.org/reading#Strat_의미지도_그리기",
+        "http://example.org/reading#Strat_문학지도",
+        "http://example.org/reading#Strat_참_거짓_가리기",
+        "http://example.org/reading#Strat_복식_기재_일지",
+        "http://example.org/reading#Strat_RAFT",
+        "http://example.org/reading#Strat_인물_따라하기",
+        "http://example.org/reading#Strat_브레인스토밍",
+        "http://example.org/reading#Strat_가능한_문장_만들기",
+        "http://example.org/reading#Strat_다시_이야기하기",
+        "http://example.org/reading#Strat_인물_인용하기"
+      ]
+    },
+    "unlabeledNodes": [],
+    "duplicateLabels": [],
+    "nonRootSubjects": [
+      "http://example.org/reading#hasVerb",
+      "http://example.org/reading#hasStrategy",
+      "http://example.org/reading#Func_Understanding",
+      "http://example.org/reading#Func_Exploration",
+      "http://example.org/reading#Func_Inference",
+      "http://example.org/reading#Func_Prediction",
+      "http://example.org/reading#Func_Comparison",
+      "http://example.org/reading#Func_Contrast",
+      "http://example.org/reading#Func_Classification",
+      "http://example.org/reading#Func_Relation",
+      "http://example.org/reading#Func_Analysis",
+      "http://example.org/reading#Func_Synthesis",
+      "http://example.org/reading#Func_Evaluation",
+      "http://example.org/reading#Func_Application",
+      "http://example.org/reading#Func_Creation",
+      "http://example.org/reading#Func_Expression",
+      "http://example.org/reading#Func_Regulation"
+    ]
+  },
+  {
+    "fileName": "text.ttl",
+    "domain": "text-type",
+    "totalTriples": 116,
+    "prefixes": {
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "owl": "http://www.w3.org/2002/07/owl#",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "ex": "http://example.org/pisa#"
+    },
+    "predicates": [
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "http://www.w3.org/2000/01/rdf-schema#label",
+      "http://www.w3.org/2000/01/rdf-schema#domain",
+      "http://www.w3.org/2000/01/rdf-schema#range",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#first",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#rest",
+      "http://www.w3.org/2002/07/owl#unionOf",
+      "http://example.org/pisa#hasCategory",
+      "http://example.org/pisa#contentDescription",
+      "http://example.org/pisa#hasSourceMaterialType",
+      "http://example.org/pisa#hasStructureAndNavigation",
+      "http://example.org/pisa#hasFormat",
+      "http://example.org/pisa#hasContentType"
+    ],
+    "classCount": 3,
+    "classes": [
+      "http://example.org/pisa#TextClassificationCategory",
+      "http://example.org/pisa#TextTypeAttribute",
+      "http://example.org/pisa#TextExample"
+    ],
+    "instancesByType": {
+      "http://www.w3.org/2002/07/owl#ObjectProperty": [
+        "http://example.org/pisa#hasCategory",
+        "http://example.org/pisa#hasSourceMaterialType",
+        "http://example.org/pisa#hasStructureAndNavigation",
+        "http://example.org/pisa#hasFormat",
+        "http://example.org/pisa#hasContentType"
+      ],
+      "http://www.w3.org/2002/07/owl#DatatypeProperty": [
+        "http://example.org/pisa#contentDescription"
+      ],
+      "http://example.org/pisa#TextClassificationCategory": [
+        "http://example.org/pisa#SourceMaterial",
+        "http://example.org/pisa#StructureAndNavigation",
+        "http://example.org/pisa#Format",
+        "http://example.org/pisa#ContentType"
+      ],
+      "http://example.org/pisa#TextTypeAttribute": [
+        "http://example.org/pisa#SingleText",
+        "http://example.org/pisa#MultipleText",
+        "http://example.org/pisa#StaticText",
+        "http://example.org/pisa#DynamicText",
+        "http://example.org/pisa#ContinuousText",
+        "http://example.org/pisa#NonContinuousText",
+        "http://example.org/pisa#MixedText",
+        "http://example.org/pisa#Description",
+        "http://example.org/pisa#Narration",
+        "http://example.org/pisa#Exposition",
+        "http://example.org/pisa#Argumentation",
+        "http://example.org/pisa#Instruction",
+        "http://example.org/pisa#Transaction"
+      ],
+      "http://example.org/pisa#TextExample": [
+        "http://example.org/pisa#Example1",
+        "http://example.org/pisa#Example2",
+        "http://example.org/pisa#Example3"
+      ]
+    },
+    "unlabeledNodes": [
+      "n3-3",
+      "n3-4",
+      "n3-2"
+    ],
+    "duplicateLabels": [
+      [
+        "조직과 탐색",
+        [
+          "http://example.org/pisa#hasStructureAndNavigation",
+          "http://example.org/pisa#StructureAndNavigation"
+        ]
+      ],
+      [
+        "체재",
+        [
+          "http://example.org/pisa#hasFormat",
+          "http://example.org/pisa#Format"
+        ]
+      ],
+      [
+        "유형(내용)",
+        [
+          "http://example.org/pisa#hasContentType",
+          "http://example.org/pisa#ContentType"
+        ]
+      ]
+    ],
+    "nonRootSubjects": [
+      "http://example.org/pisa#hasCategory",
+      "http://example.org/pisa#hasSourceMaterialType",
+      "http://example.org/pisa#hasStructureAndNavigation",
+      "http://example.org/pisa#hasFormat",
+      "http://example.org/pisa#hasContentType",
+      "http://example.org/pisa#contentDescription",
+      "n3-3",
+      "n3-4",
+      "n3-2",
+      "http://example.org/pisa#MultipleText",
+      "http://example.org/pisa#DynamicText",
+      "http://example.org/pisa#MixedText",
+      "http://example.org/pisa#Description",
+      "http://example.org/pisa#Argumentation",
+      "http://example.org/pisa#Instruction",
+      "http://example.org/pisa#Transaction",
+      "http://example.org/pisa#Example1",
+      "http://example.org/pisa#Example2",
+      "http://example.org/pisa#Example3"
+    ]
+  }
+]

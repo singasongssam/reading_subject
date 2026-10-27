@@ -1,0 +1,507 @@
+[
+  {
+    "id": "Func_Understanding",
+    "label": "이해",
+    "verbs": [
+      {
+        "id": "Verb_이해하다",
+        "label": "이해하다"
+      },
+      {
+        "id": "Verb_파악하다",
+        "label": "파악하다"
+      },
+      {
+        "id": "Verb_설명하다",
+        "label": "설명하다"
+      },
+      {
+        "id": "Verb_의미를_연결하다",
+        "label": "의미를 연결하다"
+      },
+      {
+        "id": "Verb_해석하다",
+        "label": "해석하다"
+      }
+    ],
+    "strategyIds": [
+      "Strat_단어의_나무",
+      "Strat_낱말_접사_만들기",
+      "Strat_손_그리기_활동",
+      "Strat_감정표",
+      "Strat_개념_정의_지도그리기",
+      "Strat_LEAD_어휘연습",
+      "Strat_밑줄_긋기",
+      "Strat_빈칸_메우기",
+      "Strat_중심생각_수레바퀴",
+      "Strat_수학책을_읽는_열쇠"
+    ]
+  },
+  {
+    "id": "Func_Exploration",
+    "label": "탐색",
+    "verbs": [
+      {
+        "id": "Verb_살펴보다",
+        "label": "살펴보다"
+      },
+      {
+        "id": "Verb_훑어보다",
+        "label": "훑어보다"
+      },
+      {
+        "id": "Verb_질문하다",
+        "label": "질문하다"
+      },
+      {
+        "id": "Verb_조사하다",
+        "label": "조사하다"
+      },
+      {
+        "id": "Verb_예상하다",
+        "label": "예상하다"
+      },
+      {
+        "id": "Verb_찾아보다",
+        "label": "찾아보다"
+      }
+    ],
+    "strategyIds": [
+      "Strat_SQ3R",
+      "Strat_과학책_훑어보기",
+      "Strat_미리보기",
+      "Strat_앙케이트_질문표",
+      "Strat_밑줄_긋기",
+      "Strat_질문의_답은_어디에_QAR",
+      "Strat_KWL"
+    ]
+  },
+  {
+    "id": "Func_Inference",
+    "label": "추론",
+    "verbs": [
+      {
+        "id": "Verb_추리하다",
+        "label": "추리하다"
+      },
+      {
+        "id": "Verb_유추하다",
+        "label": "유추하다"
+      },
+      {
+        "id": "Verb_근거를_찾다",
+        "label": "근거를 찾다"
+      },
+      {
+        "id": "Verb_맥락을_파악하다",
+        "label": "맥락을 파악하다"
+      },
+      {
+        "id": "Verb_숨은_의미를_발견하다",
+        "label": "숨은 의미를 발견하다"
+      }
+    ],
+    "strategyIds": [
+      "Strat_질문의_답은_어디에_QAR",
+      "Strat_정교한_질문",
+      "Strat_실마리_낱말로_유추하기",
+      "Strat_빈칸_메우기",
+      "Strat_경계_어휘전략",
+      "Strat_예측_안내하기",
+      "Strat_A_QU_A"
+    ]
+  },
+  {
+    "id": "Func_Prediction",
+    "label": "예측",
+    "verbs": [
+      {
+        "id": "Verb_예상하다",
+        "label": "예상하다"
+      },
+      {
+        "id": "Verb_가정하다",
+        "label": "가정하다"
+      },
+      {
+        "id": "Verb_전망하다",
+        "label": "전망하다"
+      },
+      {
+        "id": "Verb_추측하다",
+        "label": "추측하다"
+      },
+      {
+        "id": "Verb_미리_생각하다",
+        "label": "미리 생각하다"
+      }
+    ],
+    "strategyIds": [
+      "Strat_어휘_예상하기",
+      "Strat_예측_안내하기",
+      "Strat_사진_속으로",
+      "Strat_상상_속으로",
+      "Strat_KWL",
+      "Strat_실마리_낱말로_유추하기",
+      "Strat_미리보기"
+    ]
+  },
+  {
+    "id": "Func_Comparison",
+    "label": "비교",
+    "verbs": [
+      {
+        "id": "Verb_비교하다",
+        "label": "비교하다"
+      },
+      {
+        "id": "Verb_공통점을_찾다",
+        "label": "공통점을 찾다"
+      },
+      {
+        "id": "Verb_유사성을_분석하다",
+        "label": "유사성을 분석하다"
+      },
+      {
+        "id": "Verb_연결하다",
+        "label": "연결하다"
+      }
+    ],
+    "strategyIds": [
+      "Strat_벤다이어그램",
+      "Strat_의미자질_분석하기",
+      "Strat_대조표",
+      "Strat_대립_척도표"
+    ]
+  },
+  {
+    "id": "Func_Contrast",
+    "label": "대조",
+    "verbs": [
+      {
+        "id": "Verb_대비하다",
+        "label": "대비하다"
+      },
+      {
+        "id": "Verb_차이점을_찾다",
+        "label": "차이점을 찾다"
+      },
+      {
+        "id": "Verb_구별하다",
+        "label": "구별하다"
+      },
+      {
+        "id": "Verb_구분하다",
+        "label": "구분하다"
+      }
+    ],
+    "strategyIds": [
+      "Strat_대조표",
+      "Strat_벤다이어그램",
+      "Strat_의미자질_분석하기",
+      "Strat_대립_척도표"
+    ]
+  },
+  {
+    "id": "Func_Classification",
+    "label": "분류",
+    "verbs": [
+      {
+        "id": "Verb_나누다",
+        "label": "나누다"
+      },
+      {
+        "id": "Verb_범주화하다",
+        "label": "범주화하다"
+      },
+      {
+        "id": "Verb_묶다",
+        "label": "묶다"
+      },
+      {
+        "id": "Verb_유형화하다",
+        "label": "유형화하다"
+      },
+      {
+        "id": "Verb_체계화하다",
+        "label": "체계화하다"
+      }
+    ],
+    "strategyIds": [
+      "Strat_단어_분류하기",
+      "Strat_의미자질_분석하기",
+      "Strat_피라미드_다이어그램",
+      "Strat_닿소리표_그리기",
+      "Strat_낱말_접사_만들기"
+    ]
+  },
+  {
+    "id": "Func_Relation",
+    "label": "관계화",
+    "verbs": [
+      {
+        "id": "Verb_연결하다",
+        "label": "연결하다"
+      },
+      {
+        "id": "Verb_관련짓다",
+        "label": "관련짓다"
+      },
+      {
+        "id": "Verb_구조화하다",
+        "label": "구조화하다"
+      },
+      {
+        "id": "Verb_흐름을_파악하다",
+        "label": "흐름을 파악하다"
+      },
+      {
+        "id": "Verb_맥락화하다",
+        "label": "맥락화하다"
+      }
+    ],
+    "strategyIds": [
+      "Strat_역사의_흐름_파악하기",
+      "Strat_플롯_조직표",
+      "Strat_이야기_지도_그리기",
+      "Strat_의미_구조도_그리기",
+      "Strat_인물망",
+      "Strat_생각_그물",
+      "Strat_상호텍스트_전략"
+    ]
+  },
+  {
+    "id": "Func_Analysis",
+    "label": "분석",
+    "verbs": [
+      {
+        "id": "Verb_분석하다",
+        "label": "분석하다"
+      },
+      {
+        "id": "Verb_분해하다",
+        "label": "분해하다"
+      },
+      {
+        "id": "Verb_구조를_파악하다",
+        "label": "구조를 파악하다"
+      },
+      {
+        "id": "Verb_원인을_찾다",
+        "label": "원인을 찾다"
+      },
+      {
+        "id": "Verb_검토하다",
+        "label": "검토하다"
+      }
+    ],
+    "strategyIds": [
+      "Strat_글_구조_전략",
+      "Strat_오류_찾기",
+      "Strat_단어_유래_찾기",
+      "Strat_인물지도",
+      "Strat_상호텍스트_전략",
+      "Strat_수학책을_읽는_열쇠"
+    ]
+  },
+  {
+    "id": "Func_Synthesis",
+    "label": "종합",
+    "verbs": [
+      {
+        "id": "Verb_종합하다",
+        "label": "종합하다"
+      },
+      {
+        "id": "Verb_통합하다",
+        "label": "통합하다"
+      },
+      {
+        "id": "Verb_요약하다",
+        "label": "요약하다"
+      },
+      {
+        "id": "Verb_재구성하다",
+        "label": "재구성하다"
+      },
+      {
+        "id": "Verb_핵심화하다",
+        "label": "핵심화하다"
+      }
+    ],
+    "strategyIds": [
+      "Strat_요약하기",
+      "Strat_자석_요약하기",
+      "Strat_의미지도_그리기",
+      "Strat_중심생각_수레바퀴",
+      "Strat_생각_그물",
+      "Strat_문학지도",
+      "Strat_피라미드_다이어그램"
+    ]
+  },
+  {
+    "id": "Func_Evaluation",
+    "label": "평가",
+    "verbs": [
+      {
+        "id": "Verb_판단하다",
+        "label": "판단하다"
+      },
+      {
+        "id": "Verb_비판하다",
+        "label": "비판하다"
+      },
+      {
+        "id": "Verb_검증하다",
+        "label": "검증하다"
+      },
+      {
+        "id": "Verb_근거를_따지다",
+        "label": "근거를 따지다"
+      },
+      {
+        "id": "Verb_가치화하다",
+        "label": "가치화하다"
+      }
+    ],
+    "strategyIds": [
+      "Strat_오류_찾기",
+      "Strat_참_거짓_가리기",
+      "Strat_대립_척도표",
+      "Strat_상호텍스트_전략",
+      "Strat_복식_기재_일지"
+    ]
+  },
+  {
+    "id": "Func_Application",
+    "label": "적용",
+    "verbs": [
+      {
+        "id": "Verb_활용하다",
+        "label": "활용하다"
+      },
+      {
+        "id": "Verb_적용하다",
+        "label": "적용하다"
+      },
+      {
+        "id": "Verb_실행하다",
+        "label": "실행하다"
+      },
+      {
+        "id": "Verb_실천하다",
+        "label": "실천하다"
+      },
+      {
+        "id": "Verb_전이하다",
+        "label": "전이하다"
+      }
+    ],
+    "strategyIds": [
+      "Strat_RAFT",
+      "Strat_수학책을_읽는_열쇠",
+      "Strat_LEAD_어휘연습",
+      "Strat_인물_따라하기"
+    ]
+  },
+  {
+    "id": "Func_Creation",
+    "label": "창안",
+    "verbs": [
+      {
+        "id": "Verb_창조하다",
+        "label": "창조하다"
+      },
+      {
+        "id": "Verb_상상하다",
+        "label": "상상하다"
+      },
+      {
+        "id": "Verb_구안하다",
+        "label": "구안하다"
+      },
+      {
+        "id": "Verb_발명하다",
+        "label": "발명하다"
+      },
+      {
+        "id": "Verb_생성하다",
+        "label": "생성하다"
+      }
+    ],
+    "strategyIds": [
+      "Strat_브레인스토밍",
+      "Strat_가능한_문장_만들기",
+      "Strat_상상_속으로",
+      "Strat_RAFT",
+      "Strat_사진_속으로"
+    ]
+  },
+  {
+    "id": "Func_Expression",
+    "label": "표현",
+    "verbs": [
+      {
+        "id": "Verb_표현하다",
+        "label": "표현하다"
+      },
+      {
+        "id": "Verb_말하다",
+        "label": "말하다"
+      },
+      {
+        "id": "Verb_서술하다",
+        "label": "서술하다"
+      },
+      {
+        "id": "Verb_재현하다",
+        "label": "재현하다"
+      },
+      {
+        "id": "Verb_발표하다",
+        "label": "발표하다"
+      }
+    ],
+    "strategyIds": [
+      "Strat_다시_이야기하기",
+      "Strat_인물_인용하기",
+      "Strat_인물_따라하기",
+      "Strat_RAFT",
+      "Strat_문학지도",
+      "Strat_손_그리기_활동"
+    ]
+  },
+  {
+    "id": "Func_Regulation",
+    "label": "조절(메타인지)",
+    "verbs": [
+      {
+        "id": "Verb_점검하다",
+        "label": "점검하다"
+      },
+      {
+        "id": "Verb_반성하다",
+        "label": "반성하다"
+      },
+      {
+        "id": "Verb_계획하다",
+        "label": "계획하다"
+      },
+      {
+        "id": "Verb_조정하다",
+        "label": "조정하다"
+      },
+      {
+        "id": "Verb_성찰하다",
+        "label": "성찰하다"
+      }
+    ],
+    "strategyIds": [
+      "Strat_KWL",
+      "Strat_SQ3R",
+      "Strat_복식_기재_일지",
+      "Strat_A_QU_A",
+      "Strat_정교한_질문"
+    ]
+  }
+]

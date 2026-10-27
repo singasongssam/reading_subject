@@ -1,0 +1,9 @@
+const firebaseConfig = {
+  apiKey: "AIzaSyCWt2iCKKgvLFaxSJCu5Rb5dfGAhPLFnxg",
+  authDomain: "ttl-reading-lesson-sma.firebaseapp.com",
+  projectId: "ttl-reading-lesson-sma",
+  storageBucket: "ttl-reading-lesson-sma.firebasestorage.app",
+  messagingSenderId: "459932514534",
+  appId: "1:459932514534:web:264291099eae09b87e6327"
+};
+\

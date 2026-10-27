@@ -1,0 +1,34 @@
+{
+  "versionId": "v1.0.0-20261017",
+  "compiledAt": "2026-10-17T05:02:03.276Z",
+  "sourceFiles": [
+    {
+      "name": "사회과.ttl",
+      "triples": 361
+    },
+    {
+      "name": "과학과.ttl",
+      "triples": 327
+    },
+    {
+      "name": "가네.ttl",
+      "triples": 161
+    },
+    {
+      "name": "readstrategy.ttl",
+      "triples": 460
+    },
+    {
+      "name": "text.ttl",
+      "triples": 116
+    }
+  ],
+  "counts": {
+    "subjects": 2,
+    "curriculumNodes": 144,
+    "gagneEvents": 9,
+    "readingFunctions": 15,
+    "readingStrategies": 54,
+    "textCategories": 4
+  }
+}

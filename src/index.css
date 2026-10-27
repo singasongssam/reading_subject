@@ -1,0 +1,110 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-500: #6366f1;
+  --color-brand-600: #4f46e5;
+  --color-brand-700: #4338ca;
+  --color-brand-800: #3730a3;
+  --color-brand-900: #312e81;
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto,
+    "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    word-break: keep-all;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/* A4 용지 미리보기 */
+.a4-page {
+  width: 210mm;
+  min-height: 297mm;
+  padding: 16mm 15mm;
+  background: #ffffff;
+  color: #0f172a;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
+}
+
+.handwriting-lines {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0,
+    transparent 27px,
+    #cbd5e1 27px,
+    #cbd5e1 28px
+  );
+}
+
+/* 지도안 표 */
+.plan-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12px;
+}
+.plan-table th,
+.plan-table td {
+  border: 1px solid #475569;
+  padding: 6px 8px;
+  vertical-align: top;
+}
+.plan-table th {
+  background: #f1f5f9;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* 인쇄용 A4 스타일 최적화 */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm;
+  }
+  html,
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-size: 10pt;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-break-inside-avoid {
+    break-inside: avoid;
+  }
+  .print-page-break {
+    break-before: page;
+  }
+  .a4-page {
+    width: auto;
+    min-height: auto;
+    padding: 0;
+    box-shadow: none;
+    transform: none !important;
+  }
+  .print-reset {
+    position: static !important;
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+    background: #ffffff !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+.print-only {
+  display: none;
+}

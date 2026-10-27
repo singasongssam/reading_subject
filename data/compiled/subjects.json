@@ -1,0 +1,82 @@
+[
+  {
+    "id": "social",
+    "name": "사회",
+    "description": "사회현상을 이해하고 다양한 정보를 활용해 현대 사회의 문제를 창의적·합리적으로 해결하며 책임 있는 시민을 기르는 교과",
+    "gradeBands": [
+      "중학교 1~3학년"
+    ],
+    "competencies": [
+      {
+        "id": "CreativeThinking",
+        "label": "창의적 사고력"
+      },
+      {
+        "id": "CriticalThinking",
+        "label": "비판적 사고력"
+      },
+      {
+        "id": "ProblemSolvingDecisionMaking",
+        "label": "문제 해결력 및 의사 결정력"
+      },
+      {
+        "id": "CommunicationCollaboration",
+        "label": "의사소통 및 협업 능력"
+      },
+      {
+        "id": "InformationLiteracy",
+        "label": "정보 활용 능력"
+      }
+    ],
+    "areaIds": [
+      "GeographicAwareness",
+      "NaturalEnvironmentHumanLife",
+      "HumanEnvironmentHumanLife",
+      "SustainableWorld",
+      "Politics",
+      "Law",
+      "Economics",
+      "SocietyCulture",
+      "GeneralHistory",
+      "RegionalHistory",
+      "KoreanHistory"
+    ]
+  },
+  {
+    "id": "science",
+    "name": "과학",
+    "description": "과학적 탐구를 통해 자연 현상과 일상생활을 이해하고 개인·사회 문제를 과학적으로 해결하는 소양을 기르는 교과",
+    "gradeBands": [
+      "중학교 1~3학년"
+    ],
+    "competencies": [
+      {
+        "id": "ScientificInquiryProblemSolving",
+        "label": "과학적 탐구와 문제해결 능력"
+      },
+      {
+        "id": "ScientificDecisionMaking",
+        "label": "과학적 의사결정 능력"
+      },
+      {
+        "id": "KnowledgeInformationProcessing",
+        "label": "지식정보처리 역량"
+      },
+      {
+        "id": "CreativeThinking",
+        "label": "창의적 사고 역량"
+      },
+      {
+        "id": "CollaborativeCommunication",
+        "label": "협력적 소통 역량"
+      }
+    ],
+    "areaIds": [
+      "MotionEnergy",
+      "Matter",
+      "Life",
+      "EarthSpace",
+      "ScienceSociety"
+    ]
+  }
+]

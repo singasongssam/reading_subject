@@ -1,0 +1,1288 @@
+[
+  {
+    "id": "Strat_단어의_나무",
+    "label": "단어의 나무",
+    "functionIds": [
+      "Func_Understanding"
+    ],
+    "procedure": [
+      "1단계: [단어의 나무] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_낱말_접사_만들기",
+    "label": "낱말 접사 만들기",
+    "functionIds": [
+      "Func_Understanding",
+      "Func_Classification"
+    ],
+    "procedure": [
+      "1단계: [낱말 접사 만들기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_손_그리기_활동",
+    "label": "손 그리기 활동",
+    "functionIds": [
+      "Func_Understanding",
+      "Func_Expression"
+    ],
+    "procedure": [
+      "1단계: [손 그리기 활동] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_감정표",
+    "label": "감정표",
+    "functionIds": [
+      "Func_Understanding"
+    ],
+    "procedure": [
+      "1단계: [감정표] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_개념_정의_지도그리기",
+    "label": "개념 정의 지도그리기",
+    "functionIds": [
+      "Func_Understanding"
+    ],
+    "procedure": [
+      "1단계: [개념 정의 지도그리기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_LEAD_어휘연습",
+    "label": "LEAD 어휘연습",
+    "functionIds": [
+      "Func_Understanding",
+      "Func_Application"
+    ],
+    "procedure": [
+      "1단계: [LEAD 어휘연습] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_밑줄_긋기",
+    "label": "밑줄 긋기",
+    "functionIds": [
+      "Func_Understanding",
+      "Func_Exploration"
+    ],
+    "procedure": [
+      "1단계: [밑줄 긋기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_빈칸_메우기",
+    "label": "빈칸 메우기",
+    "functionIds": [
+      "Func_Understanding",
+      "Func_Inference"
+    ],
+    "procedure": [
+      "1단계: [빈칸 메우기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_중심생각_수레바퀴",
+    "label": "중심생각 수레바퀴",
+    "functionIds": [
+      "Func_Understanding",
+      "Func_Synthesis"
+    ],
+    "procedure": [
+      "1단계: [중심생각 수레바퀴] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_수학책을_읽는_열쇠",
+    "label": "수학책을 읽는 열쇠",
+    "functionIds": [
+      "Func_Understanding",
+      "Func_Analysis",
+      "Func_Application"
+    ],
+    "procedure": [
+      "1단계: [수학책을 읽는 열쇠] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_SQ3R",
+    "label": "SQ3R",
+    "functionIds": [
+      "Func_Exploration",
+      "Func_Regulation"
+    ],
+    "procedure": [
+      "1단계: Survey(훑어보기) - 제목, 사진, 요약문 훑어보기",
+      "2단계: Question(질문하기) - 제목을 의문문으로 바꾸어 질문 만들기",
+      "3단계: Read(자세히 읽기) - 질문의 답을 찾으며 정독하기",
+      "4단계: Recite(되새기기) - 중요한 내용을 소리 내거나 요약해 말하기",
+      "5단계: Review(다시보기) - 전체 내용을 종합 점검하고 복습하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      4,
+      5,
+      6
+    ],
+    "minutes": 20,
+    "worksheetHint": "SQ3R 5단계 활동지",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_과학책_훑어보기",
+    "label": "과학책 훑어보기",
+    "functionIds": [
+      "Func_Exploration"
+    ],
+    "procedure": [
+      "1단계: [과학책 훑어보기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_미리보기",
+    "label": "미리보기",
+    "functionIds": [
+      "Func_Exploration",
+      "Func_Prediction"
+    ],
+    "procedure": [
+      "1단계: [미리보기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_앙케이트_질문표",
+    "label": "앙케이트/질문표",
+    "functionIds": [
+      "Func_Exploration"
+    ],
+    "procedure": [
+      "1단계: [앙케이트/질문표] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_질문의_답은_어디에_QAR",
+    "label": "질문의 답은 어디에(QAR)",
+    "functionIds": [
+      "Func_Exploration",
+      "Func_Inference"
+    ],
+    "procedure": [
+      "1단계: [질문의 답은 어디에(QAR)] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_KWL",
+    "label": "KWL",
+    "functionIds": [
+      "Func_Exploration",
+      "Func_Prediction",
+      "Func_Regulation"
+    ],
+    "procedure": [
+      "1단계: K(이미 알고 있는 지식) 떠올려 활동지 1열에 적기",
+      "2단계: W(더 알고 싶은 내용 및 질문) 생성하여 2열에 적기",
+      "3단계: 질문에 대한 답을 능동적으로 찾으며 텍스트 정독하기",
+      "4단계: L(새롭게 배운 내용)을 3열에 정리하고 질문 해결 여부 확인하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술",
+      "논증"
+    ],
+    "recommendedEvents": [
+      4,
+      5,
+      6
+    ],
+    "minutes": 15,
+    "worksheetHint": "K-W-L 3칸 표 양식",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "Strat_정교한_질문",
+    "label": "정교한 질문",
+    "functionIds": [
+      "Func_Inference",
+      "Func_Regulation"
+    ],
+    "procedure": [
+      "1단계: [정교한 질문] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_실마리_낱말로_유추하기",
+    "label": "실마리 낱말로 유추하기",
+    "functionIds": [
+      "Func_Inference",
+      "Func_Prediction"
+    ],
+    "procedure": [
+      "1단계: [실마리 낱말로 유추하기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_경계_어휘전략",
+    "label": "경계 어휘전략",
+    "functionIds": [
+      "Func_Inference"
+    ],
+    "procedure": [
+      "1단계: [경계 어휘전략] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_예측_안내하기",
+    "label": "예측 안내하기",
+    "functionIds": [
+      "Func_Inference",
+      "Func_Prediction"
+    ],
+    "procedure": [
+      "1단계: [예측 안내하기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_A_QU_A",
+    "label": "A-QU-A",
+    "functionIds": [
+      "Func_Inference",
+      "Func_Regulation"
+    ],
+    "procedure": [
+      "1단계: [A-QU-A] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_어휘_예상하기",
+    "label": "어휘 예상하기",
+    "functionIds": [
+      "Func_Prediction"
+    ],
+    "procedure": [
+      "1단계: [어휘 예상하기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_사진_속으로",
+    "label": "사진 속으로",
+    "functionIds": [
+      "Func_Prediction",
+      "Func_Creation"
+    ],
+    "procedure": [
+      "1단계: [사진 속으로] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_상상_속으로",
+    "label": "상상 속으로",
+    "functionIds": [
+      "Func_Prediction",
+      "Func_Creation"
+    ],
+    "procedure": [
+      "1단계: [상상 속으로] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_벤다이어그램",
+    "label": "벤다이어그램",
+    "functionIds": [
+      "Func_Comparison",
+      "Func_Contrast"
+    ],
+    "procedure": [
+      "1단계: 비교·대조할 두 개념 또는 관점 선정하기",
+      "2단계: 겹쳐진 가운데 영역에 공통된 특성 기록하기",
+      "3단계: 양쪽 고유 영역에 서로 다른 차이점 기록하기",
+      "4단계: 공통점과 차이점을 종합하여 비교 결론 작성하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "논증",
+      "혼합적"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "2원 벤다이어그램 다이어그램",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "Strat_의미자질_분석하기",
+    "label": "의미자질 분석하기",
+    "functionIds": [
+      "Func_Comparison",
+      "Func_Contrast",
+      "Func_Classification"
+    ],
+    "procedure": [
+      "1단계: [의미자질 분석하기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_대조표",
+    "label": "대조표",
+    "functionIds": [
+      "Func_Comparison",
+      "Func_Contrast"
+    ],
+    "procedure": [
+      "1단계: [대조표] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_대립_척도표",
+    "label": "대립 척도표",
+    "functionIds": [
+      "Func_Comparison",
+      "Func_Contrast",
+      "Func_Evaluation"
+    ],
+    "procedure": [
+      "1단계: [대립 척도표] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_단어_분류하기",
+    "label": "단어 분류하기",
+    "functionIds": [
+      "Func_Classification"
+    ],
+    "procedure": [
+      "1단계: [단어 분류하기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_피라미드_다이어그램",
+    "label": "피라미드 다이어그램",
+    "functionIds": [
+      "Func_Classification",
+      "Func_Synthesis"
+    ],
+    "procedure": [
+      "1단계: [피라미드 다이어그램] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_닿소리표_그리기",
+    "label": "닿소리표 그리기",
+    "functionIds": [
+      "Func_Classification"
+    ],
+    "procedure": [
+      "1단계: [닿소리표 그리기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_역사의_흐름_파악하기",
+    "label": "역사의 흐름 파악하기",
+    "functionIds": [
+      "Func_Relation"
+    ],
+    "procedure": [
+      "1단계: [역사의 흐름 파악하기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_플롯_조직표",
+    "label": "플롯 조직표",
+    "functionIds": [
+      "Func_Relation"
+    ],
+    "procedure": [
+      "1단계: [플롯 조직표] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_이야기_지도_그리기",
+    "label": "이야기 지도 그리기",
+    "functionIds": [
+      "Func_Relation"
+    ],
+    "procedure": [
+      "1단계: [이야기 지도 그리기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_의미_구조도_그리기",
+    "label": "의미 구조도 그리기",
+    "functionIds": [
+      "Func_Relation"
+    ],
+    "procedure": [
+      "1단계: [의미 구조도 그리기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_인물망",
+    "label": "인물망",
+    "functionIds": [
+      "Func_Relation"
+    ],
+    "procedure": [
+      "1단계: [인물망] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_생각_그물",
+    "label": "생각 그물",
+    "functionIds": [
+      "Func_Relation",
+      "Func_Synthesis"
+    ],
+    "procedure": [
+      "1단계: [생각 그물] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_상호텍스트_전략",
+    "label": "상호텍스트 전략",
+    "functionIds": [
+      "Func_Relation",
+      "Func_Analysis",
+      "Func_Evaluation"
+    ],
+    "procedure": [
+      "1단계: [상호텍스트 전략] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_글_구조_전략",
+    "label": "글 구조 전략",
+    "functionIds": [
+      "Func_Analysis"
+    ],
+    "procedure": [
+      "1단계: 문단별 핵심 어휘 및 화제어 찾기",
+      "2단계: 문단의 중심 생각(요지)에 밑줄 긋기",
+      "3단계: 접속어와 논리적 전개(원인-결과, 문제-해결) 파악하기",
+      "4단계: 상하위 위계 구조도로 글 전체 구조 시각화하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "논증"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 15,
+    "worksheetHint": "문단별 핵심 키워드 구조도",
+    "reviewStatus": "reviewed"
+  },
+  {
+    "id": "Strat_오류_찾기",
+    "label": "오류 찾기",
+    "functionIds": [
+      "Func_Analysis",
+      "Func_Evaluation"
+    ],
+    "procedure": [
+      "1단계: [오류 찾기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_단어_유래_찾기",
+    "label": "단어 유래 찾기",
+    "functionIds": [
+      "Func_Analysis"
+    ],
+    "procedure": [
+      "1단계: [단어 유래 찾기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_인물지도",
+    "label": "인물지도",
+    "functionIds": [
+      "Func_Analysis"
+    ],
+    "procedure": [
+      "1단계: [인물지도] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_요약하기",
+    "label": "요약하기",
+    "functionIds": [
+      "Func_Synthesis"
+    ],
+    "procedure": [
+      "1단계: [요약하기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_자석_요약하기",
+    "label": "자석 요약하기",
+    "functionIds": [
+      "Func_Synthesis"
+    ],
+    "procedure": [
+      "1단계: [자석 요약하기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_의미지도_그리기",
+    "label": "의미지도 그리기",
+    "functionIds": [
+      "Func_Synthesis"
+    ],
+    "procedure": [
+      "1단계: [의미지도 그리기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_문학지도",
+    "label": "문학지도",
+    "functionIds": [
+      "Func_Synthesis",
+      "Func_Expression"
+    ],
+    "procedure": [
+      "1단계: [문학지도] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_참_거짓_가리기",
+    "label": "참/거짓 가리기",
+    "functionIds": [
+      "Func_Evaluation"
+    ],
+    "procedure": [
+      "1단계: [참/거짓 가리기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_복식_기재_일지",
+    "label": "복식 기재 일지",
+    "functionIds": [
+      "Func_Evaluation",
+      "Func_Regulation"
+    ],
+    "procedure": [
+      "1단계: [복식 기재 일지] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_RAFT",
+    "label": "RAFT",
+    "functionIds": [
+      "Func_Application",
+      "Func_Creation",
+      "Func_Expression"
+    ],
+    "procedure": [
+      "1단계: [RAFT] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_인물_따라하기",
+    "label": "인물 따라하기",
+    "functionIds": [
+      "Func_Application",
+      "Func_Expression"
+    ],
+    "procedure": [
+      "1단계: [인물 따라하기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_브레인스토밍",
+    "label": "브레인스토밍",
+    "functionIds": [
+      "Func_Creation"
+    ],
+    "procedure": [
+      "1단계: [브레인스토밍] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_가능한_문장_만들기",
+    "label": "가능한 문장 만들기",
+    "functionIds": [
+      "Func_Creation"
+    ],
+    "procedure": [
+      "1단계: [가능한 문장 만들기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_다시_이야기하기",
+    "label": "다시 이야기하기",
+    "functionIds": [
+      "Func_Expression"
+    ],
+    "procedure": [
+      "1단계: [다시 이야기하기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  },
+  {
+    "id": "Strat_인물_인용하기",
+    "label": "인물 인용하기",
+    "functionIds": [
+      "Func_Expression"
+    ],
+    "procedure": [
+      "1단계: [인물 인용하기] 활동의 목적과 학습할 텍스트 범위 확인하기",
+      "2단계: 텍스트를 읽으며 핵심 단어 및 정보를 전략 양식에 맞추어 기록하기",
+      "3단계: 작성한 내용을 점검하고 주요 결론을 종합하여 정리하기"
+    ],
+    "suitableTextTypes": [
+      "설명",
+      "기술"
+    ],
+    "recommendedEvents": [
+      5,
+      6
+    ],
+    "minutes": 10,
+    "worksheetHint": "활동지 기본 양식",
+    "reviewStatus": "draft"
+  }
+]

@@ -1,0 +1,1087 @@
+# 2022 개정 수학과 교육과정 RDF/RDFS/OWL 구조화 예시
+# 참고 구조: 업로드된 사회과.ttl의 클래스·속성·OWL 제약 방식
+# 근거: 교육부 고시 제2022-33호 [별책 8] 수학과 교육과정
+# 초·중학교 4개 영역의 핵심 아이디어는 원문 문장을 기록.
+# 지식·이해는 학년군별로, 과정·기능·가치·태도 및 성취기준은 대표 사례만 구조화.
+# 고등학교 공통·선택 과목은 원문 목차에 등장하는 과목명을 포함.
+# 전체 교육과정의 성취기준·내용 요소를 빠짐없이 전사한 완전판은 아님.
+
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ex: <https://example.org/curriculum/mathematics#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Mathematics a ex:MathematicsSubject,
+        ex:Subject ;
+    rdfs:label "수학"@ko ;
+    ex:description "수학의 개념, 원리, 법칙을 이해하고 현상을 수학적으로 관찰·해석하며 논리적으로 사고하고 합리적으로 문제를 해결하는 능력과 태도를 기르는 교과"@ko ;
+    ex:developsCompetency ex:Communication,
+        ex:Connection,
+        ex:InformationProcessing,
+        ex:ProblemSolving,
+        ex:Reasoning ;
+    ex:hasArea ex:ChangeRelations,
+        ex:DataProbability,
+        ex:GeometryMeasurement,
+        ex:NumberOperations ;
+    ex:hasCourse ex:CareerElectiveCourse01,
+        ex:CareerElectiveCourse02,
+        ex:CareerElectiveCourse03,
+        ex:CareerElectiveCourse04,
+        ex:CareerElectiveCourse05,
+        ex:CommonCourse01,
+        ex:CommonCourse02,
+        ex:CommonCourse03,
+        ex:CommonCourse04,
+        ex:ConvergenceElectiveCourse01,
+        ex:ConvergenceElectiveCourse02,
+        ex:ConvergenceElectiveCourse03,
+        ex:GeneralElectiveCourse01,
+        ex:GeneralElectiveCourse02,
+        ex:GeneralElectiveCourse03 .
+
+ex:MathematicsCurriculum a owl:Ontology ;
+    dc:description "교육부 고시 제2022-33호 [별책 8] 수학과 교육과정에 기초한 학습용 구조화 모델. 내용 요소와 성취기준은 대표 사례를 수록함."@ko ;
+    dc:title "2022 개정 수학과 교육과정 RDF/RDFS/OWL 구조화 예시"@ko .
+
+ex:achievementForGrade a owl:ObjectProperty ;
+    rdfs:label "성취기준 학년군"@ko ;
+    rdfs:domain ex:AchievementStandard ;
+    rdfs:range ex:GradeBand .
+
+ex:associatedArea a owl:ObjectProperty ;
+    rdfs:label "관련 영역"@ko ;
+    rdfs:domain ex:AchievementStandard ;
+    rdfs:range ex:LearningArea .
+
+ex:belongsToGradeBand a owl:ObjectProperty ;
+    rdfs:label "학년군"@ko ;
+    rdfs:domain ex:ContentElement ;
+    rdfs:range ex:GradeBand .
+
+ex:code a owl:DatatypeProperty ;
+    rdfs:label "성취기준 코드"@ko ;
+    rdfs:domain ex:AchievementStandard ;
+    rdfs:range <https://example.org/curriculum/mathematics#http://www.w3.org/2001/XMLSchema#string> .
+
+ex:description a owl:DatatypeProperty ;
+    rdfs:label "설명"@ko ;
+    rdfs:range <https://example.org/curriculum/mathematics#http://www.w3.org/2001/XMLSchema#string> .
+
+ex:developsCompetency a owl:ObjectProperty ;
+    rdfs:label "함양 역량"@ko ;
+    rdfs:domain ex:Subject ;
+    rdfs:range ex:Competency .
+
+ex:gradeBand a owl:DatatypeProperty ;
+    rdfs:label "학년군"@ko ;
+    rdfs:domain ex:ContentElement ;
+    rdfs:range <https://example.org/curriculum/mathematics#http://www.w3.org/2001/XMLSchema#string> .
+
+ex:hasAchievementStandard a owl:ObjectProperty ;
+    rdfs:label "성취기준"@ko ;
+    rdfs:domain ex:LearningArea ;
+    rdfs:range ex:AchievementStandard .
+
+ex:hasCategory a owl:ObjectProperty ;
+    rdfs:label "과목 유형"@ko ;
+    rdfs:domain ex:Course ;
+    rdfs:range ex:CourseCategory .
+
+ex:hasContentElement a owl:ObjectProperty ;
+    rdfs:label "내용 요소"@ko ;
+    rdfs:domain ex:LearningArea ;
+    rdfs:range ex:ContentElement .
+
+ex:hasCoreIdea a owl:ObjectProperty ;
+    rdfs:label "핵심 아이디어"@ko ;
+    rdfs:domain ex:LearningArea ;
+    rdfs:range ex:CoreIdea .
+
+ex:hasCourse a owl:ObjectProperty ;
+    rdfs:label "개설 과목"@ko ;
+    rdfs:domain ex:Subject ;
+    rdfs:range ex:Course .
+
+ex:relatedToArea a owl:ObjectProperty ;
+    rdfs:label "관련 영역"@ko ;
+    rdfs:domain ex:LearningArea ;
+    rdfs:range ex:LearningArea .
+
+ex:standardText a owl:DatatypeProperty ;
+    rdfs:label "성취기준 원문"@ko ;
+    rdfs:domain ex:AchievementStandard ;
+    rdfs:range <https://example.org/curriculum/mathematics#http://www.w3.org/2001/XMLSchema#string> .
+
+ex:CareerElectiveCourse01 a ex:Course ;
+    rdfs:label "미적분Ⅱ"@ko ;
+    ex:hasCategory ex:CareerElective .
+
+ex:CareerElectiveCourse02 a ex:Course ;
+    rdfs:label "기하"@ko ;
+    ex:hasCategory ex:CareerElective .
+
+ex:CareerElectiveCourse03 a ex:Course ;
+    rdfs:label "경제 수학"@ko ;
+    ex:hasCategory ex:CareerElective .
+
+ex:CareerElectiveCourse04 a ex:Course ;
+    rdfs:label "인공지능 수학"@ko ;
+    ex:hasCategory ex:CareerElective .
+
+ex:CareerElectiveCourse05 a ex:Course ;
+    rdfs:label "직무 수학"@ko ;
+    ex:hasCategory ex:CareerElective .
+
+ex:ChangeRelationsCoreIdea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "변화하는 현상에 반복적인 요소로 들어있는 규칙은 수나 식으로 표현될 수 있으며, 규칙을 탐구하는 것은 수학적으로 추측하고 일반화하는 데 기반이 된다."@ko .
+
+ex:ChangeRelationsCoreIdea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "동치 관계, 대응 관계, 비례 관계 등은 여러 현상에 들어있는 대상들 사이의 다양한 관계를 기술하고 복잡한 문제를 해결하는 데 유용하게 활용된다."@ko .
+
+ex:ChangeRelationsCoreIdea3 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 3"@ko ;
+    ex:description "수와 그 계산은 문자와 식을 사용하여 일반화되며, 특정한 관계를 만족시키는 미지의 값은 방정식과 부등식을 해결하는 적절한 절차를 거쳐 구해진다."@ko .
+
+ex:ChangeRelationsCoreIdea4 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 4"@ko ;
+    ex:description "한 양이 변함에 따라 다른 양이 하나씩 정해지는 두 양 사이의 대응 관계를 나타내는 함수와 그 그래프는 변화하는 현상 속의 다양한 관계를 수학적으로 표현한다."@ko .
+
+ex:ChangeRelations_Attitude_01 a ex:ValueAttitude ;
+    rdfs:label "규칙, 동치 관계 탐구에 대한 흥미"@ko .
+
+ex:ChangeRelations_Attitude_02 a ex:ValueAttitude ;
+    rdfs:label "대응 관계, 비 표현의 편리함 인식"@ko .
+
+ex:ChangeRelations_Attitude_03 a ex:ValueAttitude ;
+    rdfs:label "실생활, 사회 및 자연 현상과 관련된 문제를 수학적 모델링을 통해 해결하려는 도전적인 태도"@ko .
+
+ex:ChangeRelations_Attitude_04 a ex:ValueAttitude ;
+    rdfs:label "타당한 근거에 따라 논리적으로 설명하는 태도"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Elementary12_01 a ex:KnowledgeUnderstanding ;
+    rdfs:label "규칙"@ko ;
+    ex:belongsToGradeBand ex:Elementary12 ;
+    ex:gradeBand "초등학교 1~2학년"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Elementary34_01 a ex:KnowledgeUnderstanding ;
+    rdfs:label "규칙"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Elementary34_02 a ex:KnowledgeUnderstanding ;
+    rdfs:label "동치 관계"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Elementary56_01 a ex:KnowledgeUnderstanding ;
+    rdfs:label "대응 관계"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Elementary56_02 a ex:KnowledgeUnderstanding ;
+    rdfs:label "비와 비율"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Elementary56_03 a ex:KnowledgeUnderstanding ;
+    rdfs:label "비례식과 비례배분"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Middle13_01 a ex:KnowledgeUnderstanding ;
+    rdfs:label "문자의 사용과 식"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Middle13_02 a ex:KnowledgeUnderstanding ;
+    rdfs:label "일차방정식"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Middle13_03 a ex:KnowledgeUnderstanding ;
+    rdfs:label "좌표평면과 그래프"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Middle13_04 a ex:KnowledgeUnderstanding ;
+    rdfs:label "식의 계산"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Middle13_05 a ex:KnowledgeUnderstanding ;
+    rdfs:label "일차부등식"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Middle13_06 a ex:KnowledgeUnderstanding ;
+    rdfs:label "연립일차방정식"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Middle13_07 a ex:KnowledgeUnderstanding ;
+    rdfs:label "일차함수와 그 그래프"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Middle13_08 a ex:KnowledgeUnderstanding ;
+    rdfs:label "일차함수와 일차방정식의 관계"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Middle13_09 a ex:KnowledgeUnderstanding ;
+    rdfs:label "다항식의 곱셈과 인수분해"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Middle13_10 a ex:KnowledgeUnderstanding ;
+    rdfs:label "이차방정식"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:ChangeRelations_KnowledgeUnderstanding_Middle13_11 a ex:KnowledgeUnderstanding ;
+    rdfs:label "이차함수와 그 그래프"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:ChangeRelations_Process_01 a ex:ProcessSkill ;
+    rdfs:label "규칙을 찾아 여러 가지 방법으로 표현하기"@ko .
+
+ex:ChangeRelations_Process_02 a ex:ProcessSkill ;
+    rdfs:label "비율을 실생활 및 타 교과와 연결하여 문제해결하기"@ko .
+
+ex:ChangeRelations_Process_03 a ex:ProcessSkill ;
+    rdfs:label "방정식과 부등식 풀기"@ko .
+
+ex:ChangeRelations_Process_04 a ex:ProcessSkill ;
+    rdfs:label "상황이나 관계를 표, 식, 그래프로 나타내기"@ko .
+
+ex:ChangeRelations_Process_05 a ex:ProcessSkill ;
+    rdfs:label "주어진 그래프 해석하기"@ko .
+
+ex:CommonCourse01 a ex:Course ;
+    rdfs:label "공통수학1"@ko ;
+    ex:hasCategory ex:Common .
+
+ex:CommonCourse02 a ex:Course ;
+    rdfs:label "공통수학2"@ko ;
+    ex:hasCategory ex:Common .
+
+ex:CommonCourse03 a ex:Course ;
+    rdfs:label "기본수학1"@ko ;
+    ex:hasCategory ex:Common .
+
+ex:CommonCourse04 a ex:Course ;
+    rdfs:label "기본수학2"@ko ;
+    ex:hasCategory ex:Common .
+
+ex:Communication a ex:Competency ;
+    rdfs:label "의사소통"@ko .
+
+ex:Connection a ex:Competency ;
+    rdfs:label "연결"@ko .
+
+ex:ConvergenceElectiveCourse01 a ex:Course ;
+    rdfs:label "수학과 문화"@ko ;
+    ex:hasCategory ex:ConvergenceElective .
+
+ex:ConvergenceElectiveCourse02 a ex:Course ;
+    rdfs:label "실용 통계"@ko ;
+    ex:hasCategory ex:ConvergenceElective .
+
+ex:ConvergenceElectiveCourse03 a ex:Course ;
+    rdfs:label "수학과제 탐구"@ko ;
+    ex:hasCategory ex:ConvergenceElective .
+
+ex:Curriculum a <https://example.org/curriculum/mathematics#http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "교육과정"@ko .
+
+ex:DataProbabilityCoreIdea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "자료를 수집, 정리, 해석하는 통계는 자료의 특징을 파악하고 두 집단을 비교하며 자료의 관계를 탐구하는 데 활용된다."@ko .
+
+ex:DataProbabilityCoreIdea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "사건이 일어날 가능성을 여러 가지 방법으로 표현하는 것은 불확실성을 이해하는 데 도움이 되며, 가능성을 확률로 수치화하면 불확실성을 수학적으로 다룰 수 있게 된다."@ko .
+
+ex:DataProbabilityCoreIdea3 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 3"@ko ;
+    ex:description "자료를 이용하여 통계적 문제해결 과정을 실천하고 생활 속의 가능성을 탐구하는 것은 미래를 예측하고 합리적인 의사 결정을 하는 데 기반이 된다."@ko .
+
+ex:DataProbability_Attitude_01 a ex:ValueAttitude ;
+    rdfs:label "표와 그래프의 편리함 인식"@ko .
+
+ex:DataProbability_Attitude_02 a ex:ValueAttitude ;
+    rdfs:label "자료를 이용한 통계적 문제해결 과정의 가치 인식"@ko .
+
+ex:DataProbability_Attitude_03 a ex:ValueAttitude ;
+    rdfs:label "확률 및 통계적 근거를 바탕으로 비판적으로 사고하는 태도"@ko .
+
+ex:DataProbability_Attitude_04 a ex:ValueAttitude ;
+    rdfs:label "통계적 문제해결 과정에 주도적으로 참여하는 태도"@ko .
+
+ex:DataProbability_KnowledgeUnderstanding_Elementary12_01 a ex:KnowledgeUnderstanding ;
+    rdfs:label "자료의 분류"@ko ;
+    ex:belongsToGradeBand ex:Elementary12 ;
+    ex:gradeBand "초등학교 1~2학년"@ko .
+
+ex:DataProbability_KnowledgeUnderstanding_Elementary12_02 a ex:KnowledgeUnderstanding ;
+    rdfs:label "표"@ko ;
+    ex:belongsToGradeBand ex:Elementary12 ;
+    ex:gradeBand "초등학교 1~2학년"@ko .
+
+ex:DataProbability_KnowledgeUnderstanding_Elementary12_03 a ex:KnowledgeUnderstanding ;
+    rdfs:label "○, ×, ／를 이용한 그래프"@ko ;
+    ex:belongsToGradeBand ex:Elementary12 ;
+    ex:gradeBand "초등학교 1~2학년"@ko .
+
+ex:DataProbability_KnowledgeUnderstanding_Elementary34_01 a ex:KnowledgeUnderstanding ;
+    rdfs:label "그림그래프"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:DataProbability_KnowledgeUnderstanding_Elementary34_02 a ex:KnowledgeUnderstanding ;
+    rdfs:label "막대그래프"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:DataProbability_KnowledgeUnderstanding_Elementary34_03 a ex:KnowledgeUnderstanding ;
+    rdfs:label "꺾은선그래프"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:DataProbability_KnowledgeUnderstanding_Elementary56_01 a ex:KnowledgeUnderstanding ;
+    rdfs:label "평균"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:DataProbability_KnowledgeUnderstanding_Elementary56_02 a ex:KnowledgeUnderstanding ;
+    rdfs:label "띠그래프, 원그래프"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:DataProbability_KnowledgeUnderstanding_Elementary56_03 a ex:KnowledgeUnderstanding ;
+    rdfs:label "가능성"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:DataProbability_KnowledgeUnderstanding_Middle13_01 a ex:KnowledgeUnderstanding ;
+    rdfs:label "대푯값"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:DataProbability_KnowledgeUnderstanding_Middle13_02 a ex:KnowledgeUnderstanding ;
+    rdfs:label "도수분포표와 상대도수"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:DataProbability_KnowledgeUnderstanding_Middle13_03 a ex:KnowledgeUnderstanding ;
+    rdfs:label "경우의 수와 확률"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:DataProbability_KnowledgeUnderstanding_Middle13_04 a ex:KnowledgeUnderstanding ;
+    rdfs:label "산포도"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:DataProbability_KnowledgeUnderstanding_Middle13_05 a ex:KnowledgeUnderstanding ;
+    rdfs:label "상자그림과 산점도"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:DataProbability_Process_01 a ex:ProcessSkill ;
+    rdfs:label "탐구 문제를 설정하고 그에 맞는 자료를 수집하기"@ko .
+
+ex:DataProbability_Process_02 a ex:ProcessSkill ;
+    rdfs:label "자료를 표나 그래프로 나타내고 해석하기"@ko .
+
+ex:DataProbability_Process_03 a ex:ProcessSkill ;
+    rdfs:label "통계적 탐구 문제 설정하기"@ko .
+
+ex:DataProbability_Process_04 a ex:ProcessSkill ;
+    rdfs:label "공학 도구를 이용하여 자료를 수집하고 분석하기"@ko .
+
+ex:DataProbability_Process_05 a ex:ProcessSkill ;
+    rdfs:label "자료의 상관관계 설명하기"@ko .
+
+ex:FourAreasRestriction a owl:Restriction ;
+    owl:onClass ex:LearningArea ;
+    owl:onProperty ex:hasArea ;
+    owl:qualifiedCardinality "4"^^xsd:nonNegativeInteger .
+
+ex:GeneralElectiveCourse01 a ex:Course ;
+    rdfs:label "대수"@ko ;
+    ex:hasCategory ex:GeneralElective .
+
+ex:GeneralElectiveCourse02 a ex:Course ;
+    rdfs:label "미적분Ⅰ"@ko ;
+    ex:hasCategory ex:GeneralElective .
+
+ex:GeneralElectiveCourse03 a ex:Course ;
+    rdfs:label "확률과 통계"@ko ;
+    ex:hasCategory ex:GeneralElective .
+
+ex:GeometryMeasurementCoreIdea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "평면도형과 입체도형은 여러 가지 모양을 범주화한 것이며, 각각의 평면도형과 입체도형은 고유한 성질을 갖는다."@ko .
+
+ex:GeometryMeasurementCoreIdea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "도형의 성질과 관계를 탐구하고 정당화하는 것은 논리적이고 비판적으로 사고하는 데 기반이 된다."@ko .
+
+ex:GeometryMeasurementCoreIdea3 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 3"@ko ;
+    ex:description "측정은 여러 가지 속성의 양을 비교하고 속성에 따른 단위를 이용하여 양을 수치화함으로써 여러 가지 현상을 해석하거나 실생활 문제를 해결하는 데 활용된다."@ko .
+
+ex:GeometryMeasurement_Attitude_01 a ex:ValueAttitude ;
+    rdfs:label "평면도형, 입체도형에 대한 흥미와 관심"@ko .
+
+ex:GeometryMeasurement_Attitude_02 a ex:ValueAttitude ;
+    rdfs:label "표준 단위의 필요성 인식"@ko .
+
+ex:GeometryMeasurement_Attitude_03 a ex:ValueAttitude ;
+    rdfs:label "증명의 필요성 인식"@ko .
+
+ex:GeometryMeasurement_Attitude_04 a ex:ValueAttitude ;
+    rdfs:label "정당화를 통해 수학적 근거를 바탕으로 비판적으로 사고하는 태도"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary12_01 a ex:KnowledgeUnderstanding ;
+    rdfs:label "입체도형의 모양"@ko ;
+    ex:belongsToGradeBand ex:Elementary12 ;
+    ex:gradeBand "초등학교 1~2학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary12_02 a ex:KnowledgeUnderstanding ;
+    rdfs:label "평면도형과 그 구성 요소"@ko ;
+    ex:belongsToGradeBand ex:Elementary12 ;
+    ex:gradeBand "초등학교 1~2학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary12_03 a ex:KnowledgeUnderstanding ;
+    rdfs:label "양의 비교"@ko ;
+    ex:belongsToGradeBand ex:Elementary12 ;
+    ex:gradeBand "초등학교 1~2학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary12_04 a ex:KnowledgeUnderstanding ;
+    rdfs:label "시각과 시간 (시, 분)"@ko ;
+    ex:belongsToGradeBand ex:Elementary12 ;
+    ex:gradeBand "초등학교 1~2학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary12_05 a ex:KnowledgeUnderstanding ;
+    rdfs:label "길이(cm, m)"@ko ;
+    ex:belongsToGradeBand ex:Elementary12 ;
+    ex:gradeBand "초등학교 1~2학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_01 a ex:KnowledgeUnderstanding ;
+    rdfs:label "도형의 기초"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_02 a ex:KnowledgeUnderstanding ;
+    rdfs:label "원의 구성 요소"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_03 a ex:KnowledgeUnderstanding ;
+    rdfs:label "여러 가지 삼각형"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_04 a ex:KnowledgeUnderstanding ;
+    rdfs:label "여러 가지 사각형"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_05 a ex:KnowledgeUnderstanding ;
+    rdfs:label "다각형"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_06 a ex:KnowledgeUnderstanding ;
+    rdfs:label "평면도형의 이동"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_07 a ex:KnowledgeUnderstanding ;
+    rdfs:label "시각과 시간(초)"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_08 a ex:KnowledgeUnderstanding ;
+    rdfs:label "길이(mm, km)"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_09 a ex:KnowledgeUnderstanding ;
+    rdfs:label "들이(L, mL)"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_10 a ex:KnowledgeUnderstanding ;
+    rdfs:label "무게(kg, g, t)"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_11 a ex:KnowledgeUnderstanding ;
+    rdfs:label "각도"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary56_01 a ex:KnowledgeUnderstanding ;
+    rdfs:label "합동과 대칭"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary56_02 a ex:KnowledgeUnderstanding ;
+    rdfs:label "직육면체와 정육면체"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary56_03 a ex:KnowledgeUnderstanding ;
+    rdfs:label "각기둥과 각뿔"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary56_04 a ex:KnowledgeUnderstanding ;
+    rdfs:label "원기둥, 원뿔, 구"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary56_05 a ex:KnowledgeUnderstanding ;
+    rdfs:label "다각형의 둘레와 넓이"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary56_06 a ex:KnowledgeUnderstanding ;
+    rdfs:label "원주율과 원의 넓이"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary56_07 a ex:KnowledgeUnderstanding ;
+    rdfs:label "직육면체와 정육면체의 겉넓이와 부피"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_01 a ex:KnowledgeUnderstanding ;
+    rdfs:label "기본 도형"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_02 a ex:KnowledgeUnderstanding ;
+    rdfs:label "작도와 합동"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_03 a ex:KnowledgeUnderstanding ;
+    rdfs:label "평면도형의 성질"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_04 a ex:KnowledgeUnderstanding ;
+    rdfs:label "입체도형의 성질"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_05 a ex:KnowledgeUnderstanding ;
+    rdfs:label "삼각형과 사각형의 성질"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_06 a ex:KnowledgeUnderstanding ;
+    rdfs:label "도형의 닮음"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_07 a ex:KnowledgeUnderstanding ;
+    rdfs:label "피타고라스 정리"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_08 a ex:KnowledgeUnderstanding ;
+    rdfs:label "삼각비"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_09 a ex:KnowledgeUnderstanding ;
+    rdfs:label "원의 성질"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:GeometryMeasurement_Process_01 a ex:ProcessSkill ;
+    rdfs:label "도형의 개념, 구성 요소, 성질 탐구하고 설명하기"@ko .
+
+ex:GeometryMeasurement_Process_02 a ex:ProcessSkill ;
+    rdfs:label "측정 단위를 사용하여 양을 표현하기"@ko .
+
+ex:GeometryMeasurement_Process_03 a ex:ProcessSkill ;
+    rdfs:label "도형의 길이, 넓이, 겉넓이, 부피 구하기"@ko .
+
+ex:GeometryMeasurement_Process_04 a ex:ProcessSkill ;
+    rdfs:label "도형의 성질을 정당화하기"@ko .
+
+ex:GeometryMeasurement_Process_05 a ex:ProcessSkill ;
+    rdfs:label "삼각비를 활용하여 문제해결하기"@ko .
+
+ex:InformationProcessing a ex:Competency ;
+    rdfs:label "정보처리"@ko .
+
+ex:MathematicsSubject a <https://example.org/curriculum/mathematics#http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "수학 교과 클래스"@ko ;
+    rdfs:subClassOf ex:FourAreasRestriction,
+        ex:Subject .
+
+ex:NumberOperationsCoreIdea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "사물의 양은 자연수, 분수, 소수 등으로 표현되며, 수는 자연수에서 정수, 유리수, 실수로 확장된다."@ko .
+
+ex:NumberOperationsCoreIdea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "사칙계산은 자연수에 대해 정의되며 정수, 유리수, 실수의 사칙계산으로 확장되고 이때 연산의 성질이 일관되게 성립한다."@ko .
+
+ex:NumberOperationsCoreIdea3 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 3"@ko ;
+    ex:description "수와 사칙계산은 수학 학습의 기본이 되며, 실생활 문제를 포함한 다양한 문제를 해결하는 데 유용하게 활용된다."@ko .
+
+ex:NumberOperations_Attitude_01 a ex:ValueAttitude ;
+    rdfs:label "자연수, 분수, 소수의 필요성 인식"@ko .
+
+ex:NumberOperations_Attitude_02 a ex:ValueAttitude ;
+    rdfs:label "사칙계산, 어림의 유용성 인식"@ko .
+
+ex:NumberOperations_Attitude_03 a ex:ValueAttitude ;
+    rdfs:label "수와 연산 관련 문제해결에서 비판적으로 사고하는 태도"@ko .
+
+ex:NumberOperations_Attitude_04 a ex:ValueAttitude ;
+    rdfs:label "수 체계의 논리적 아름다움에 대한 관심"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Elementary12_01 a ex:KnowledgeUnderstanding ;
+    rdfs:label "네 자리 이하의 수"@ko ;
+    ex:belongsToGradeBand ex:Elementary12 ;
+    ex:gradeBand "초등학교 1~2학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Elementary12_02 a ex:KnowledgeUnderstanding ;
+    rdfs:label "두 자리 수 범위의 덧셈과 뺄셈"@ko ;
+    ex:belongsToGradeBand ex:Elementary12 ;
+    ex:gradeBand "초등학교 1~2학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Elementary12_03 a ex:KnowledgeUnderstanding ;
+    rdfs:label "한 자리 수의 곱셈"@ko ;
+    ex:belongsToGradeBand ex:Elementary12 ;
+    ex:gradeBand "초등학교 1~2학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Elementary34_01 a ex:KnowledgeUnderstanding ;
+    rdfs:label "다섯 자리 이상의 수"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Elementary34_02 a ex:KnowledgeUnderstanding ;
+    rdfs:label "분수"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Elementary34_03 a ex:KnowledgeUnderstanding ;
+    rdfs:label "소수"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Elementary34_04 a ex:KnowledgeUnderstanding ;
+    rdfs:label "세 자리 수의 덧셈과 뺄셈"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Elementary34_05 a ex:KnowledgeUnderstanding ;
+    rdfs:label "자연수의 곱셈과 나눗셈"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Elementary34_06 a ex:KnowledgeUnderstanding ;
+    rdfs:label "분모가 같은 분수의 덧셈과 뺄셈"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Elementary34_07 a ex:KnowledgeUnderstanding ;
+    rdfs:label "소수의 덧셈과 뺄셈"@ko ;
+    ex:belongsToGradeBand ex:Elementary34 ;
+    ex:gradeBand "초등학교 3~4학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Elementary56_01 a ex:KnowledgeUnderstanding ;
+    rdfs:label "약수와 배수"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Elementary56_02 a ex:KnowledgeUnderstanding ;
+    rdfs:label "수의 범위와 올림, 버림, 반올림"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Elementary56_03 a ex:KnowledgeUnderstanding ;
+    rdfs:label "자연수의 혼합 계산"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Elementary56_04 a ex:KnowledgeUnderstanding ;
+    rdfs:label "분모가 다른 분수의 덧셈과 뺄셈"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Elementary56_05 a ex:KnowledgeUnderstanding ;
+    rdfs:label "분수의 곱셈과 나눗셈"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Elementary56_06 a ex:KnowledgeUnderstanding ;
+    rdfs:label "소수의 곱셈과 나눗셈"@ko ;
+    ex:belongsToGradeBand ex:Elementary56 ;
+    ex:gradeBand "초등학교 5~6학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Middle13_01 a ex:KnowledgeUnderstanding ;
+    rdfs:label "소인수분해"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Middle13_02 a ex:KnowledgeUnderstanding ;
+    rdfs:label "정수와 유리수"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Middle13_03 a ex:KnowledgeUnderstanding ;
+    rdfs:label "유리수와 순환소수"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:NumberOperations_KnowledgeUnderstanding_Middle13_04 a ex:KnowledgeUnderstanding ;
+    rdfs:label "제곱근과 실수"@ko ;
+    ex:belongsToGradeBand ex:Middle13 ;
+    ex:gradeBand "중학교 1~3학년"@ko .
+
+ex:NumberOperations_Process_01 a ex:ProcessSkill ;
+    rdfs:label "수를 세고 읽고 쓰기"@ko .
+
+ex:NumberOperations_Process_02 a ex:ProcessSkill ;
+    rdfs:label "사칙계산의 의미와 계산 원리를 탐구하고 계산하기"@ko .
+
+ex:NumberOperations_Process_03 a ex:ProcessSkill ;
+    rdfs:label "수 감각과 연산 감각 기르기"@ko .
+
+ex:NumberOperations_Process_04 a ex:ProcessSkill ;
+    rdfs:label "정수, 유리수, 실수의 대소 관계 판단하기"@ko .
+
+ex:NumberOperations_Process_05 a ex:ProcessSkill ;
+    rdfs:label "유리수와 순환소수의 관계 설명하기"@ko .
+
+ex:ProblemSolving a ex:Competency ;
+    rdfs:label "문제해결"@ko .
+
+ex:Reasoning a ex:Competency ;
+    rdfs:label "추론"@ko .
+
+ex:Standard_2수01_01 a ex:AchievementStandard ;
+    rdfs:label "2수01-01"@ko ;
+    ex:achievementForGrade ex:Elementary12 ;
+    ex:associatedArea ex:NumberOperations ;
+    ex:code "2수01-01" ;
+    ex:standardText "수의 필요성을 인식하면서 0과 100까지의 수 개념을 이해하고, 수를 세고 읽고 쓸 수 있다."@ko .
+
+ex:Standard_2수01_06 a ex:AchievementStandard ;
+    rdfs:label "2수01-06"@ko ;
+    ex:achievementForGrade ex:Elementary12 ;
+    ex:associatedArea ex:NumberOperations ;
+    ex:code "2수01-06" ;
+    ex:standardText "두 자리 수의 범위에서 덧셈과 뺄셈의 계산 원리를 이해하고 그 계산을 할 수 있다."@ko .
+
+ex:Standard_2수02_01 a ex:AchievementStandard ;
+    rdfs:label "2수02-01"@ko ;
+    ex:achievementForGrade ex:Elementary12 ;
+    ex:associatedArea ex:ChangeRelations ;
+    ex:code "2수02-01" ;
+    ex:standardText "물체, 무늬, 수 등의 배열에서 규칙을 찾아 여러 가지 방법으로 표현할 수 있다."@ko .
+
+ex:Standard_2수03_01 a ex:AchievementStandard ;
+    rdfs:label "2수03-01"@ko ;
+    ex:achievementForGrade ex:Elementary12 ;
+    ex:associatedArea ex:GeometryMeasurement ;
+    ex:code "2수03-01" ;
+    ex:standardText "교실 및 생활 주변에서 여러 가지 물건을 관찰하여 직육면체, 원기둥, 구의 모양을 찾고, 이를 이용하여 여러 가지 모양을 만들 수 있다."@ko .
+
+ex:Standard_2수04_02 a ex:AchievementStandard ;
+    rdfs:label "2수04-02"@ko ;
+    ex:achievementForGrade ex:Elementary12 ;
+    ex:associatedArea ex:DataProbability ;
+    ex:code "2수04-02" ;
+    ex:standardText "자료를 분류하여 표로 나타내고, 자료를 표로 나타내면 편리한 점을 말할 수 있다."@ko .
+
+ex:Standard_4수01_01 a ex:AchievementStandard ;
+    rdfs:label "4수01-01"@ko ;
+    ex:achievementForGrade ex:Elementary34 ;
+    ex:associatedArea ex:NumberOperations ;
+    ex:code "4수01-01" ;
+    ex:standardText "큰 수의 필요성을 인식하면서 10000 이상의 큰 수에 대한 자릿값과 위치적 기수법을 이해하고, 수를 읽고 쓸 수 있다."@ko .
+
+ex:Standard_4수02_03 a ex:AchievementStandard ;
+    rdfs:label "4수02-03"@ko ;
+    ex:achievementForGrade ex:Elementary34 ;
+    ex:associatedArea ex:ChangeRelations ;
+    ex:code "4수02-03" ;
+    ex:standardText "등호를 사용하여 크기가 같은 두 양의 관계를 식으로 나타낼 수 있다."@ko .
+
+ex:Standard_4수03_01 a ex:AchievementStandard ;
+    rdfs:label "4수03-01"@ko ;
+    ex:achievementForGrade ex:Elementary34 ;
+    ex:associatedArea ex:GeometryMeasurement ;
+    ex:code "4수03-01" ;
+    ex:standardText "직선, 선분, 반직선을 이해하고 구별할 수 있다."@ko .
+
+ex:Standard_4수04_03 a ex:AchievementStandard ;
+    rdfs:label "4수04-03"@ko ;
+    ex:achievementForGrade ex:Elementary34 ;
+    ex:associatedArea ex:DataProbability ;
+    ex:code "4수04-03" ;
+    ex:standardText "탐구 문제를 해결하기 위해 자료를 수집, 정리하여 막대그래프나 꺾은선그래프로 나타내고 해석할 수 있다."@ko .
+
+ex:Standard_6수01_01 a ex:AchievementStandard ;
+    rdfs:label "6수01-01"@ko ;
+    ex:achievementForGrade ex:Elementary56 ;
+    ex:associatedArea ex:NumberOperations ;
+    ex:code "6수01-01" ;
+    ex:standardText "덧셈, 뺄셈, 곱셈, 나눗셈의 혼합 계산에서 계산하는 순서를 알고, 혼합 계산을 할 수 있다."@ko .
+
+ex:hasArea a owl:ObjectProperty ;
+    rdfs:label "포함 영역"@ko ;
+    rdfs:domain ex:Subject ;
+    rdfs:range ex:LearningArea .
+
+ex:ConvergenceElective a ex:CourseCategory ;
+    rdfs:label "융합 선택 과목"@ko .
+
+ex:GeneralElective a ex:CourseCategory ;
+    rdfs:label "일반 선택 과목"@ko .
+
+ex:GeometryMeasurement a ex:LearningArea ;
+    rdfs:label "도형과 측정"@ko ;
+    ex:hasAchievementStandard ex:Standard_2수03_01,
+        ex:Standard_4수03_01 ;
+    ex:hasContentElement ex:GeometryMeasurement_Attitude_01,
+        ex:GeometryMeasurement_Attitude_02,
+        ex:GeometryMeasurement_Attitude_03,
+        ex:GeometryMeasurement_Attitude_04,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary12_01,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary12_02,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary12_03,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary12_04,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary12_05,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_01,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_02,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_03,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_04,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_05,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_06,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_07,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_08,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_09,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_10,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary34_11,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary56_01,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary56_02,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary56_03,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary56_04,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary56_05,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary56_06,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Elementary56_07,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_01,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_02,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_03,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_04,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_05,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_06,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_07,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_08,
+        ex:GeometryMeasurement_KnowledgeUnderstanding_Middle13_09,
+        ex:GeometryMeasurement_Process_01,
+        ex:GeometryMeasurement_Process_02,
+        ex:GeometryMeasurement_Process_03,
+        ex:GeometryMeasurement_Process_04,
+        ex:GeometryMeasurement_Process_05 ;
+    ex:hasCoreIdea ex:GeometryMeasurementCoreIdea1,
+        ex:GeometryMeasurementCoreIdea2,
+        ex:GeometryMeasurementCoreIdea3 ;
+    ex:relatedToArea ex:ChangeRelations,
+        ex:DataProbability .
+
+ex:Common a ex:CourseCategory ;
+    rdfs:label "공통 과목"@ko .
+
+ex:CareerElective a ex:CourseCategory ;
+    rdfs:label "진로 선택 과목"@ko .
+
+ex:CourseCategory a <https://example.org/curriculum/mathematics#http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "과목 유형"@ko .
+
+ex:DataProbability a ex:LearningArea ;
+    rdfs:label "자료와 가능성"@ko ;
+    ex:hasAchievementStandard ex:Standard_2수04_02,
+        ex:Standard_4수04_03 ;
+    ex:hasContentElement ex:DataProbability_Attitude_01,
+        ex:DataProbability_Attitude_02,
+        ex:DataProbability_Attitude_03,
+        ex:DataProbability_Attitude_04,
+        ex:DataProbability_KnowledgeUnderstanding_Elementary12_01,
+        ex:DataProbability_KnowledgeUnderstanding_Elementary12_02,
+        ex:DataProbability_KnowledgeUnderstanding_Elementary12_03,
+        ex:DataProbability_KnowledgeUnderstanding_Elementary34_01,
+        ex:DataProbability_KnowledgeUnderstanding_Elementary34_02,
+        ex:DataProbability_KnowledgeUnderstanding_Elementary34_03,
+        ex:DataProbability_KnowledgeUnderstanding_Elementary56_01,
+        ex:DataProbability_KnowledgeUnderstanding_Elementary56_02,
+        ex:DataProbability_KnowledgeUnderstanding_Elementary56_03,
+        ex:DataProbability_KnowledgeUnderstanding_Middle13_01,
+        ex:DataProbability_KnowledgeUnderstanding_Middle13_02,
+        ex:DataProbability_KnowledgeUnderstanding_Middle13_03,
+        ex:DataProbability_KnowledgeUnderstanding_Middle13_04,
+        ex:DataProbability_KnowledgeUnderstanding_Middle13_05,
+        ex:DataProbability_Process_01,
+        ex:DataProbability_Process_02,
+        ex:DataProbability_Process_03,
+        ex:DataProbability_Process_04,
+        ex:DataProbability_Process_05 ;
+    ex:hasCoreIdea ex:DataProbabilityCoreIdea1,
+        ex:DataProbabilityCoreIdea2,
+        ex:DataProbabilityCoreIdea3 ;
+    ex:relatedToArea ex:ChangeRelations,
+        ex:NumberOperations .
+
+ex:Subject a <https://example.org/curriculum/mathematics#http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "교과"@ko ;
+    rdfs:subClassOf ex:Curriculum .
+
+ex:ChangeRelations a ex:LearningArea ;
+    rdfs:label "변화와 관계"@ko ;
+    ex:hasAchievementStandard ex:Standard_2수02_01,
+        ex:Standard_4수02_03 ;
+    ex:hasContentElement ex:ChangeRelations_Attitude_01,
+        ex:ChangeRelations_Attitude_02,
+        ex:ChangeRelations_Attitude_03,
+        ex:ChangeRelations_Attitude_04,
+        ex:ChangeRelations_KnowledgeUnderstanding_Elementary12_01,
+        ex:ChangeRelations_KnowledgeUnderstanding_Elementary34_01,
+        ex:ChangeRelations_KnowledgeUnderstanding_Elementary34_02,
+        ex:ChangeRelations_KnowledgeUnderstanding_Elementary56_01,
+        ex:ChangeRelations_KnowledgeUnderstanding_Elementary56_02,
+        ex:ChangeRelations_KnowledgeUnderstanding_Elementary56_03,
+        ex:ChangeRelations_KnowledgeUnderstanding_Middle13_01,
+        ex:ChangeRelations_KnowledgeUnderstanding_Middle13_02,
+        ex:ChangeRelations_KnowledgeUnderstanding_Middle13_03,
+        ex:ChangeRelations_KnowledgeUnderstanding_Middle13_04,
+        ex:ChangeRelations_KnowledgeUnderstanding_Middle13_05,
+        ex:ChangeRelations_KnowledgeUnderstanding_Middle13_06,
+        ex:ChangeRelations_KnowledgeUnderstanding_Middle13_07,
+        ex:ChangeRelations_KnowledgeUnderstanding_Middle13_08,
+        ex:ChangeRelations_KnowledgeUnderstanding_Middle13_09,
+        ex:ChangeRelations_KnowledgeUnderstanding_Middle13_10,
+        ex:ChangeRelations_KnowledgeUnderstanding_Middle13_11,
+        ex:ChangeRelations_Process_01,
+        ex:ChangeRelations_Process_02,
+        ex:ChangeRelations_Process_03,
+        ex:ChangeRelations_Process_04,
+        ex:ChangeRelations_Process_05 ;
+    ex:hasCoreIdea ex:ChangeRelationsCoreIdea1,
+        ex:ChangeRelationsCoreIdea2,
+        ex:ChangeRelationsCoreIdea3,
+        ex:ChangeRelationsCoreIdea4 ;
+    ex:relatedToArea ex:DataProbability,
+        ex:NumberOperations .
+
+ex:GradeBand a <https://example.org/curriculum/mathematics#http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "학년군"@ko .
+
+ex:NumberOperations a ex:LearningArea ;
+    rdfs:label "수와 연산"@ko ;
+    ex:hasAchievementStandard ex:Standard_2수01_01,
+        ex:Standard_2수01_06,
+        ex:Standard_4수01_01,
+        ex:Standard_6수01_01 ;
+    ex:hasContentElement ex:NumberOperations_Attitude_01,
+        ex:NumberOperations_Attitude_02,
+        ex:NumberOperations_Attitude_03,
+        ex:NumberOperations_Attitude_04,
+        ex:NumberOperations_KnowledgeUnderstanding_Elementary12_01,
+        ex:NumberOperations_KnowledgeUnderstanding_Elementary12_02,
+        ex:NumberOperations_KnowledgeUnderstanding_Elementary12_03,
+        ex:NumberOperations_KnowledgeUnderstanding_Elementary34_01,
+        ex:NumberOperations_KnowledgeUnderstanding_Elementary34_02,
+        ex:NumberOperations_KnowledgeUnderstanding_Elementary34_03,
+        ex:NumberOperations_KnowledgeUnderstanding_Elementary34_04,
+        ex:NumberOperations_KnowledgeUnderstanding_Elementary34_05,
+        ex:NumberOperations_KnowledgeUnderstanding_Elementary34_06,
+        ex:NumberOperations_KnowledgeUnderstanding_Elementary34_07,
+        ex:NumberOperations_KnowledgeUnderstanding_Elementary56_01,
+        ex:NumberOperations_KnowledgeUnderstanding_Elementary56_02,
+        ex:NumberOperations_KnowledgeUnderstanding_Elementary56_03,
+        ex:NumberOperations_KnowledgeUnderstanding_Elementary56_04,
+        ex:NumberOperations_KnowledgeUnderstanding_Elementary56_05,
+        ex:NumberOperations_KnowledgeUnderstanding_Elementary56_06,
+        ex:NumberOperations_KnowledgeUnderstanding_Middle13_01,
+        ex:NumberOperations_KnowledgeUnderstanding_Middle13_02,
+        ex:NumberOperations_KnowledgeUnderstanding_Middle13_03,
+        ex:NumberOperations_KnowledgeUnderstanding_Middle13_04,
+        ex:NumberOperations_Process_01,
+        ex:NumberOperations_Process_02,
+        ex:NumberOperations_Process_03,
+        ex:NumberOperations_Process_04,
+        ex:NumberOperations_Process_05 ;
+    ex:hasCoreIdea ex:NumberOperationsCoreIdea1,
+        ex:NumberOperationsCoreIdea2,
+        ex:NumberOperationsCoreIdea3 ;
+    ex:relatedToArea ex:ChangeRelations .
+
+ex:Competency a <https://example.org/curriculum/mathematics#http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "교과 역량"@ko .
+
+ex:ContentElement a <https://example.org/curriculum/mathematics#http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "내용 요소"@ko .
+
+ex:LearningArea a <https://example.org/curriculum/mathematics#http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "내용 영역"@ko ;
+    owl:disjointWith ex:Competency,
+        ex:ContentElement,
+        ex:CoreIdea .
+
+ex:AchievementStandard a <https://example.org/curriculum/mathematics#http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "성취기준"@ko .
+
+ex:CoreIdea a <https://example.org/curriculum/mathematics#http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "핵심 아이디어"@ko ;
+    owl:disjointWith ex:Competency,
+        ex:ContentElement .
+
+ex:Course a <https://example.org/curriculum/mathematics#http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "고등학교 과목"@ko .
+
+ex:Elementary12 a ex:GradeBand ;
+    rdfs:label "초등학교 1~2학년"@ko .
+
+ex:ValueAttitude a <https://example.org/curriculum/mathematics#http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "가치·태도"@ko ;
+    rdfs:subClassOf ex:ContentElement .
+
+ex:Elementary56 a ex:GradeBand ;
+    rdfs:label "초등학교 5~6학년"@ko .
+
+ex:ProcessSkill a <https://example.org/curriculum/mathematics#http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "과정·기능"@ko ;
+    rdfs:subClassOf ex:ContentElement ;
+    owl:disjointWith ex:ValueAttitude .
+
+ex:Elementary34 a ex:GradeBand ;
+    rdfs:label "초등학교 3~4학년"@ko .
+
+ex:Middle13 a ex:GradeBand ;
+    rdfs:label "중학교 1~3학년"@ko .
+
+ex:KnowledgeUnderstanding a <https://example.org/curriculum/mathematics#http://www.w3.org/2002/07/owl#Class> ;
+    rdfs:label "지식·이해"@ko ;
+    rdfs:subClassOf ex:ContentElement ;
+    owl:disjointWith ex:ProcessSkill,
+        ex:ValueAttitude .
+
