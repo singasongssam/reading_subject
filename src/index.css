@@ -108,3 +108,12 @@
 .print-only {
   display: none;
 }
+
+/* Keep the actual lesson artifact printable without navigation controls. */
+@media print {
+  .lesson-print-root { max-width: none !important; padding: 0 !important; }
+  .plan-table { width: 100%; table-layout: fixed; border-collapse: collapse; }
+  .plan-table td, .plan-table th { overflow-wrap: anywhere; word-break: keep-all; }
+  .plan-table thead { display: table-header-group; }
+  .plan-table tr { break-inside: avoid; page-break-inside: avoid; }
+}

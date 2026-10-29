@@ -1,20 +1,19 @@
-import { AiProvider } from './types';
+import type { AiProvider } from './types';
 import { MockProvider } from './mockProvider';
 import { GeminiProvider } from './geminiProvider';
-
+import { getUserKey } from './userKey';
 export * from './types';
-export * from './mockProvider';
-export * from './geminiProvider';
-
-// VITE_AI_MODE 환경변수 분기: mock 또는 gemini
-const aiMode = import.meta.env.VITE_AI_MODE || 'mock';
-const geminiKey = import.meta.env.VITE_GEMINI_API_KEY || '';
-
+export * from './userKey';
 export function getAiProvider(): AiProvider {
-  if (aiMode === 'gemini' && geminiKey) {
-    return new GeminiProvider(geminiKey, import.meta.env.VITE_GEMINI_MODEL || 'gemini-2.0-flash');
-  }
-  return new MockProvider();
+  const key = getUserKey();
+  return key ? new GeminiProvider(key, import.meta.env.VITE_GEMINI_MODEL || 'gemini-2.5-flash') : new MockProvider();
 }
-
-export const aiProvider = getAiProvider();
+// Resolve provider per call so changing personal key takes effect without a page reload.
+export const aiProvider: AiProvider = {
+  get name() { return getAiProvider().name; },
+  generateMaterialSet: (...args) => getAiProvider().generateMaterialSet(...args),
+  composeGagnePlan: (...args) => getAiProvider().composeGagnePlan(...args),
+  generateMaterial: (...args) => getAiProvider().generateMaterial(...args),
+  recommendStrategies: (...args) => getAiProvider().recommendStrategies(...args),
+  generateLessonPlan: (...args) => getAiProvider().generateLessonPlan(...args),
+};

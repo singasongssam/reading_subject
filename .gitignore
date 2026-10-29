@@ -44,3 +44,5 @@ Thumbs.db
 # Firebase cache
 .firebase/
 .firebaserc.local
+
+firebaseConfig_Key.txt

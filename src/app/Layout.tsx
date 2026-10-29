@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { BookOpen, Compass, Wand2, Archive, ShieldCheck, LogOut, Sparkles } from 'lucide-react';
 import { useAuth } from '@/features/auth/AuthContext';
+import { getUserKey, setUserKey, setActiveAiUser } from '@/lib/ai';
 
 export const Layout: React.FC = () => {
   const { currentUser, logout } = useAuth();
   const navigate = useNavigate();
+  const [showAiSettings, setShowAiSettings] = useState(false);
+  const [personalKey, setPersonalKey] = useState('');
+  const [keyMessage, setKeyMessage] = useState('');
+  useEffect(() => {
+    setActiveAiUser(currentUser?.loginId || null);
+    if (currentUser) setPersonalKey(getUserKey(currentUser.loginId));
+  }, [currentUser]);
 
   const handleLogout = () => {
     logout();
@@ -65,11 +73,9 @@ export const Layout: React.FC = () => {
 
           {/* 우측 유저 프로필 및 상태 배지 */}
           <div className="flex items-center gap-3">
-            {/* 오프라인 AI 모드 배지 */}
-            <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200">
-              <Sparkles className="w-3 h-3 text-emerald-500" />
-              Mock AI (오프라인)
-            </span>
+            <button type="button" className="inline-flex items-center gap-1.5 px-3 py-2 rounded-lg bg-indigo-50 text-indigo-700 border border-indigo-200 text-xs font-semibold" onClick={() => {setKeyMessage('');setShowAiSettings(true);}}>
+              <Sparkles className="w-4 h-4"/> 개인 AI 설정
+            </button>
 
             {/* 사용자 정보 */}
             <div className="flex items-center gap-2.5 pl-3 border-l border-slate-200">
@@ -124,6 +130,20 @@ export const Layout: React.FC = () => {
         </div>
       </header>
 
+      {showAiSettings && <div className="fixed inset-0 z-50 bg-black/40 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="개인 Gemini 키 설정">
+        <div className="bg-white rounded-xl p-6 w-full max-w-lg space-y-4 shadow-xl">
+          <h2 className="text-lg font-bold">개인 Gemini API 키</h2>
+          <p className="text-sm text-slate-600">내 키를 등록하면 읽기자료·발문·활동·평가기준에 AI를 활용합니다. 비워두면 규칙 기반으로 생성합니다.</p>
+          <input aria-label="Gemini API 키" type="password" autoComplete="off" value={personalKey} onChange={e => setPersonalKey(e.target.value)} className="border rounded-lg w-full p-3" placeholder="Gemini API 키" />
+          <p className="text-xs text-amber-700">키는 현재 브라우저 탭 세션에 저장됩니다. 브라우저에서 직접 Gemini를 호출하므로 개발자 도구 및 네트워크 요청에서 키가 보일 수 있습니다. 공유 PC에서는 사용하지 마세요.</p>
+          <div className="flex gap-2 justify-end flex-wrap">
+            <button type="button" className="border rounded-lg px-3 py-2" onClick={() => {setUserKey(currentUser.loginId,'');setPersonalKey('');setKeyMessage('키 삭제 완료 — 규칙 기반 모드');}}>키 삭제</button>
+            <button type="button" className="border rounded-lg px-3 py-2" onClick={() => setShowAiSettings(false)}>닫기</button>
+            <button type="button" className="bg-indigo-600 text-white rounded-lg px-4 py-2" onClick={() => {setUserKey(currentUser.loginId,personalKey);setKeyMessage(personalKey.trim() ? '개인 키 저장 완료 — 다음 생성부터 AI 적용' : '규칙 기반 모드');}}>저장</button>
+          </div>
+          {keyMessage && <p role="status" className="text-sm text-emerald-700">{keyMessage}</p>}
+        </div>
+      </div>}
       {/* 메인 뷰 컨테이너 */}
       <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
         <Outlet />

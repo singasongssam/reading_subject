@@ -1,0 +1,1540 @@
+# 교육부 고시 제2022-33호 [별책 18] 중학교 선택 교과 교육과정
+# 사회과.ttl의 RDF/RDFS/OWL 표현 체계를 참조하였으며 환경·보건·진로와 직업 3과목의 13개 내용 영역, 핵심 아이디어, 3범주 내용 요소, 전체 성취기준을 담음.
+# 원문 HWP의 일부 항목에는 붙어 쓰기와 띄어쓰기 등의 출판 원문 표기가 그대로 반영됨.
+
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ex: <https://example.org/curriculum/middle-school-electives#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:CareerAreaRestriction a owl:Restriction ;
+    owl:onClass ex:LearningArea ;
+    owl:onProperty ex:hasArea ;
+    owl:qualifiedCardinality "3"^^xsd:nonNegativeInteger .
+
+ex:EnvironmentAreaRestriction a owl:Restriction ;
+    owl:onClass ex:LearningArea ;
+    owl:onProperty ex:hasArea ;
+    owl:qualifiedCardinality "5"^^xsd:nonNegativeInteger .
+
+ex:HealthAreaRestriction a owl:Restriction ;
+    owl:onClass ex:LearningArea ;
+    owl:onProperty ex:hasArea ;
+    owl:qualifiedCardinality "5"^^xsd:nonNegativeInteger .
+
+ex:MiddleSchoolElectiveCurriculum a owl:Ontology ;
+    dc:description "교육부 고시 제2022-33호 [별책 18]의 환경·보건·진로와 직업 과목을 구조화한 자료. 핵심 아이디어·내용 요소·성취기준은 해당 원문을 기준으로 작성."@ko ;
+    dc:title "2022 개정 중학교 선택 교과 교육과정 RDF/RDFS/OWL"@ko .
+
+ex:associatedArea a owl:ObjectProperty ;
+    rdfs:label "관련 영역"@ko ;
+    rdfs:domain ex:AchievementStandard ;
+    rdfs:range ex:LearningArea .
+
+ex:belongsToSubject a owl:ObjectProperty ;
+    rdfs:label "소속 과목"@ko ;
+    rdfs:domain ex:AchievementStandard ;
+    rdfs:range ex:Subject .
+
+ex:code a owl:DatatypeProperty ;
+    rdfs:label "성취기준 코드"@ko ;
+    rdfs:range xsd:string .
+
+ex:description a owl:DatatypeProperty ;
+    rdfs:label "설명"@ko ;
+    rdfs:range xsd:string .
+
+ex:developsCompetency a owl:ObjectProperty ;
+    rdfs:label "함양 역량"@ko ;
+    rdfs:domain ex:Subject ;
+    rdfs:range ex:Competency .
+
+ex:hasAchievementStandard a owl:ObjectProperty ;
+    rdfs:label "성취기준"@ko ;
+    rdfs:domain ex:LearningArea ;
+    rdfs:range ex:AchievementStandard .
+
+ex:hasContentElement a owl:ObjectProperty ;
+    rdfs:label "내용 요소"@ko ;
+    rdfs:domain ex:LearningArea ;
+    rdfs:range ex:ContentElement .
+
+ex:hasCoreIdea a owl:ObjectProperty ;
+    rdfs:label "핵심 아이디어"@ko ;
+    rdfs:domain ex:LearningArea ;
+    rdfs:range ex:CoreIdea .
+
+ex:relatedToArea a owl:ObjectProperty ;
+    rdfs:label "관련 영역"@ko ;
+    rdfs:domain ex:LearningArea ;
+    rdfs:range ex:LearningArea .
+
+ex:standardText a owl:DatatypeProperty ;
+    rdfs:label "성취기준 원문"@ko ;
+    rdfs:range xsd:string .
+
+ex:CareerCompetency1 a ex:Competency ;
+    rdfs:label "진로 개발 역량"@ko .
+
+ex:CareerExploration_Idea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "직업 세계는 사회 환경 변화를 반영한다."@ko .
+
+ex:CareerExploration_Idea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "자신에게 적합한 진로 기회를 발견하기 위해서는 폭넓은 진로 정보와 학습이 필요하다."@ko .
+
+ex:CareerExploration_Idea3 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 3"@ko ;
+    ex:description "다양한 경험과 진로 활동 참여는 진로 탐색의 주도성을 높인다."@ko .
+
+ex:CareerExploration_Idea4 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 4"@ko ;
+    ex:description "창업가 정신은 진로 탐색에 있어 새로운 기회와 다양한 도전의 기반이 된다."@ko .
+
+ex:CareerExploration_KnowledgeUnderstanding1 a ex:KnowledgeUnderstanding ;
+    rdfs:label "직업 세계의 다양성과 가변성"@ko .
+
+ex:CareerExploration_KnowledgeUnderstanding2 a ex:KnowledgeUnderstanding ;
+    rdfs:label "직업 및 학과 정보"@ko .
+
+ex:CareerExploration_KnowledgeUnderstanding3 a ex:KnowledgeUnderstanding ;
+    rdfs:label "진로 경로와 교육 기회"@ko .
+
+ex:CareerExploration_KnowledgeUnderstanding4 a ex:KnowledgeUnderstanding ;
+    rdfs:label "창업과 창업가 정신"@ko .
+
+ex:CareerExploration_ProcessSkill1 a ex:ProcessSkill ;
+    rdfs:label "직업 세계와 진로 정보 탐색하기"@ko .
+
+ex:CareerExploration_ProcessSkill2 a ex:ProcessSkill ;
+    rdfs:label "다양한 진로 활동 참여하기"@ko .
+
+ex:CareerExploration_ProcessSkill3 a ex:ProcessSkill ;
+    rdfs:label "창업가 사례 조사하기"@ko .
+
+ex:CareerExploration_ValueAttitude1 a ex:ValueAttitude ;
+    rdfs:label "직업 세계 변화에 대한 적응성"@ko .
+
+ex:CareerExploration_ValueAttitude2 a ex:ValueAttitude ;
+    rdfs:label "진로 탐색의 자기 주도적인 태도"@ko .
+
+ex:CareerExploration_ValueAttitude3 a ex:ValueAttitude ;
+    rdfs:label "창의적 발상과 도전 정신"@ko .
+
+ex:CareerPlanning_Idea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "진로의사결정은 개인적, 환경적 특성과 요인과 관련된다."@ko .
+
+ex:CareerPlanning_Idea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "진로에서 학습의 중요성에 대한 인식과 긍정적 태도는 진로 목표 달성에 도움을 준다."@ko .
+
+ex:CareerPlanning_Idea3 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 3"@ko ;
+    ex:description "진로 준비는 자기 주도적인 진로 설계와 실천이 수반된다."@ko .
+
+ex:CareerPlanning_KnowledgeUnderstanding1 a ex:KnowledgeUnderstanding ;
+    rdfs:label "진로의사결정의 개념, 방법 및 고려사항"@ko .
+
+ex:CareerPlanning_KnowledgeUnderstanding2 a ex:KnowledgeUnderstanding ;
+    rdfs:label "진로 경로와 학습 계획"@ko .
+
+ex:CareerPlanning_KnowledgeUnderstanding3 a ex:KnowledgeUnderstanding ;
+    rdfs:label "진로 목표 달성을 위한 자기 관리"@ko .
+
+ex:CareerPlanning_ProcessSkill1 a ex:ProcessSkill ;
+    rdfs:label "잠정적 진로의사결정하기"@ko .
+
+ex:CareerPlanning_ProcessSkill2 a ex:ProcessSkill ;
+    rdfs:label "진로 목표 달성을 위한 학습 방법 수립하기"@ko .
+
+ex:CareerPlanning_ProcessSkill3 a ex:ProcessSkill ;
+    rdfs:label "진로 계획 및 단계별 실천 방법을 수립하고 실행하기"@ko .
+
+ex:CareerPlanning_ValueAttitude1 a ex:ValueAttitude ;
+    rdfs:label "진로의사결정의 주도성"@ko .
+
+ex:CareerPlanning_ValueAttitude2 a ex:ValueAttitude ;
+    rdfs:label "학습에 대한 긍정적 태도와 의지"@ko .
+
+ex:CareerPlanning_ValueAttitude3 a ex:ValueAttitude ;
+    rdfs:label "자기 주도적인 학습 실천 태도"@ko .
+
+ex:CareerPlanning_ValueAttitude4 a ex:ValueAttitude ;
+    rdfs:label "진로 계획 실천의 중요성 내면화"@ko .
+
+ex:CareerSelf_Idea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "직업군에 따라 직업인에게 요구되는 진로 특성이 있고, 진로 특성은 경험과 학습을 통해 계발된다."@ko .
+
+ex:CareerSelf_Idea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "자신의 진로 특성에 대한 이해와 긍정적 자아 개념 형성은 미래 진로를 탐색하는 데 기초가 된다."@ko .
+
+ex:CareerSelf_Idea3 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 3"@ko ;
+    ex:description "함께 일하고 싶은 직업인은 긍정적인 특성과 태도를 갖추고 있다."@ko .
+
+ex:CareerSelf_KnowledgeUnderstanding1 a ex:KnowledgeUnderstanding ;
+    rdfs:label "진로와 직업의 의미와 중요성"@ko .
+
+ex:CareerSelf_KnowledgeUnderstanding2 a ex:KnowledgeUnderstanding ;
+    rdfs:label "다양한 직업인의 진로 특성과 삶의 모습"@ko .
+
+ex:CareerSelf_KnowledgeUnderstanding3 a ex:KnowledgeUnderstanding ;
+    rdfs:label "나의 진로 특성 및 긍정적 자아 개념"@ko .
+
+ex:CareerSelf_KnowledgeUnderstanding4 a ex:KnowledgeUnderstanding ;
+    rdfs:label "바람직한 직업인의 기본자세"@ko .
+
+ex:CareerSelf_KnowledgeUnderstanding5 a ex:KnowledgeUnderstanding ;
+    rdfs:label "일과 여가의 개인적⋅사회적 의미"@ko .
+
+ex:CareerSelf_ProcessSkill1 a ex:ProcessSkill ;
+    rdfs:label "다양한 직업인의 삶과 진로 특성 조사하기"@ko .
+
+ex:CareerSelf_ProcessSkill2 a ex:ProcessSkill ;
+    rdfs:label "다양한 방법으로 자신의 진로 특성 분석하기"@ko .
+
+ex:CareerSelf_ProcessSkill3 a ex:ProcessSkill ;
+    rdfs:label "함께 일하고 싶은 바람직한 직업인의 특성과 자세 분석하기"@ko .
+
+ex:CareerSelf_ValueAttitude1 a ex:ValueAttitude ;
+    rdfs:label "자신과 타인의 진로 특성 존중"@ko .
+
+ex:CareerSelf_ValueAttitude2 a ex:ValueAttitude ;
+    rdfs:label "진로에 대한 자기 주도적 태도와 자신감"@ko .
+
+ex:CareerSelf_ValueAttitude3 a ex:ValueAttitude ;
+    rdfs:label "삶에서 일과 여가의 가치와 행복"@ko .
+
+ex:ClimateAction_Idea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "기후변화는 전 지구적으로 발생하고 있으며, 지구 생태계와 인간 사회에 중대한 영향을 끼친다."@ko .
+
+ex:ClimateAction_Idea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "기후위기는 인간 활동이 초래하였으며, 그 영향과 피해는 지역과 집단에 따라 다르게 나타난다."@ko .
+
+ex:ClimateAction_Idea3 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 3"@ko ;
+    ex:description "기후위기 극복을 위해 사회 전 분야에서 기후행동의 계획과 실천이 필요하다."@ko .
+
+ex:ClimateAction_KnowledgeUnderstanding1 a ex:KnowledgeUnderstanding ;
+    rdfs:label "기후변화와 기후위기"@ko .
+
+ex:ClimateAction_KnowledgeUnderstanding2 a ex:KnowledgeUnderstanding ;
+    rdfs:label "기후변화의 영향과 피해"@ko .
+
+ex:ClimateAction_KnowledgeUnderstanding3 a ex:KnowledgeUnderstanding ;
+    rdfs:label "기후위기와 생물다양성의 관계"@ko .
+
+ex:ClimateAction_KnowledgeUnderstanding4 a ex:KnowledgeUnderstanding ;
+    rdfs:label "온실가스 배출과 기후위기"@ko .
+
+ex:ClimateAction_KnowledgeUnderstanding5 a ex:KnowledgeUnderstanding ;
+    rdfs:label "기후행동"@ko .
+
+ex:ClimateAction_ProcessSkill1 a ex:ProcessSkill ;
+    rdfs:label "기후변화의 영향과 불평등 사례 조사하기"@ko .
+
+ex:ClimateAction_ProcessSkill2 a ex:ProcessSkill ;
+    rdfs:label "일상생활 속 온실가스 배출 조사하고 비교하기"@ko .
+
+ex:ClimateAction_ProcessSkill3 a ex:ProcessSkill ;
+    rdfs:label "기후위기 대응 원칙에 대해 토의하기"@ko .
+
+ex:ClimateAction_ProcessSkill4 a ex:ProcessSkill ;
+    rdfs:label "기후행동을 계획하고 실천하기"@ko .
+
+ex:ClimateAction_ValueAttitude1 a ex:ValueAttitude ;
+    rdfs:label "기후변화 피해에 대한 공감"@ko .
+
+ex:ClimateAction_ValueAttitude2 a ex:ValueAttitude ;
+    rdfs:label "기후위기에 대한 인간의 책임감"@ko .
+
+ex:ClimateAction_ValueAttitude3 a ex:ValueAttitude ;
+    rdfs:label "기후행동 참여와 실천 의지"@ko .
+
+ex:Curriculum a owl:Class ;
+    rdfs:label "교육과정"@ko .
+
+ex:EnvironmentCompetency1 a ex:Competency ;
+    rdfs:label "환경 감수성"@ko .
+
+ex:EnvironmentCompetency2 a ex:Competency ;
+    rdfs:label "시스템사고"@ko .
+
+ex:EnvironmentCompetency3 a ex:Competency ;
+    rdfs:label "협력과 공동체 역량"@ko .
+
+ex:EnvironmentCompetency4 a ex:Competency ;
+    rdfs:label "의사소통 및 갈등 해결 역량"@ko .
+
+ex:EnvironmentCompetency5 a ex:Competency ;
+    rdfs:label "창의적 문제 해결 역량"@ko .
+
+ex:EnvironmentCompetency6 a ex:Competency ;
+    rdfs:label "환경 정보 활용 능력"@ko .
+
+ex:EnvironmentalIssues_Idea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "환경 문제와 쟁점은 지구 생태계 및 사회 체계와 유기적으로 연결되어 있다."@ko .
+
+ex:EnvironmentalIssues_Idea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "환경 문제와 쟁점의 탐구는 환경적⋅사회적⋅경제적 관점에서 통합적⋅심층적으로 접근될 필요가 있다."@ko .
+
+ex:EnvironmentalIssues_Idea3 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 3"@ko ;
+    ex:description "환경 문제와 쟁점을 분석하고 해결 방안을 제시할 때는 지속가능성과 형평성에 대한 고려가 필요하다."@ko .
+
+ex:EnvironmentalIssues_KnowledgeUnderstanding1 a ex:KnowledgeUnderstanding ;
+    rdfs:label "환경 문제와 지구 생태계 및 사회 체계의 연결성"@ko .
+
+ex:EnvironmentalIssues_KnowledgeUnderstanding2 a ex:KnowledgeUnderstanding ;
+    rdfs:label "에너지 이용과 자원 순환의 문제 및 쟁점"@ko .
+
+ex:EnvironmentalIssues_KnowledgeUnderstanding3 a ex:KnowledgeUnderstanding ;
+    rdfs:label "지역 환경 문제와 지구 환경 문제"@ko .
+
+ex:EnvironmentalIssues_KnowledgeUnderstanding4 a ex:KnowledgeUnderstanding ;
+    rdfs:label "지속가능성과 형평성을 고려한 환경 문제 해결 방안"@ko .
+
+ex:EnvironmentalIssues_ProcessSkill1 a ex:ProcessSkill ;
+    rdfs:label "환경 문제와 환경 체계 내 상호 작용 연결하기"@ko .
+
+ex:EnvironmentalIssues_ProcessSkill2 a ex:ProcessSkill ;
+    rdfs:label "환경 문제의 원인과 영향 조사하고 추론하기"@ko .
+
+ex:EnvironmentalIssues_ProcessSkill3 a ex:ProcessSkill ;
+    rdfs:label "환경 문제에 관한 탐구 계획 및 수행하기"@ko .
+
+ex:EnvironmentalIssues_ProcessSkill4 a ex:ProcessSkill ;
+    rdfs:label "환경 문제 해결을 위한 참여와 실천하기"@ko .
+
+ex:EnvironmentalIssues_ValueAttitude1 a ex:ValueAttitude ;
+    rdfs:label "환경 문제의 복잡성과 통합성 인식"@ko .
+
+ex:EnvironmentalIssues_ValueAttitude2 a ex:ValueAttitude ;
+    rdfs:label "환경 문제에 대한 인간의 책임 인식"@ko .
+
+ex:EnvironmentalIssues_ValueAttitude3 a ex:ValueAttitude ;
+    rdfs:label "환경 문제 이해 및 해결 과정에서 지속가능성과 형평성 추구"@ko .
+
+ex:EnvironmentalIssues_ValueAttitude4 a ex:ValueAttitude ;
+    rdfs:label "환경 문제 해결을 위한 주체적 환경 행동 의지"@ko .
+
+ex:EnvironmentalSystem_Idea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "지구 생태계는 물, 대기, 토양, 인간을 포함한 생물 등으로 구성되며 이들은 서로 영향을 주고받는다."@ko .
+
+ex:EnvironmentalSystem_Idea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "환경은 지구 생태계와 인간 사회로 구성된 복잡한 시스템이다."@ko .
+
+ex:EnvironmentalSystem_Idea3 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 3"@ko ;
+    ex:description "환경 체계의 변화와 역동성을 이해하기 위해서는 환류적⋅통합적 사고가 필요하다."@ko .
+
+ex:EnvironmentalSystem_KnowledgeUnderstanding1 a ex:KnowledgeUnderstanding ;
+    rdfs:label "물, 대기, 토양, 생물 등 지구 생태계 구성 요소의 특징과 역할"@ko .
+
+ex:EnvironmentalSystem_KnowledgeUnderstanding2 a ex:KnowledgeUnderstanding ;
+    rdfs:label "물, 대기, 토양, 생물 등 지구 생태계와 인간 사회의 상호 작용"@ko .
+
+ex:EnvironmentalSystem_KnowledgeUnderstanding3 a ex:KnowledgeUnderstanding ;
+    rdfs:label "환경 변화와 시스템사고"@ko .
+
+ex:EnvironmentalSystem_KnowledgeUnderstanding4 a ex:KnowledgeUnderstanding ;
+    rdfs:label "환경 체계의 의미와 복잡성"@ko .
+
+ex:EnvironmentalSystem_ProcessSkill1 a ex:ProcessSkill ;
+    rdfs:label "환경 체계 구성 요소의 특징 조사하기"@ko .
+
+ex:EnvironmentalSystem_ProcessSkill2 a ex:ProcessSkill ;
+    rdfs:label "환경 체계 구성 요소 간 상호 작용 분석하기"@ko .
+
+ex:EnvironmentalSystem_ProcessSkill3 a ex:ProcessSkill ;
+    rdfs:label "지역적⋅지구적 수준에서 환경 체계의 변화 추론하기"@ko .
+
+ex:EnvironmentalSystem_ValueAttitude1 a ex:ValueAttitude ;
+    rdfs:label "환경 체계 내 자연과 문화 다양성의 가치 인식"@ko .
+
+ex:EnvironmentalSystem_ValueAttitude2 a ex:ValueAttitude ;
+    rdfs:label "부분에서 나아가 전체를 바라보는 인식과 태도"@ko .
+
+ex:HealthCompetency1 a ex:Competency ;
+    rdfs:label "건강관리 역량"@ko .
+
+ex:HealthCompetency2 a ex:Competency ;
+    rdfs:label "건강문제해결 역량"@ko .
+
+ex:HealthCompetency3 a ex:Competency ;
+    rdfs:label "건강옹호 역량"@ko .
+
+ex:HealthPromotion_Idea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "우리 삶의 질에 중요한 건강을 유지, 증진하기 위해서는 건강의 연속성과 항상성 및 다양한 영향요인을 고려한 건강관리가 중요하다."@ko .
+
+ex:HealthPromotion_Idea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "건강관리의 생활화를 위해서는 몸과 마음의 신호를 알아차리고, 건강관리 모델과 전략, 건강생활기술, 정보, 자원을 활용할 수 있는 건강관리 역량과 사회적 지지가 중요하다."@ko .
+
+ex:HealthPromotion_KnowledgeUnderstanding1 a ex:KnowledgeUnderstanding ;
+    rdfs:label "건강 개념과 영향요인"@ko .
+
+ex:HealthPromotion_KnowledgeUnderstanding2 a ex:KnowledgeUnderstanding ;
+    rdfs:label "건강관리모델"@ko .
+
+ex:HealthPromotion_KnowledgeUnderstanding3 a ex:KnowledgeUnderstanding ;
+    rdfs:label "건강에 대한 사회적 지지"@ko .
+
+ex:HealthPromotion_KnowledgeUnderstanding4 a ex:KnowledgeUnderstanding ;
+    rdfs:label "몸과 마음의 신호와 건강지표"@ko .
+
+ex:HealthPromotion_KnowledgeUnderstanding5 a ex:KnowledgeUnderstanding ;
+    rdfs:label "생활주기와 건강생활습관"@ko .
+
+ex:HealthPromotion_KnowledgeUnderstanding6 a ex:KnowledgeUnderstanding ;
+    rdfs:label "건강문제 및 질병 예방과 건강관리"@ko .
+
+ex:HealthPromotion_KnowledgeUnderstanding7 a ex:KnowledgeUnderstanding ;
+    rdfs:label "건강생활기술"@ko .
+
+ex:HealthPromotion_KnowledgeUnderstanding8 a ex:KnowledgeUnderstanding ;
+    rdfs:label "건강옹호와 협력"@ko .
+
+ex:HealthPromotion_ProcessSkill1 a ex:ProcessSkill ;
+    rdfs:label "건강 개념 및 가치와 영향요인 탐색하기"@ko .
+
+ex:HealthPromotion_ProcessSkill2 a ex:ProcessSkill ;
+    rdfs:label "몸과 마음의 신호 이해하기"@ko .
+
+ex:HealthPromotion_ProcessSkill3 a ex:ProcessSkill ;
+    rdfs:label "건강상태를 확인하고 건강관리 방안 제시하기"@ko .
+
+ex:HealthPromotion_ProcessSkill4 a ex:ProcessSkill ;
+    rdfs:label "건강관리 모델을 알아보고 생활에 적용하기"@ko .
+
+ex:HealthPromotion_ProcessSkill5 a ex:ProcessSkill ;
+    rdfs:label "건강관리 목표와 전략을 세우고 평가하기"@ko .
+
+ex:HealthPromotion_ProcessSkill6 a ex:ProcessSkill ;
+    rdfs:label "건강문제와 건강생활기술을 탐색하여 건강관리 실천하기"@ko .
+
+ex:HealthPromotion_ProcessSkill7 a ex:ProcessSkill ;
+    rdfs:label "건강옹호활동을 이해하여 사례에 적용하기"@ko .
+
+ex:HealthPromotion_ValueAttitude1 a ex:ValueAttitude ;
+    rdfs:label "건강과 행복의 소중함"@ko .
+
+ex:HealthPromotion_ValueAttitude2 a ex:ValueAttitude ;
+    rdfs:label "건강의 가치 내면화 및 건강을 관리하려는 태도"@ko .
+
+ex:HealthPromotion_ValueAttitude3 a ex:ValueAttitude ;
+    rdfs:label "몸과 마음의 신호에 대한 민감성"@ko .
+
+ex:HealthPromotion_ValueAttitude4 a ex:ValueAttitude ;
+    rdfs:label "건강생활기술 활용 및 옹호와 협력에 대한 적극성"@ko .
+
+ex:HealthResourcesCulture_Idea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "건강 수준은 가정환경, 성, 경제 수준 등에 따라 차이가 있으므로 건강을 옹호하고 지지하는 건강지향적인 사회 환경이 필요하다."@ko .
+
+ex:HealthResourcesCulture_Idea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "디지털 기술과 미디어, 인공지능 시대의 보건의료 환경 및 의료서비스의 변화는 사람들의 건강정보와 건강자원의 선택 및 활용에 영향을 미친다."@ko .
+
+ex:HealthResourcesCulture_Idea3 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 3"@ko ;
+    ex:description "인류의 건강을 위협하는 기후변화는 지속가능한 사회를 위한 건강문화 조성 및 공동체의 책임감과 연대를 필요로 한다."@ko .
+
+ex:HealthResourcesCulture_KnowledgeUnderstanding1 a ex:KnowledgeUnderstanding ;
+    rdfs:label "건강권"@ko .
+
+ex:HealthResourcesCulture_KnowledgeUnderstanding2 a ex:KnowledgeUnderstanding ;
+    rdfs:label "건강정보와 보건의료서비스건강자원"@ko .
+
+ex:HealthResourcesCulture_KnowledgeUnderstanding3 a ex:KnowledgeUnderstanding ;
+    rdfs:label "디지털⋅인공지능 시대 건강자원의 변화⋅위험"@ko .
+
+ex:HealthResourcesCulture_KnowledgeUnderstanding4 a ex:KnowledgeUnderstanding ;
+    rdfs:label "건강 문해력과 디지털 문해력"@ko .
+
+ex:HealthResourcesCulture_KnowledgeUnderstanding5 a ex:KnowledgeUnderstanding ;
+    rdfs:label "기후변화와 사회적 건강문제"@ko .
+
+ex:HealthResourcesCulture_KnowledgeUnderstanding6 a ex:KnowledgeUnderstanding ;
+    rdfs:label "건강 신념과 규범⋅관행 등 건강문화와 지속가능한 환경"@ko .
+
+ex:HealthResourcesCulture_ProcessSkill1 a ex:ProcessSkill ;
+    rdfs:label "건강권을 위한 노력과 자원 탐색하기"@ko .
+
+ex:HealthResourcesCulture_ProcessSkill2 a ex:ProcessSkill ;
+    rdfs:label "디지털⋅인공지능 건강정보와 보건의료서비스 및 건강자원의 변화와 활용 탐색하기"@ko .
+
+ex:HealthResourcesCulture_ProcessSkill3 a ex:ProcessSkill ;
+    rdfs:label "문화와 기후변화가 건강에 미치는 영향 탐색하기"@ko .
+
+ex:HealthResourcesCulture_ProcessSkill4 a ex:ProcessSkill ;
+    rdfs:label "건강옹호활동 주도하기"@ko .
+
+ex:HealthResourcesCulture_ProcessSkill5 a ex:ProcessSkill ;
+    rdfs:label "건강지향적 문화와 환경 지지⋅옹호하기"@ko .
+
+ex:HealthResourcesCulture_ValueAttitude1 a ex:ValueAttitude ;
+    rdfs:label "건강에 대한 권리와 책임 인식"@ko .
+
+ex:HealthResourcesCulture_ValueAttitude2 a ex:ValueAttitude ;
+    rdfs:label "건강한 문화와 환경 변화를 위한 참여 의식 내면화"@ko .
+
+ex:HealthResourcesCulture_ValueAttitude3 a ex:ValueAttitude ;
+    rdfs:label "건강의 가치화와 다양성 존중"@ko .
+
+ex:HumanEnvironment_Idea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "인간은 환경 안에서 살아가며, 환경과 인간의 삶은 서로 연결되어 있어 영향을 주고받는다."@ko .
+
+ex:HumanEnvironment_Idea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "환경을 바라보는 관점은 다양하며, 개인과 사회의 환경관에 따라 환경에 대한 태도와 의사 결정이 달라진다."@ko .
+
+ex:HumanEnvironment_Idea3 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 3"@ko ;
+    ex:description "인간은 경험을 통해 환경의 아름다움과 변화, 훼손 등을 민감하게 느끼고, 환경에 의미를 부여하며 관계를 맺는다."@ko .
+
+ex:HumanEnvironment_KnowledgeUnderstanding1 a ex:KnowledgeUnderstanding ;
+    rdfs:label "환경과 인간의 관계"@ko .
+
+ex:HumanEnvironment_KnowledgeUnderstanding2 a ex:KnowledgeUnderstanding ;
+    rdfs:label "다양한 환경관: 인간중심주의와 생태중심주의"@ko .
+
+ex:HumanEnvironment_KnowledgeUnderstanding3 a ex:KnowledgeUnderstanding ;
+    rdfs:label "자연의 아름다움"@ko .
+
+ex:HumanEnvironment_KnowledgeUnderstanding4 a ex:KnowledgeUnderstanding ;
+    rdfs:label "지역 환경과 나의 관계: 지역 환경 탐사"@ko .
+
+ex:HumanEnvironment_ProcessSkill1 a ex:ProcessSkill ;
+    rdfs:label "환경과 인간의 관계 조사하기"@ko .
+
+ex:HumanEnvironment_ProcessSkill2 a ex:ProcessSkill ;
+    rdfs:label "환경에 대한 다양한 관점 비교하기"@ko .
+
+ex:HumanEnvironment_ProcessSkill3 a ex:ProcessSkill ;
+    rdfs:label "환경과 인간의 바람직한 관계 토론하기"@ko .
+
+ex:HumanEnvironment_ProcessSkill4 a ex:ProcessSkill ;
+    rdfs:label "자연에 대한 자신의 느낌과 경험 표현하기"@ko .
+
+ex:HumanEnvironment_ProcessSkill5 a ex:ProcessSkill ;
+    rdfs:label "지역 환경 탐사 계획하고 수행하기"@ko .
+
+ex:HumanEnvironment_ValueAttitude1 a ex:ValueAttitude ;
+    rdfs:label "환경의 아름다움과 변화에 대한 감수성"@ko .
+
+ex:HumanEnvironment_ValueAttitude2 a ex:ValueAttitude ;
+    rdfs:label "자신과 다른 관점에 대한 포용적 태도"@ko .
+
+ex:HumanEnvironment_ValueAttitude3 a ex:ValueAttitude ;
+    rdfs:label "생명과 환경에 대한 존중과 배려"@ko .
+
+ex:HumanEnvironment_ValueAttitude4 a ex:ValueAttitude ;
+    rdfs:label "자신이 사는 지역과 장소에 대한 관심과 참여 의지"@ko .
+
+ex:HumanEnvironment_ValueAttitude5 a ex:ValueAttitude ;
+    rdfs:label "환경에 대한 책임감"@ko .
+
+ex:MentalHealth_Idea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "자신과 삶의 소중함에 대한 인식, 다양성 존중, 적절한 유대와 지지적 환경은 청소년기와 성인기의 건강하고 행복한 삶의 기초가 된다."@ko .
+
+ex:MentalHealth_Idea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "흡연⋅음주 및 의약품의 오⋅남용은 개인과 사회의 건강 및 사회문제와 관련이 있으므로 내적인 힘과 생활기술 및 지지체계가 중요하다."@ko .
+
+ex:MentalHealth_KnowledgeUnderstanding1 a ex:KnowledgeUnderstanding ;
+    rdfs:label "흡연⋅음주⋅약물 오⋅남용"@ko .
+
+ex:MentalHealth_KnowledgeUnderstanding2 a ex:KnowledgeUnderstanding ;
+    rdfs:label "행위 중독"@ko .
+
+ex:MentalHealth_KnowledgeUnderstanding3 a ex:KnowledgeUnderstanding ;
+    rdfs:label "감정⋅공감 및 지지"@ko .
+
+ex:MentalHealth_KnowledgeUnderstanding4 a ex:KnowledgeUnderstanding ;
+    rdfs:label "자아 존중감"@ko .
+
+ex:MentalHealth_KnowledgeUnderstanding5 a ex:KnowledgeUnderstanding ;
+    rdfs:label "스트레스 관리"@ko .
+
+ex:MentalHealth_KnowledgeUnderstanding6 a ex:KnowledgeUnderstanding ;
+    rdfs:label "삶⋅죽음⋅상실의 의미"@ko .
+
+ex:MentalHealth_ProcessSkill1 a ex:ProcessSkill ;
+    rdfs:label "정서와 정신건강 및 영향요인 알아보기"@ko .
+
+ex:MentalHealth_ProcessSkill2 a ex:ProcessSkill ;
+    rdfs:label "약물과 중독의 기전을 이해하고 조절하기"@ko .
+
+ex:MentalHealth_ProcessSkill3 a ex:ProcessSkill ;
+    rdfs:label "건강하고 안전한 선택 지지하기"@ko .
+
+ex:MentalHealth_ProcessSkill4 a ex:ProcessSkill ;
+    rdfs:label "감정을 이해하고 적절하게 표현하여 행복한 관계 맺기"@ko .
+
+ex:MentalHealth_ProcessSkill5 a ex:ProcessSkill ;
+    rdfs:label "유혹과 압력 등에 대처 및 옹호하기"@ko .
+
+ex:MentalHealth_ProcessSkill6 a ex:ProcessSkill ;
+    rdfs:label "다양성을 존중하며 유대 강화 및 환경 개선하기"@ko .
+
+ex:MentalHealth_ValueAttitude1 a ex:ValueAttitude ;
+    rdfs:label "자신과 타인의 삶을 소중히 여기고 존중하는 태도"@ko .
+
+ex:MentalHealth_ValueAttitude2 a ex:ValueAttitude ;
+    rdfs:label "건강한 자아상⋅유대와 행복 추구"@ko .
+
+ex:MentalHealth_ValueAttitude3 a ex:ValueAttitude ;
+    rdfs:label "위험요인 감수성과 중독에 대한 비판적 태도"@ko .
+
+ex:SafetyFirstAid_Idea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "생활 속에는 늘 위험이 있을 수 있고, 다양한 건강위험은 문제가 되기 전 대체로 신호가 있으며, 도미노처럼 주변의 건강문제로 이어질 수 있으므로, 개인과 공동체의 안전 감수성 및 참여와 협력에 기반한 예방과 관리가 중요하다."@ko .
+
+ex:SafetyFirstAid_Idea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "위급 상황에서 공동체의 준비된 안전수칙 및 응급처치의 적용과 협력은 개인과 공동체의 사망 및 손상 악화 방지와 질병 회복의 결정 요인으로 작용한다."@ko .
+
+ex:SafetyFirstAid_KnowledgeUnderstanding1 a ex:KnowledgeUnderstanding ;
+    rdfs:label "건강 안전의 의미와 위험요인"@ko .
+
+ex:SafetyFirstAid_KnowledgeUnderstanding2 a ex:KnowledgeUnderstanding ;
+    rdfs:label "급⋅만성 질병 및 관리"@ko .
+
+ex:SafetyFirstAid_KnowledgeUnderstanding3 a ex:KnowledgeUnderstanding ;
+    rdfs:label "면역과 감염병 예방 및 관리"@ko .
+
+ex:SafetyFirstAid_KnowledgeUnderstanding4 a ex:KnowledgeUnderstanding ;
+    rdfs:label "공동체의 문화와 건강 안전 및 관리"@ko .
+
+ex:SafetyFirstAid_KnowledgeUnderstanding5 a ex:KnowledgeUnderstanding ;
+    rdfs:label "건강수칙⋅응급처치⋅협력"@ko .
+
+ex:SafetyFirstAid_ProcessSkill1 a ex:ProcessSkill ;
+    rdfs:label "건강 안전의 개념 및 위험요인을 탐구하여 예방⋅대처방안 탐색하기"@ko .
+
+ex:SafetyFirstAid_ProcessSkill2 a ex:ProcessSkill ;
+    rdfs:label "질병과 면역의 원리를 이해하고 건강수칙 탐색하기"@ko .
+
+ex:SafetyFirstAid_ProcessSkill3 a ex:ProcessSkill ;
+    rdfs:label "위급 상황에서 협력적 건강 안전 관리 방안을 탐색하고 실천하기"@ko .
+
+ex:SafetyFirstAid_ProcessSkill4 a ex:ProcessSkill ;
+    rdfs:label "질병과 함께 건강하게 살아갈 방안을 탐색하여 생활에 적용하기"@ko .
+
+ex:SafetyFirstAid_ProcessSkill5 a ex:ProcessSkill ;
+    rdfs:label "다양한 응급상황에서 협력적 응급처치와 심폐소생술⋅자동심장충격기 사용 방법을 익히고 실천하기"@ko .
+
+ex:SafetyFirstAid_ValueAttitude1 a ex:ValueAttitude ;
+    rdfs:label "건강과 안전에 대한 감수성 내면화"@ko .
+
+ex:SafetyFirstAid_ValueAttitude2 a ex:ValueAttitude ;
+    rdfs:label "건강안전 관리 방안에 대한 탐색적 태도"@ko .
+
+ex:SafetyFirstAid_ValueAttitude3 a ex:ValueAttitude ;
+    rdfs:label "질병 예방과 응급처치에 대한 관심과 참여"@ko .
+
+ex:SexualHealth_Idea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "성 건강은 개인과 가족의 행복, 국가 발전에 기본이 된다."@ko .
+
+ex:SexualHealth_Idea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "성 건강관리는 성인지 관점 및 서로 다른 입장에 대한 균형 있는 접근과 이해를 필요로 한다."@ko .
+
+ex:SexualHealth_KnowledgeUnderstanding1 a ex:KnowledgeUnderstanding ;
+    rdfs:label "성의 개념"@ko .
+
+ex:SexualHealth_KnowledgeUnderstanding2 a ex:KnowledgeUnderstanding ;
+    rdfs:label "성적 발달과 신체상"@ko .
+
+ex:SexualHealth_KnowledgeUnderstanding3 a ex:KnowledgeUnderstanding ;
+    rdfs:label "성적자기결정권"@ko .
+
+ex:SexualHealth_KnowledgeUnderstanding4 a ex:KnowledgeUnderstanding ;
+    rdfs:label "이성교제와 경계 존중"@ko .
+
+ex:SexualHealth_KnowledgeUnderstanding5 a ex:KnowledgeUnderstanding ;
+    rdfs:label "성역할 및 임신과 피임"@ko .
+
+ex:SexualHealth_KnowledgeUnderstanding6 a ex:KnowledgeUnderstanding ;
+    rdfs:label "성폭력⋅성매개감염병 등 성 건강위험"@ko .
+
+ex:SexualHealth_KnowledgeUnderstanding7 a ex:KnowledgeUnderstanding ;
+    rdfs:label "성 건강문제와 관리⋅옹호"@ko .
+
+ex:SexualHealth_KnowledgeUnderstanding8 a ex:KnowledgeUnderstanding ;
+    rdfs:label "성문화"@ko .
+
+ex:SexualHealth_ProcessSkill1 a ex:ProcessSkill ;
+    rdfs:label "성 건강에 관련된 생리와 주제, 제도, 권리 탐색하기"@ko .
+
+ex:SexualHealth_ProcessSkill2 a ex:ProcessSkill ;
+    rdfs:label "성적 발달과 관계에 대해 알아보고 건강하게 관리하기"@ko .
+
+ex:SexualHealth_ProcessSkill3 a ex:ProcessSkill ;
+    rdfs:label "디지털 미디어와 성문화를 탐색하여 개선하기"@ko .
+
+ex:SexualHealth_ProcessSkill4 a ex:ProcessSkill ;
+    rdfs:label "안전하고 행복한 선택을 위한 균형 있는 관점으로 대처전략 세우기"@ko .
+
+ex:SexualHealth_ProcessSkill5 a ex:ProcessSkill ;
+    rdfs:label "청소년 성 건강문제를 알아보고 예방⋅관리하기"@ko .
+
+ex:SexualHealth_ProcessSkill6 a ex:ProcessSkill ;
+    rdfs:label "성과 관련된 차별과 고정 관념, 평등과 존중에 대해 알아보고 평가하기"@ko .
+
+ex:SexualHealth_ValueAttitude1 a ex:ValueAttitude ;
+    rdfs:label "안전하고 행복한 성의식과 성문화 함양"@ko .
+
+ex:SexualHealth_ValueAttitude2 a ex:ValueAttitude ;
+    rdfs:label "성인지 감수성 및 차이를 존중하고 공감⋅배려하는 자세"@ko .
+
+ex:SexualHealth_ValueAttitude3 a ex:ValueAttitude ;
+    rdfs:label "성 건강을 근거를 가지고 관리하는 태도"@ko .
+
+ex:SexualHealth_ValueAttitude4 a ex:ValueAttitude ;
+    rdfs:label "성 미디어 문해력 함양"@ko .
+
+ex:Standard_9보01_01 a ex:AchievementStandard ;
+    rdfs:label "9보01-01"@ko ;
+    ex:associatedArea ex:HealthPromotion ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보01-01" ;
+    ex:standardText "건강의 개념과 영향요인, 건강관리 모델을 탐구하여 건강을 관리하는 태도를 갖는다."@ko .
+
+ex:Standard_9보01_02 a ex:AchievementStandard ;
+    rdfs:label "9보01-02"@ko ;
+    ex:associatedArea ex:HealthPromotion ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보01-02" ;
+    ex:standardText "몸과 마음의 신호와 건강지표를 통해 건강상태를 평가하여 건강관리에 적용한다."@ko .
+
+ex:Standard_9보01_03 a ex:AchievementStandard ;
+    rdfs:label "9보01-03"@ko ;
+    ex:associatedArea ex:HealthPromotion ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보01-03" ;
+    ex:standardText "건강한 수면, 식습관, 신체활동에 대해 알아보고 건강생활습관을 계획하고 실천한다."@ko .
+
+ex:Standard_9보01_04 a ex:AchievementStandard ;
+    rdfs:label "9보01-04"@ko ;
+    ex:associatedArea ex:HealthPromotion ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보01-04" ;
+    ex:standardText "건강문제와 건강생활기술을 탐색하여 질병을 예방할 수 있도록 건강을 관리한다."@ko .
+
+ex:Standard_9보01_05 a ex:AchievementStandard ;
+    rdfs:label "9보01-05"@ko ;
+    ex:associatedArea ex:HealthPromotion ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보01-05" ;
+    ex:standardText "건강에 대한 사회적 지지의 중요성을 인식하고 개인과 공동체의 건강옹호활동을 협력적으로 탐색한다."@ko .
+
+ex:Standard_9보02_01 a ex:AchievementStandard ;
+    rdfs:label "9보02-01"@ko ;
+    ex:associatedArea ex:MentalHealth ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보02-01" ;
+    ex:standardText "약물 오⋅남용과 흡연, 음주의 유혹과 압력에 대해 안전하게 선택하고 대처⋅옹호한다."@ko .
+
+ex:Standard_9보02_02 a ex:AchievementStandard ;
+    rdfs:label "9보02-02"@ko ;
+    ex:associatedArea ex:MentalHealth ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보02-02" ;
+    ex:standardText "행위 중독이 건강에 미치는 영향과 위험요인 및 대처방안을 탐색하여 예방하고 관리하려는 태도를 갖는다."@ko .
+
+ex:Standard_9보02_03 a ex:AchievementStandard ;
+    rdfs:label "9보02-03"@ko ;
+    ex:associatedArea ex:MentalHealth ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보02-03" ;
+    ex:standardText "자아 존중감에 대해 이해하고 생활 속에서 자아 존중감을 높이는 상황과 저하시키는 상황을 탐색하여 대처하고 지지하여 건강한 자아상을 추구한다."@ko .
+
+ex:Standard_9보02_04 a ex:AchievementStandard ;
+    rdfs:label "9보02-04"@ko ;
+    ex:associatedArea ex:MentalHealth ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보02-04" ;
+    ex:standardText "감정과 스트레스의 적절한 인식과 표현, 지지와 공감 및 다양성 존중을 통해 관계 속에서 행복함과 건강한 관계 맺기를 보여준다."@ko .
+
+ex:Standard_9보02_05 a ex:AchievementStandard ;
+    rdfs:label "9보02-05"@ko ;
+    ex:associatedArea ex:MentalHealth ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보02-05" ;
+    ex:standardText "삶과 죽음, 상실의 의미에 대한 성찰을 바탕으로, 삶의 소중함을 깨닫고 죽음⋅상실에 건강하게 대처하는 자세를 지지한다."@ko .
+
+ex:Standard_9보03_01 a ex:AchievementStandard ;
+    rdfs:label "9보03-01"@ko ;
+    ex:associatedArea ex:SexualHealth ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보03-01" ;
+    ex:standardText "성의 개념과 성역할 및 영향요인에 대해 성인지적 관점에서 탐색하여 안전하고 행복한 성문화와 성의식의 필요성을 이해한다."@ko .
+
+ex:Standard_9보03_02 a ex:AchievementStandard ;
+    rdfs:label "9보03-02"@ko ;
+    ex:associatedArea ex:SexualHealth ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보03-02" ;
+    ex:standardText "청소년기 성적 발달과 관계, 신체상에 대해 알아보고 사회적 조건을 이해하며 건강하게 관리한다."@ko .
+
+ex:Standard_9보03_03 a ex:AchievementStandard ;
+    rdfs:label "9보03-03"@ko ;
+    ex:associatedArea ex:SexualHealth ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보03-03" ;
+    ex:standardText "성적자기결정권을 균형 있게 탐색하여 안전하고 행복한 대처전략을 세우고 이성 교제 시 경계를 존중하고 배려하는 자세를 갖는다."@ko .
+
+ex:Standard_9보03_04 a ex:AchievementStandard ;
+    rdfs:label "9보03-04"@ko ;
+    ex:associatedArea ex:SexualHealth ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보03-04" ;
+    ex:standardText "성폭력⋅성매개감염병 등 성 건강 위험요소를 미디어 문해력 및 성문화와 관련지어 탐색하고 건강하게 관리⋅옹호한다."@ko .
+
+ex:Standard_9보03_05 a ex:AchievementStandard ;
+    rdfs:label "9보03-05"@ko ;
+    ex:associatedArea ex:SexualHealth ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보03-05" ;
+    ex:standardText "임신, 피임에 대한 이해를 바탕으로 십대의 임신과 미혼 부모 문제가 개인과 사회에 미치는 영향을 분석하고 건강에 유익한 선택과 자원을 지지한다."@ko .
+
+ex:Standard_9보03_06 a ex:AchievementStandard ;
+    rdfs:label "9보03-06"@ko ;
+    ex:associatedArea ex:SexualHealth ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보03-06" ;
+    ex:standardText "청소년의 성 건강과 관련하여 사회적 쟁점이 있는 이슈들에 대해 다양한 입장의 근거와 맥락, 고정 관념, 차별, 불평등한 상황을 파악하여 균형 있고 평등한 성문화를 조성하려는 자세를 갖는다."@ko .
+
+ex:Standard_9보04_01 a ex:AchievementStandard ;
+    rdfs:label "9보04-01"@ko ;
+    ex:associatedArea ex:SafetyFirstAid ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보04-01" ;
+    ex:standardText "건강안전의 의미와 위험요인을 탐구하여 질병과 사고를 예방하고 관리하며 건강안전 지향적 환경 개선에 적극적인 태도를 갖는다."@ko .
+
+ex:Standard_9보04_02 a ex:AchievementStandard ;
+    rdfs:label "9보04-02"@ko ;
+    ex:associatedArea ex:SafetyFirstAid ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보04-02" ;
+    ex:standardText "급⋅만성 질병의 위험요인과 건강에 미치는 영향을 탐색하여, 질병과 함께 건강하게 살아가기 위한 방안을 세우고 실천한다."@ko .
+
+ex:Standard_9보04_03 a ex:AchievementStandard ;
+    rdfs:label "9보04-03"@ko ;
+    ex:associatedArea ex:SafetyFirstAid ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보04-03" ;
+    ex:standardText "감염병과 면역의 원리를 이해하고 개인과 공동체가 지켜야 할 건강수칙을 탐색하여 근거와 함께 제안하고 실천한다."@ko .
+
+ex:Standard_9보04_04 a ex:AchievementStandard ;
+    rdfs:label "9보04-04"@ko ;
+    ex:associatedArea ex:SafetyFirstAid ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보04-04" ;
+    ex:standardText "상황에 따른 응급처치의 원리와 방법을 이해하고, 다양한 위기 및 응급상황에서 적절한 응급처치와 협력적 대응 방안을 탐색하여 적용한다."@ko .
+
+ex:Standard_9보04_05 a ex:AchievementStandard ;
+    rdfs:label "9보04-05"@ko ;
+    ex:associatedArea ex:SafetyFirstAid ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보04-05" ;
+    ex:standardText "응급의료체계의 활용 방안을 탐색하고 심폐소생술과 자동심장충격기의 원리와 사용법을 익혀 협력적으로 바르게 적용한다."@ko .
+
+ex:Standard_9보05_01 a ex:AchievementStandard ;
+    rdfs:label "9보05-01"@ko ;
+    ex:associatedArea ex:HealthResourcesCulture ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보05-01" ;
+    ex:standardText "건강권 발전을 위한 노력과 건강자원을 탐색하여 공동체의 건강권 향상을 위한 활동에 관심을 가지고 참여한다."@ko .
+
+ex:Standard_9보05_02 a ex:AchievementStandard ;
+    rdfs:label "9보05-02"@ko ;
+    ex:associatedArea ex:HealthResourcesCulture ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보05-02" ;
+    ex:standardText "디지털⋅인공지능 시대에 따른 보건의료서비스와 건강정보를 포함한 건강자원의 변화를 알아보고 건강에 유익하게 활용하며 개선방안을 탐색한다."@ko .
+
+ex:Standard_9보05_03 a ex:AchievementStandard ;
+    rdfs:label "9보05-03"@ko ;
+    ex:associatedArea ex:HealthResourcesCulture ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보05-03" ;
+    ex:standardText "기후변화와 건강의 관계를 탐색하고, 지속가능한 사회를 위한 개인과 공동체의 건강옹호활동을 탐구하고 실천한다."@ko .
+
+ex:Standard_9보05_04 a ex:AchievementStandard ;
+    rdfs:label "9보05-04"@ko ;
+    ex:associatedArea ex:HealthResourcesCulture ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보05-04" ;
+    ex:standardText "건강 신념과 규범⋅관행 및 미디어 등이 건강에 미치는 영향을 탐색하고 건강하게 개선하려는 태도를 발전시켜 건강관리와 건강문제 해결에 적용한다."@ko .
+
+ex:Standard_9보05_05 a ex:AchievementStandard ;
+    rdfs:label "9보05-05"@ko ;
+    ex:associatedArea ex:HealthResourcesCulture ;
+    ex:belongsToSubject ex:Health ;
+    ex:code "9보05-05" ;
+    ex:standardText "다양성 존중과 사회적 소수자 배려를 포함하여 건강지향적 문화와 환경을 지지⋅옹호한다."@ko .
+
+ex:Standard_9진로01_01 a ex:AchievementStandard ;
+    rdfs:label "9진로01-01"@ko ;
+    ex:associatedArea ex:CareerSelf ;
+    ex:belongsToSubject ex:Career ;
+    ex:code "9진로01-01" ;
+    ex:standardText "진로와 직업의 의미를 이해하고 다양한 직업인의 진로 특성과 삶의 모습을 탐색한다."@ko .
+
+ex:Standard_9진로01_02 a ex:AchievementStandard ;
+    rdfs:label "9진로01-02"@ko ;
+    ex:associatedArea ex:CareerSelf ;
+    ex:belongsToSubject ex:Career ;
+    ex:code "9진로01-02" ;
+    ex:standardText "다양한 방법으로 자신의 진로 특성을 파악하고 긍정적 자아 개념을 갖는다."@ko .
+
+ex:Standard_9진로01_03 a ex:AchievementStandard ;
+    rdfs:label "9진로01-03"@ko ;
+    ex:associatedArea ex:CareerSelf ;
+    ex:belongsToSubject ex:Career ;
+    ex:code "9진로01-03" ;
+    ex:standardText "함께 일하고 싶은 직업인의 특성을 알아보고 바람직한 직업인의 자세를 갖는다."@ko .
+
+ex:Standard_9진로01_04 a ex:AchievementStandard ;
+    rdfs:label "9진로01-04"@ko ;
+    ex:associatedArea ex:CareerSelf ;
+    ex:belongsToSubject ex:Career ;
+    ex:code "9진로01-04" ;
+    ex:standardText "일과 여가의 의미와 상호 관계를 이해하고 조화롭고 행복한 삶을 생각한다."@ko .
+
+ex:Standard_9진로02_01 a ex:AchievementStandard ;
+    rdfs:label "9진로02-01"@ko ;
+    ex:associatedArea ex:CareerExploration ;
+    ex:belongsToSubject ex:Career ;
+    ex:code "9진로02-01" ;
+    ex:standardText "사회 변화에 따른 직업 세계의 변화를 이해한다."@ko .
+
+ex:Standard_9진로02_02 a ex:AchievementStandard ;
+    rdfs:label "9진로02-02"@ko ;
+    ex:associatedArea ex:CareerExploration ;
+    ex:belongsToSubject ex:Career ;
+    ex:code "9진로02-02" ;
+    ex:standardText "진로 경로의 다양성과 가변성을 이해하고, 유연한 진로 탐색 태도를 함양한다."@ko .
+
+ex:Standard_9진로02_03 a ex:AchievementStandard ;
+    rdfs:label "9진로02-03"@ko ;
+    ex:associatedArea ex:CareerExploration ;
+    ex:belongsToSubject ex:Career ;
+    ex:code "9진로02-03" ;
+    ex:standardText "진로 정보를 탐색하는 다양한 방법을 알아보고 관심 분야의 진로 정보를 탐색하고 활용한다."@ko .
+
+ex:Standard_9진로02_04 a ex:AchievementStandard ;
+    rdfs:label "9진로02-04"@ko ;
+    ex:associatedArea ex:CareerExploration ;
+    ex:belongsToSubject ex:Career ;
+    ex:code "9진로02-04" ;
+    ex:standardText "다양한 경험과 진로 활동을 자신의 진로와 연계하며 주도적인 진로 탐색 태도를 함양한다."@ko .
+
+ex:Standard_9진로02_05 a ex:AchievementStandard ;
+    rdfs:label "9진로02-05"@ko ;
+    ex:associatedArea ex:CareerExploration ;
+    ex:belongsToSubject ex:Career ;
+    ex:code "9진로02-05" ;
+    ex:standardText "고등학교의 유형, 특성, 교육과정에 대한 정보를 통해 교육 기회를 탐색한다."@ko .
+
+ex:Standard_9진로02_06 a ex:AchievementStandard ;
+    rdfs:label "9진로02-06"@ko ;
+    ex:associatedArea ex:CareerExploration ;
+    ex:belongsToSubject ex:Career ;
+    ex:code "9진로02-06" ;
+    ex:standardText "창업의 특성과 창업가 정신을 이해하고 그 중요성을 인식한다."@ko .
+
+ex:Standard_9진로03_01 a ex:AchievementStandard ;
+    rdfs:label "9진로03-01"@ko ;
+    ex:associatedArea ex:CareerPlanning ;
+    ex:belongsToSubject ex:Career ;
+    ex:code "9진로03-01" ;
+    ex:standardText "진로의사결정의 방법과 고려 사항을 이해하고 진로를 잠정적으로 결정한다."@ko .
+
+ex:Standard_9진로03_02 a ex:AchievementStandard ;
+    rdfs:label "9진로03-02"@ko ;
+    ex:associatedArea ex:CareerPlanning ;
+    ex:belongsToSubject ex:Career ;
+    ex:code "9진로03-02" ;
+    ex:standardText "관심 진로 분야의 다양한 진로 경로를 탐색하고 자신의 진로 경로를 설정한다."@ko .
+
+ex:Standard_9진로03_03 a ex:AchievementStandard ;
+    rdfs:label "9진로03-03"@ko ;
+    ex:associatedArea ex:CareerPlanning ;
+    ex:belongsToSubject ex:Career ;
+    ex:code "9진로03-03" ;
+    ex:standardText "진로 목표 성취를 위해 학습의 필요성을 이해하고, 학습 계획을 자기 주도적으로 수립하여 실천한다."@ko .
+
+ex:Standard_9진로03_04 a ex:AchievementStandard ;
+    rdfs:label "9진로03-04"@ko ;
+    ex:associatedArea ex:CareerPlanning ;
+    ex:belongsToSubject ex:Career ;
+    ex:code "9진로03-04" ;
+    ex:standardText "졸업 이후의 진로 계획을 수립하고 자기 관리 및 진로 준비 방법을 알아보고 실천한다."@ko .
+
+ex:Standard_9환01_01 a ex:AchievementStandard ;
+    rdfs:label "9환01-01"@ko ;
+    ex:associatedArea ex:HumanEnvironment ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환01-01" ;
+    ex:standardText "일상생활이 환경에 미치는 영향과 환경이 일상생활에 미치는 영향을 조사하여 인간과 환경의 관계를 탐색하고, 환경에 대한 우리의 역할과 책임을 인식한다."@ko .
+
+ex:Standard_9환01_02 a ex:AchievementStandard ;
+    rdfs:label "9환01-02"@ko ;
+    ex:associatedArea ex:HumanEnvironment ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환01-02" ;
+    ex:standardText "환경 갈등 상황에서 환경에 대한 자신의 관점과 의견을 제시하고, 환경을 바라보는 다양한 관점을 비교하여 환경과 인간의 관계를 탐색한다."@ko .
+
+ex:Standard_9환01_03 a ex:AchievementStandard ;
+    rdfs:label "9환01-03"@ko ;
+    ex:associatedArea ex:HumanEnvironment ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환01-03" ;
+    ex:standardText "오감을 활용해 자연을 체험하고, 자연의 아름다움이나 변화, 훼손 등에 대한 생각과 감정을 다양한 방법으로 표현한다."@ko .
+
+ex:Standard_9환01_04 a ex:AchievementStandard ;
+    rdfs:label "9환01-04"@ko ;
+    ex:associatedArea ex:HumanEnvironment ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환01-04" ;
+    ex:standardText "학교나 지역 환경 탐사를 통해 지역과 나의 관계를 이해하고, 탐사 결과를 다양한 매체와 방법으로 제시한다."@ko .
+
+ex:Standard_9환02_01 a ex:AchievementStandard ;
+    rdfs:label "9환02-01"@ko ;
+    ex:associatedArea ex:EnvironmentalSystem ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환02-01" ;
+    ex:standardText "생태계 구성 요소인 물, 대기, 토양, 생물이 지구 생태계의 유지에 기여하는 역할과 특징을 살펴보고, 이를 통해 지구 생태계 구성 요소의 상호 작용을 파악한다."@ko .
+
+ex:Standard_9환02_02 a ex:AchievementStandard ;
+    rdfs:label "9환02-02"@ko ;
+    ex:associatedArea ex:EnvironmentalSystem ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환02-02" ;
+    ex:standardText "지구 생태계 구성 요소와 인간 사회의 상호 작용 사례를 지역적, 지구적 차원에서 찾아보고, 환경의 다양한 수준에 미치는 영향과 시간의 흐름에 따른 변화를 추론한다."@ko .
+
+ex:Standard_9환02_03 a ex:AchievementStandard ;
+    rdfs:label "9환02-03"@ko ;
+    ex:associatedArea ex:EnvironmentalSystem ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환02-03" ;
+    ex:standardText "환경은 물, 대기, 토양, 생물로 구성된 지구 생태계와 정치⋅경제⋅문화⋅법과 제도 등 인간 사회의 상호 작용을 기반으로 다양성과 복잡성을 가진 시스템임을 탐구한다."@ko .
+
+ex:Standard_9환03_01 a ex:AchievementStandard ;
+    rdfs:label "9환03-01"@ko ;
+    ex:associatedArea ex:EnvironmentalIssues ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환03-01" ;
+    ex:standardText "지구 생태계의 구성 요소와 관련된 환경 문제를 조사하여 그 문제의 특성을 파악하고, 환경 문제의 발생 원인과 영향을 사회, 문화, 경제 등 여러 측면을 고려하여 분석하고 추론한다."@ko .
+
+ex:Standard_9환03_02 a ex:AchievementStandard ;
+    rdfs:label "9환03-02"@ko ;
+    ex:associatedArea ex:EnvironmentalIssues ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환03-02" ;
+    ex:standardText "신⋅재생 에너지, 핵발전, 자원 재활용과 쓰레기 처리 등 에너지 이용 및 자원 순환과 관련된 문제를 탐구하는 과정을 계획하여 수행하고, 관련된 요소 간의 상호 작용을 분석한다."@ko .
+
+ex:Standard_9환03_03 a ex:AchievementStandard ;
+    rdfs:label "9환03-03"@ko ;
+    ex:associatedArea ex:EnvironmentalIssues ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환03-03" ;
+    ex:standardText "환경 문제의 원인과 영향을 데이터를 기반으로 조사하고, 관련 쟁점과 해결 방안을 탐구 한다."@ko .
+
+ex:Standard_9환03_04 a ex:AchievementStandard ;
+    rdfs:label "9환03-04"@ko ;
+    ex:associatedArea ex:EnvironmentalIssues ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환03-04" ;
+    ex:standardText "지역 환경 문제가 지구 환경 문제와 어떻게 연결되어 있으며, 지구 생태계의 구성 요소 중 어떤 것과 관련이 있는지 파악하고, 지속가능성과 형평성을 고려하여 해결 방안을 제시 한다."@ko .
+
+ex:Standard_9환04_01 a ex:AchievementStandard ;
+    rdfs:label "9환04-01"@ko ;
+    ex:associatedArea ex:ClimateAction ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환04-01" ;
+    ex:standardText "지구 역사와 함께 기후가 어떻게 변화해 왔고 전망되는지 이해하고 현재의 기후위기 상황을 인식한다."@ko .
+
+ex:Standard_9환04_02 a ex:AchievementStandard ;
+    rdfs:label "9환04-02"@ko ;
+    ex:associatedArea ex:ClimateAction ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환04-02" ;
+    ex:standardText "생물다양성 감소 등 기후변화의 영향과 피해, 갈등과 불평등에 관한 사례를 탐구하고, 사람과 자연이 겪는 고통에 공감하며 지구 공동체의 관점에서 기후변화 피해를 줄이는 방법을 토의한다."@ko .
+
+ex:Standard_9환04_03 a ex:AchievementStandard ;
+    rdfs:label "9환04-03"@ko ;
+    ex:associatedArea ex:ClimateAction ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환04-03" ;
+    ex:standardText "온실가스의 종류와 특성을 알아보고, 온실가스 배출원과 배출량을 비교하여 인간 활동이 기후변화에 끼친 영향을 파악한다."@ko .
+
+ex:Standard_9환04_04 a ex:AchievementStandard ;
+    rdfs:label "9환04-04"@ko ;
+    ex:associatedArea ex:ClimateAction ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환04-04" ;
+    ex:standardText "지속가능한 미래를 위한 기후위기 대응 방향을 토의하고, 개인적⋅지역적⋅국가적 차원의 기후행동 사례를 탐구한다."@ko .
+
+ex:Standard_9환04_05 a ex:AchievementStandard ;
+    rdfs:label "9환04-05"@ko ;
+    ex:associatedArea ex:ClimateAction ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환04-05" ;
+    ex:standardText "학교와 지역에서 실천할 수 있는 기후행동을 계획하고 참여하며 그 결과를 성찰한다."@ko .
+
+ex:Standard_9환05_01 a ex:AchievementStandard ;
+    rdfs:label "9환05-01"@ko ;
+    ex:associatedArea ex:SustainabilityParticipation ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환05-01" ;
+    ex:standardText "지속가능성의 의미를 이해하여 주거, 교통, 먹거리, 소비 등 일상생활에서 지속가능발전의 사례를 찾아보고, 창의적⋅개방적 태도로 지속가능한 미래 모습을 구상해 보며 자신의 견해를 제시한다."@ko .
+
+ex:Standard_9환05_02 a ex:AchievementStandard ;
+    rdfs:label "9환05-02"@ko ;
+    ex:associatedArea ex:SustainabilityParticipation ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환05-02" ;
+    ex:standardText "생태시민의 의미와 역할을 이해하여 미래 세대와 비인간 존재에 대한 배려와 존중이 필요함을 인식하고 배려의 대상과 범위에 대해 토의한다."@ko .
+
+ex:Standard_9환05_03 a ex:AchievementStandard ;
+    rdfs:label "9환05-03"@ko ;
+    ex:associatedArea ex:SustainabilityParticipation ;
+    ex:belongsToSubject ex:Environment ;
+    ex:code "9환05-03" ;
+    ex:standardText "환경 정의 측면에서 자신이 살고 있는 마을이나 지역에 적용할 수 있는 지속가능한 사회를 위한 개인적⋅사회적 실천 방안을 조사하여 참여해 보고, 실천 방안을 평가한다."@ko .
+
+ex:SustainabilityParticipation_Idea1 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 1"@ko ;
+    ex:description "지속가능한 미래를 위해서는 지구 시스템의 한계를 고려한 삶의 양식 추구 및 개인과 사회의 변화 모색이 필요하다."@ko .
+
+ex:SustainabilityParticipation_Idea2 a ex:CoreIdea ;
+    rdfs:label "핵심 아이디어 2"@ko ;
+    ex:description "지속가능한 미래를 위해서는 비인간 존재와 미래 세대에 대한 배려와 책임감, 자신이 살아가는 세계에 대한 주체적 행동이 필요하다."@ko .
+
+ex:SustainabilityParticipation_KnowledgeUnderstanding1 a ex:KnowledgeUnderstanding ;
+    rdfs:label "지속가능성의 의미와 필요성"@ko .
+
+ex:SustainabilityParticipation_KnowledgeUnderstanding2 a ex:KnowledgeUnderstanding ;
+    rdfs:label "지속가능한 사회와 환경 정의"@ko .
+
+ex:SustainabilityParticipation_KnowledgeUnderstanding3 a ex:KnowledgeUnderstanding ;
+    rdfs:label "생태시민의 의미와 역할"@ko .
+
+ex:SustainabilityParticipation_ProcessSkill1 a ex:ProcessSkill ;
+    rdfs:label "지속가능성의 복합적 의미 탐색하기"@ko .
+
+ex:SustainabilityParticipation_ProcessSkill2 a ex:ProcessSkill ;
+    rdfs:label "지속가능한 미래를 꿈꾸고 상호 소통하기"@ko .
+
+ex:SustainabilityParticipation_ProcessSkill3 a ex:ProcessSkill ;
+    rdfs:label "배려의 대상과 범위 토의하기"@ko .
+
+ex:SustainabilityParticipation_ProcessSkill4 a ex:ProcessSkill ;
+    rdfs:label "개인적⋅사회적 환경 실천에 참여하고 평가하기"@ko .
+
+ex:SustainabilityParticipation_ValueAttitude1 a ex:ValueAttitude ;
+    rdfs:label "미래 세대와 비인간 존재에 대한 배려"@ko .
+
+ex:SustainabilityParticipation_ValueAttitude2 a ex:ValueAttitude ;
+    rdfs:label "지속가능한 사회를 위한 책임감과 실천 의지"@ko .
+
+ex:SustainabilityParticipation_ValueAttitude3 a ex:ValueAttitude ;
+    rdfs:label "지속가능한 미래를 위한 창의성⋅개방성"@ko .
+
+ex:hasArea a owl:ObjectProperty ;
+    rdfs:label "포함 영역"@ko ;
+    rdfs:domain ex:Subject ;
+    rdfs:range ex:LearningArea .
+
+ex:EnvironmentalSystem a ex:LearningArea ;
+    rdfs:label "환경 체계"@ko ;
+    ex:hasAchievementStandard ex:Standard_9환02_01,
+        ex:Standard_9환02_02,
+        ex:Standard_9환02_03 ;
+    ex:hasContentElement ex:EnvironmentalSystem_KnowledgeUnderstanding1,
+        ex:EnvironmentalSystem_KnowledgeUnderstanding2,
+        ex:EnvironmentalSystem_KnowledgeUnderstanding3,
+        ex:EnvironmentalSystem_KnowledgeUnderstanding4,
+        ex:EnvironmentalSystem_ProcessSkill1,
+        ex:EnvironmentalSystem_ProcessSkill2,
+        ex:EnvironmentalSystem_ProcessSkill3,
+        ex:EnvironmentalSystem_ValueAttitude1,
+        ex:EnvironmentalSystem_ValueAttitude2 ;
+    ex:hasCoreIdea ex:EnvironmentalSystem_Idea1,
+        ex:EnvironmentalSystem_Idea2,
+        ex:EnvironmentalSystem_Idea3 .
+
+ex:SustainabilityParticipation a ex:LearningArea ;
+    rdfs:label "지속가능성과 시민 참여"@ko ;
+    ex:hasAchievementStandard ex:Standard_9환05_01,
+        ex:Standard_9환05_02,
+        ex:Standard_9환05_03 ;
+    ex:hasContentElement ex:SustainabilityParticipation_KnowledgeUnderstanding1,
+        ex:SustainabilityParticipation_KnowledgeUnderstanding2,
+        ex:SustainabilityParticipation_KnowledgeUnderstanding3,
+        ex:SustainabilityParticipation_ProcessSkill1,
+        ex:SustainabilityParticipation_ProcessSkill2,
+        ex:SustainabilityParticipation_ProcessSkill3,
+        ex:SustainabilityParticipation_ProcessSkill4,
+        ex:SustainabilityParticipation_ValueAttitude1,
+        ex:SustainabilityParticipation_ValueAttitude2,
+        ex:SustainabilityParticipation_ValueAttitude3 ;
+    ex:hasCoreIdea ex:SustainabilityParticipation_Idea1,
+        ex:SustainabilityParticipation_Idea2 .
+
+ex:CareerPlanning a ex:LearningArea ;
+    rdfs:label "진로 설계와 실천"@ko ;
+    ex:hasAchievementStandard ex:Standard_9진로03_01,
+        ex:Standard_9진로03_02,
+        ex:Standard_9진로03_03,
+        ex:Standard_9진로03_04 ;
+    ex:hasContentElement ex:CareerPlanning_KnowledgeUnderstanding1,
+        ex:CareerPlanning_KnowledgeUnderstanding2,
+        ex:CareerPlanning_KnowledgeUnderstanding3,
+        ex:CareerPlanning_ProcessSkill1,
+        ex:CareerPlanning_ProcessSkill2,
+        ex:CareerPlanning_ProcessSkill3,
+        ex:CareerPlanning_ValueAttitude1,
+        ex:CareerPlanning_ValueAttitude2,
+        ex:CareerPlanning_ValueAttitude3,
+        ex:CareerPlanning_ValueAttitude4 ;
+    ex:hasCoreIdea ex:CareerPlanning_Idea1,
+        ex:CareerPlanning_Idea2,
+        ex:CareerPlanning_Idea3 .
+
+ex:CareerSelf a ex:LearningArea ;
+    rdfs:label "진로와 나의 이해"@ko ;
+    ex:hasAchievementStandard ex:Standard_9진로01_01,
+        ex:Standard_9진로01_02,
+        ex:Standard_9진로01_03,
+        ex:Standard_9진로01_04 ;
+    ex:hasContentElement ex:CareerSelf_KnowledgeUnderstanding1,
+        ex:CareerSelf_KnowledgeUnderstanding2,
+        ex:CareerSelf_KnowledgeUnderstanding3,
+        ex:CareerSelf_KnowledgeUnderstanding4,
+        ex:CareerSelf_KnowledgeUnderstanding5,
+        ex:CareerSelf_ProcessSkill1,
+        ex:CareerSelf_ProcessSkill2,
+        ex:CareerSelf_ProcessSkill3,
+        ex:CareerSelf_ValueAttitude1,
+        ex:CareerSelf_ValueAttitude2,
+        ex:CareerSelf_ValueAttitude3 ;
+    ex:hasCoreIdea ex:CareerSelf_Idea1,
+        ex:CareerSelf_Idea2,
+        ex:CareerSelf_Idea3 .
+
+ex:EnvironmentalIssues a ex:LearningArea ;
+    rdfs:label "환경 문제와 쟁점"@ko ;
+    ex:hasAchievementStandard ex:Standard_9환03_01,
+        ex:Standard_9환03_02,
+        ex:Standard_9환03_03,
+        ex:Standard_9환03_04 ;
+    ex:hasContentElement ex:EnvironmentalIssues_KnowledgeUnderstanding1,
+        ex:EnvironmentalIssues_KnowledgeUnderstanding2,
+        ex:EnvironmentalIssues_KnowledgeUnderstanding3,
+        ex:EnvironmentalIssues_KnowledgeUnderstanding4,
+        ex:EnvironmentalIssues_ProcessSkill1,
+        ex:EnvironmentalIssues_ProcessSkill2,
+        ex:EnvironmentalIssues_ProcessSkill3,
+        ex:EnvironmentalIssues_ProcessSkill4,
+        ex:EnvironmentalIssues_ValueAttitude1,
+        ex:EnvironmentalIssues_ValueAttitude2,
+        ex:EnvironmentalIssues_ValueAttitude3,
+        ex:EnvironmentalIssues_ValueAttitude4 ;
+    ex:hasCoreIdea ex:EnvironmentalIssues_Idea1,
+        ex:EnvironmentalIssues_Idea2,
+        ex:EnvironmentalIssues_Idea3 .
+
+ex:HumanEnvironment a ex:LearningArea ;
+    rdfs:label "환경과 인간"@ko ;
+    ex:hasAchievementStandard ex:Standard_9환01_01,
+        ex:Standard_9환01_02,
+        ex:Standard_9환01_03,
+        ex:Standard_9환01_04 ;
+    ex:hasContentElement ex:HumanEnvironment_KnowledgeUnderstanding1,
+        ex:HumanEnvironment_KnowledgeUnderstanding2,
+        ex:HumanEnvironment_KnowledgeUnderstanding3,
+        ex:HumanEnvironment_KnowledgeUnderstanding4,
+        ex:HumanEnvironment_ProcessSkill1,
+        ex:HumanEnvironment_ProcessSkill2,
+        ex:HumanEnvironment_ProcessSkill3,
+        ex:HumanEnvironment_ProcessSkill4,
+        ex:HumanEnvironment_ProcessSkill5,
+        ex:HumanEnvironment_ValueAttitude1,
+        ex:HumanEnvironment_ValueAttitude2,
+        ex:HumanEnvironment_ValueAttitude3,
+        ex:HumanEnvironment_ValueAttitude4,
+        ex:HumanEnvironment_ValueAttitude5 ;
+    ex:hasCoreIdea ex:HumanEnvironment_Idea1,
+        ex:HumanEnvironment_Idea2,
+        ex:HumanEnvironment_Idea3 .
+
+ex:ClimateAction a ex:LearningArea ;
+    rdfs:label "기후위기와 기후행동"@ko ;
+    ex:hasAchievementStandard ex:Standard_9환04_01,
+        ex:Standard_9환04_02,
+        ex:Standard_9환04_03,
+        ex:Standard_9환04_04,
+        ex:Standard_9환04_05 ;
+    ex:hasContentElement ex:ClimateAction_KnowledgeUnderstanding1,
+        ex:ClimateAction_KnowledgeUnderstanding2,
+        ex:ClimateAction_KnowledgeUnderstanding3,
+        ex:ClimateAction_KnowledgeUnderstanding4,
+        ex:ClimateAction_KnowledgeUnderstanding5,
+        ex:ClimateAction_ProcessSkill1,
+        ex:ClimateAction_ProcessSkill2,
+        ex:ClimateAction_ProcessSkill3,
+        ex:ClimateAction_ProcessSkill4,
+        ex:ClimateAction_ValueAttitude1,
+        ex:ClimateAction_ValueAttitude2,
+        ex:ClimateAction_ValueAttitude3 ;
+    ex:hasCoreIdea ex:ClimateAction_Idea1,
+        ex:ClimateAction_Idea2,
+        ex:ClimateAction_Idea3 .
+
+ex:ContentElement a owl:Class ;
+    rdfs:label "내용 요소"@ko .
+
+ex:HealthPromotion a ex:LearningArea ;
+    rdfs:label "건강증진과 질병예방"@ko ;
+    ex:hasAchievementStandard ex:Standard_9보01_01,
+        ex:Standard_9보01_02,
+        ex:Standard_9보01_03,
+        ex:Standard_9보01_04,
+        ex:Standard_9보01_05 ;
+    ex:hasContentElement ex:HealthPromotion_KnowledgeUnderstanding1,
+        ex:HealthPromotion_KnowledgeUnderstanding2,
+        ex:HealthPromotion_KnowledgeUnderstanding3,
+        ex:HealthPromotion_KnowledgeUnderstanding4,
+        ex:HealthPromotion_KnowledgeUnderstanding5,
+        ex:HealthPromotion_KnowledgeUnderstanding6,
+        ex:HealthPromotion_KnowledgeUnderstanding7,
+        ex:HealthPromotion_KnowledgeUnderstanding8,
+        ex:HealthPromotion_ProcessSkill1,
+        ex:HealthPromotion_ProcessSkill2,
+        ex:HealthPromotion_ProcessSkill3,
+        ex:HealthPromotion_ProcessSkill4,
+        ex:HealthPromotion_ProcessSkill5,
+        ex:HealthPromotion_ProcessSkill6,
+        ex:HealthPromotion_ProcessSkill7,
+        ex:HealthPromotion_ValueAttitude1,
+        ex:HealthPromotion_ValueAttitude2,
+        ex:HealthPromotion_ValueAttitude3,
+        ex:HealthPromotion_ValueAttitude4 ;
+    ex:hasCoreIdea ex:HealthPromotion_Idea1,
+        ex:HealthPromotion_Idea2 .
+
+ex:HealthResourcesCulture a ex:LearningArea ;
+    rdfs:label "건강자원과 건강문화"@ko ;
+    ex:hasAchievementStandard ex:Standard_9보05_01,
+        ex:Standard_9보05_02,
+        ex:Standard_9보05_03,
+        ex:Standard_9보05_04,
+        ex:Standard_9보05_05 ;
+    ex:hasContentElement ex:HealthResourcesCulture_KnowledgeUnderstanding1,
+        ex:HealthResourcesCulture_KnowledgeUnderstanding2,
+        ex:HealthResourcesCulture_KnowledgeUnderstanding3,
+        ex:HealthResourcesCulture_KnowledgeUnderstanding4,
+        ex:HealthResourcesCulture_KnowledgeUnderstanding5,
+        ex:HealthResourcesCulture_KnowledgeUnderstanding6,
+        ex:HealthResourcesCulture_ProcessSkill1,
+        ex:HealthResourcesCulture_ProcessSkill2,
+        ex:HealthResourcesCulture_ProcessSkill3,
+        ex:HealthResourcesCulture_ProcessSkill4,
+        ex:HealthResourcesCulture_ProcessSkill5,
+        ex:HealthResourcesCulture_ValueAttitude1,
+        ex:HealthResourcesCulture_ValueAttitude2,
+        ex:HealthResourcesCulture_ValueAttitude3 ;
+    ex:hasCoreIdea ex:HealthResourcesCulture_Idea1,
+        ex:HealthResourcesCulture_Idea2,
+        ex:HealthResourcesCulture_Idea3 .
+
+ex:MentalHealth a ex:LearningArea ;
+    rdfs:label "정서와 정신건강"@ko ;
+    ex:hasAchievementStandard ex:Standard_9보02_01,
+        ex:Standard_9보02_02,
+        ex:Standard_9보02_03,
+        ex:Standard_9보02_04,
+        ex:Standard_9보02_05 ;
+    ex:hasContentElement ex:MentalHealth_KnowledgeUnderstanding1,
+        ex:MentalHealth_KnowledgeUnderstanding2,
+        ex:MentalHealth_KnowledgeUnderstanding3,
+        ex:MentalHealth_KnowledgeUnderstanding4,
+        ex:MentalHealth_KnowledgeUnderstanding5,
+        ex:MentalHealth_KnowledgeUnderstanding6,
+        ex:MentalHealth_ProcessSkill1,
+        ex:MentalHealth_ProcessSkill2,
+        ex:MentalHealth_ProcessSkill3,
+        ex:MentalHealth_ProcessSkill4,
+        ex:MentalHealth_ProcessSkill5,
+        ex:MentalHealth_ProcessSkill6,
+        ex:MentalHealth_ValueAttitude1,
+        ex:MentalHealth_ValueAttitude2,
+        ex:MentalHealth_ValueAttitude3 ;
+    ex:hasCoreIdea ex:MentalHealth_Idea1,
+        ex:MentalHealth_Idea2 .
+
+ex:SafetyFirstAid a ex:LearningArea ;
+    rdfs:label "건강안전과 응급처치"@ko ;
+    ex:hasAchievementStandard ex:Standard_9보04_01,
+        ex:Standard_9보04_02,
+        ex:Standard_9보04_03,
+        ex:Standard_9보04_04,
+        ex:Standard_9보04_05 ;
+    ex:hasContentElement ex:SafetyFirstAid_KnowledgeUnderstanding1,
+        ex:SafetyFirstAid_KnowledgeUnderstanding2,
+        ex:SafetyFirstAid_KnowledgeUnderstanding3,
+        ex:SafetyFirstAid_KnowledgeUnderstanding4,
+        ex:SafetyFirstAid_KnowledgeUnderstanding5,
+        ex:SafetyFirstAid_ProcessSkill1,
+        ex:SafetyFirstAid_ProcessSkill2,
+        ex:SafetyFirstAid_ProcessSkill3,
+        ex:SafetyFirstAid_ProcessSkill4,
+        ex:SafetyFirstAid_ProcessSkill5,
+        ex:SafetyFirstAid_ValueAttitude1,
+        ex:SafetyFirstAid_ValueAttitude2,
+        ex:SafetyFirstAid_ValueAttitude3 ;
+    ex:hasCoreIdea ex:SafetyFirstAid_Idea1,
+        ex:SafetyFirstAid_Idea2 .
+
+ex:Subject a owl:Class ;
+    rdfs:label "교과"@ko ;
+    rdfs:subClassOf ex:Curriculum .
+
+ex:CareerExploration a ex:LearningArea ;
+    rdfs:label "직업 세계와 진로 탐색"@ko ;
+    ex:hasAchievementStandard ex:Standard_9진로02_01,
+        ex:Standard_9진로02_02,
+        ex:Standard_9진로02_03,
+        ex:Standard_9진로02_04,
+        ex:Standard_9진로02_05,
+        ex:Standard_9진로02_06 ;
+    ex:hasContentElement ex:CareerExploration_KnowledgeUnderstanding1,
+        ex:CareerExploration_KnowledgeUnderstanding2,
+        ex:CareerExploration_KnowledgeUnderstanding3,
+        ex:CareerExploration_KnowledgeUnderstanding4,
+        ex:CareerExploration_ProcessSkill1,
+        ex:CareerExploration_ProcessSkill2,
+        ex:CareerExploration_ProcessSkill3,
+        ex:CareerExploration_ValueAttitude1,
+        ex:CareerExploration_ValueAttitude2,
+        ex:CareerExploration_ValueAttitude3 ;
+    ex:hasCoreIdea ex:CareerExploration_Idea1,
+        ex:CareerExploration_Idea2,
+        ex:CareerExploration_Idea3,
+        ex:CareerExploration_Idea4 .
+
+ex:SexualHealth a ex:LearningArea ;
+    rdfs:label "성과 건강"@ko ;
+    ex:hasAchievementStandard ex:Standard_9보03_01,
+        ex:Standard_9보03_02,
+        ex:Standard_9보03_03,
+        ex:Standard_9보03_04,
+        ex:Standard_9보03_05,
+        ex:Standard_9보03_06 ;
+    ex:hasContentElement ex:SexualHealth_KnowledgeUnderstanding1,
+        ex:SexualHealth_KnowledgeUnderstanding2,
+        ex:SexualHealth_KnowledgeUnderstanding3,
+        ex:SexualHealth_KnowledgeUnderstanding4,
+        ex:SexualHealth_KnowledgeUnderstanding5,
+        ex:SexualHealth_KnowledgeUnderstanding6,
+        ex:SexualHealth_KnowledgeUnderstanding7,
+        ex:SexualHealth_KnowledgeUnderstanding8,
+        ex:SexualHealth_ProcessSkill1,
+        ex:SexualHealth_ProcessSkill2,
+        ex:SexualHealth_ProcessSkill3,
+        ex:SexualHealth_ProcessSkill4,
+        ex:SexualHealth_ProcessSkill5,
+        ex:SexualHealth_ProcessSkill6,
+        ex:SexualHealth_ValueAttitude1,
+        ex:SexualHealth_ValueAttitude2,
+        ex:SexualHealth_ValueAttitude3,
+        ex:SexualHealth_ValueAttitude4 ;
+    ex:hasCoreIdea ex:SexualHealth_Idea1,
+        ex:SexualHealth_Idea2 .
+
+ex:Competency a owl:Class ;
+    rdfs:label "교과 역량"@ko .
+
+ex:Career a owl:NamedIndividual,
+        ex:Subject ;
+    rdfs:label "진로와 직업"@ko ;
+    ex:developsCompetency ex:CareerCompetency1 ;
+    ex:hasArea ex:CareerExploration,
+        ex:CareerPlanning,
+        ex:CareerSelf .
+
+ex:Environment a owl:NamedIndividual,
+        ex:Subject ;
+    rdfs:label "환경"@ko ;
+    ex:developsCompetency ex:EnvironmentCompetency1,
+        ex:EnvironmentCompetency2,
+        ex:EnvironmentCompetency3,
+        ex:EnvironmentCompetency4,
+        ex:EnvironmentCompetency5,
+        ex:EnvironmentCompetency6 ;
+    ex:hasArea ex:ClimateAction,
+        ex:EnvironmentalIssues,
+        ex:EnvironmentalSystem,
+        ex:HumanEnvironment,
+        ex:SustainabilityParticipation .
+
+ex:LearningArea a owl:Class ;
+    rdfs:label "내용 영역"@ko ;
+    owl:disjointWith ex:ContentElement,
+        ex:CoreIdea .
+
+ex:Health a owl:NamedIndividual,
+        ex:Subject ;
+    rdfs:label "보건"@ko ;
+    ex:developsCompetency ex:HealthCompetency1,
+        ex:HealthCompetency2,
+        ex:HealthCompetency3 ;
+    ex:hasArea ex:HealthPromotion,
+        ex:HealthResourcesCulture,
+        ex:MentalHealth,
+        ex:SafetyFirstAid,
+        ex:SexualHealth .
+
+ex:CoreIdea a owl:Class ;
+    rdfs:label "핵심 아이디어"@ko ;
+    owl:disjointWith ex:ContentElement .
+
+ex:ValueAttitude a owl:Class ;
+    rdfs:label "가치·태도"@ko ;
+    rdfs:subClassOf ex:ContentElement .
+
+ex:ProcessSkill a owl:Class ;
+    rdfs:label "과정·기능"@ko ;
+    rdfs:subClassOf ex:ContentElement ;
+    owl:disjointWith ex:ValueAttitude .
+
+ex:AchievementStandard a owl:Class ;
+    rdfs:label "성취기준"@ko .
+
+ex:KnowledgeUnderstanding a owl:Class ;
+    rdfs:label "지식·이해"@ko ;
+    rdfs:subClassOf ex:ContentElement ;
+    owl:disjointWith ex:ProcessSkill,
+        ex:ValueAttitude .
+

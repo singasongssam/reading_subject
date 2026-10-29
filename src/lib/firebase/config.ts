@@ -2,7 +2,7 @@ import { initializeApp, getApps, getApp } from 'firebase/app';
 import { getAuth, connectAuthEmulator } from 'firebase/auth';
 import { getFirestore, connectFirestoreEmulator } from 'firebase/firestore';
 
-const apiKey = import.meta.env.VITE_FIREBASE_API_KEY || 'AIzaSyCWt2iCKKgvLFaxSJCu5Rb5dfGAhPLFnxg';
+const apiKey = import.meta.env.VITE_FIREBASE_API_KEY || 'local-mock-api-key';
 
 export const isFirebaseConfigured = Boolean(
   apiKey &&

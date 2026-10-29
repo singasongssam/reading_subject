@@ -46,6 +46,17 @@ export const Step5PreviewOutput: React.FC = () => {
 
   const [savedNotice, setSavedNotice] = useState<string | null>(null);
   const [exportingDocx, setExportingDocx] = useState(false);
+  const [lessonDetail, setLessonDetail] = useState<'standard' | 'detailed'>('standard');
+  // Keep original AI content in state; compact only the printed standard plan.
+  const compact = (value: string, max = 190): string => {
+    const lines = value.split(/\n+/).map((line) => line.trim()).filter(Boolean);
+    const unique = lines.filter((line, index) => lines.findIndex((other) => other === line) === index);
+    const result = unique.join(' ').replace(/\s+/g, ' ').trim();
+    if (result.length <= max) return result;
+    const cut = result.slice(0, max);
+    const end = Math.max(cut.lastIndexOf('. '), cut.lastIndexOf('다.'));
+    return `${end > max * 0.55 ? cut.slice(0, end + 1) : cut.trimEnd()}…`;
+  };
 
   const ctx = getCurriculumContext();
   const variant = getCurrentVariant();
@@ -146,7 +157,7 @@ export const Step5PreviewOutput: React.FC = () => {
   };
 
   const renderTeacherLessonPlanDocument = () => (
-    <div className="mx-auto max-w-[210mm] space-y-6 rounded-xl border border-slate-300 bg-white p-8 text-slate-900 shadow-sm print:border-0 print:p-0 print:shadow-none">
+    <div className="lesson-print-root mx-auto max-w-[210mm] space-y-6 rounded-xl border border-slate-300 bg-white p-8 text-slate-900 shadow-sm print:border-0 print:p-0 print:shadow-none">
       {/* 공식 공문서 타이틀 */}
       <div className="border-b-2 border-slate-900 pb-4 text-center">
         <div className="text-xs font-bold tracking-widest text-slate-500">
@@ -310,14 +321,14 @@ export const Step5PreviewOutput: React.FC = () => {
                 <td className="space-y-1.5 whitespace-pre-line">
                   <div>
                     <span className="font-bold text-indigo-900">[교사] </span>
-                    {ev.teacherActivity}
+                    {lessonDetail === 'standard' ? compact(ev.teacherActivity, 180) : ev.teacherActivity}
                   </div>
                   <div>
                     <span className="font-bold text-emerald-900">[학생] </span>
-                    {ev.studentActivity}
+                    {lessonDetail === 'standard' ? compact(ev.studentActivity, 155) : ev.studentActivity}
                   </div>
                 </td>
-                <td className="text-[11px] text-slate-700">{ev.materialAndNotice}</td>
+                <td className="text-[11px] text-slate-700">{lessonDetail === 'standard' ? compact(ev.materialAndNotice, 90) : ev.materialAndNotice}</td>
               </tr>
             ))}
           </tbody>
@@ -339,15 +350,15 @@ export const Step5PreviewOutput: React.FC = () => {
           <tbody>
             <tr>
               <td className="text-center font-bold text-indigo-900">상 (Excellent)</td>
-              <td>{rubric.high}</td>
+              <td>{lessonDetail === 'standard' ? compact(rubric.high, 170) : rubric.high}</td>
             </tr>
             <tr>
               <td className="text-center font-bold text-emerald-900">중 (Good)</td>
-              <td>{rubric.mid}</td>
+              <td>{lessonDetail === 'standard' ? compact(rubric.mid, 170) : rubric.mid}</td>
             </tr>
             <tr>
               <td className="text-center font-bold text-amber-900">하 (Needs Work)</td>
-              <td>{rubric.low}</td>
+              <td>{lessonDetail === 'standard' ? compact(rubric.low, 170) : rubric.low}</td>
             </tr>
           </tbody>
         </table>
@@ -385,6 +396,19 @@ export const Step5PreviewOutput: React.FC = () => {
             );
           })}
         </div>
+
+        {outputViewMode === 'lessonPlan' && (
+          <div className="flex items-center gap-1 rounded-xl border border-indigo-200 bg-indigo-50 p-1" aria-label="지도안 상세 수준">
+            <button type="button" aria-pressed={lessonDetail === 'standard'} onClick={() => setLessonDetail('standard')}
+              className={`rounded-lg px-3 py-2 text-xs font-bold ${lessonDetail === 'standard' ? 'bg-indigo-600 text-white' : 'text-indigo-800'}`}>
+              표준 지도안 (요약)
+            </button>
+            <button type="button" aria-pressed={lessonDetail === 'detailed'} onClick={() => setLessonDetail('detailed')}
+              className={`rounded-lg px-3 py-2 text-xs font-bold ${lessonDetail === 'detailed' ? 'bg-indigo-600 text-white' : 'text-indigo-800'}`}>
+              AI 상세 지도안 (전체)
+            </button>
+          </div>
+        )}
 
         {/* 부가 도구 모달 & 내보내기 버튼 */}
         <div className="flex flex-wrap items-center gap-2">

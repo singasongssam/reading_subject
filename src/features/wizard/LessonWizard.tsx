@@ -35,6 +35,7 @@ import {
 import { GraphicOrganizer, getOrganizerMeta } from '@/features/visuals/GraphicOrganizer';
 import { Step5PreviewOutput } from '@/features/output/Step5PreviewOutput';
 import type { ReadingLevel, TimeProfileId } from '@/lib/domain/types';
+import { getGenerationPreferences, setGenerationPreferences, type GenerationPreferences } from '@/lib/ai/generationContext';
 
 export const LessonWizard: React.FC = () => {
   const {
@@ -44,6 +45,8 @@ export const LessonWizard: React.FC = () => {
     readingLevel,
     materialSet,
     isGeneratingMaterial,
+    aiGenerationStatus,
+    aiGenerationMessage,
     setGenreId,
     setReadingLevel,
     regenerateMaterialSet,
@@ -81,6 +84,13 @@ export const LessonWizard: React.FC = () => {
     getCurriculumContext,
     getCurrentVariant,
   } = useAppStore();
+
+  const [preferences, setPreferences] = useState<GenerationPreferences>(() => getGenerationPreferences());
+  const updatePreference = (name: keyof GenerationPreferences, value: string) => {
+    const next = { ...preferences, [name]: value };
+    setPreferences(next);
+    setGenerationPreferences(next);
+  };
 
   const [strategyFilter, setStrategyFilter] = useState<'all' | '읽기 전' | '읽기 중' | '읽기 후'>('all');
 
@@ -214,7 +224,22 @@ export const LessonWizard: React.FC = () => {
               </button>
             </div>
 
-            {/* 5대 장르 전환 버튼 */}
+            <div className="rounded-xl border border-indigo-100 bg-indigo-50/60 p-4 space-y-3">
+            <div className="text-sm font-bold text-indigo-950">맞춤형 AI 생성 조건 (규칙 기반 모드에서는 사용하지 않음)</div>
+            <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+              {([['learnerProfile','학급·학생 특성','예: 읽기 기초가 부족한 중2, 4인 모둠'],['lessonFocus','수업 목표·강조점','예: 근거를 비교하며 타당성 판단'],['teachingApproach','선호 수업 방식','예: 토론 후 협력학습, 2인 짝활동'],['extraInstructions','추가 요구','예: 발문을 3개 이상, 생활 사례 포함']] as const).map(([key,title,hint]) => (
+                <label key={key} className="block text-xs font-semibold text-slate-700">{title}
+                  <textarea value={preferences[key]} onChange={e => updatePreference(key,e.target.value)} rows={2} placeholder={hint} className="mt-1 w-full rounded-lg border border-slate-200 bg-white p-2 text-sm font-normal" />
+                </label>
+              ))}
+            </div>
+            <p className="text-xs text-slate-500">학생 실명·민감정보는 입력하지 마세요. 조건을 입력한 다음 읽기자료 또는 지도안을 다시 생성하세요.</p>
+          </div>
+          {aiGenerationStatus !== 'idle' && <div role="status" className={`rounded-lg border px-4 py-2 text-sm ${aiGenerationStatus === 'ai' ? 'border-emerald-200 bg-emerald-50 text-emerald-800' : aiGenerationStatus === 'fallback' ? 'border-amber-200 bg-amber-50 text-amber-900' : 'border-slate-200 bg-slate-50 text-slate-700'}`}>
+            <strong>{aiGenerationStatus === 'ai' ? '✓ Gemini AI 생성 성공' : aiGenerationStatus === 'fallback' ? '⚠ AI 호출 실패 · 규칙 기반 대체' : '규칙 기반 생성'}</strong> — {aiGenerationMessage}
+          </div>}
+
+          {/* 5대 장르 전환 버튼 */}
             <div className="mt-4">
               <div className="mb-1.5 text-xs font-bold text-slate-700">1) 텍스트 5대 장르 전환 (text.ttl 기반)</div>
               <div className="grid grid-cols-1 gap-2 sm:grid-cols-5">
@@ -745,6 +770,7 @@ export const LessonWizard: React.FC = () => {
               </button>
             </div>
 
+            {aiGenerationStatus !== 'idle' && <p role="status" className="rounded-lg bg-indigo-50 px-3 py-2 text-sm text-indigo-800">{aiGenerationStatus === 'ai' ? '✓ Gemini AI 생성 성공' : aiGenerationStatus === 'fallback' ? '⚠ AI 호출 실패 · 규칙 기반 대체' : '규칙 기반 생성'} — {aiGenerationMessage}</p>}
             {/* 1) 총 수업 시간 프리셋 (40/45/50/80/90분) 및 15~180분 직접 입력 */}
             <div className="mt-4 grid grid-cols-1 gap-4 lg:grid-cols-12">
               <div className="space-y-2 lg:col-span-6">

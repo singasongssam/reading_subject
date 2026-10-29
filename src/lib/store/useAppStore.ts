@@ -1,6 +1,8 @@
 import { create } from 'zustand';
 import { ontologyStore } from '@/lib/data/ontologyStore';
 import { aiProvider } from '@/lib/ai';
+import { getUserKey } from '@/lib/ai/userKey';
+import { getGenerationResult, reportGeneration } from '@/lib/ai/generationContext';
 import type {
   CurriculumContext,
   GenreId,
@@ -74,6 +76,8 @@ export interface AppState {
   readingLevel: ReadingLevel;
   materialSet: MaterialSet;
   isGeneratingMaterial: boolean;
+  aiGenerationStatus: 'idle' | 'rule' | 'ai' | 'fallback';
+  aiGenerationMessage: string;
 
   setGenreId: (genreId: GenreId) => Promise<void>;
   setReadingLevel: (level: ReadingLevel) => void;
@@ -251,6 +255,8 @@ export const useAppStore = create<AppState>((set, get) => ({
   readingLevel: '보통',
   materialSet: initMaterialSet,
   isGeneratingMaterial: false,
+  aiGenerationStatus: 'idle',
+  aiGenerationMessage: '',
 
   selectedStrategyIds: initStrategyIds,
   organizerModalStrategyId: null,
@@ -443,7 +449,12 @@ export const useAppStore = create<AppState>((set, get) => ({
     set({ genreId, isGeneratingMaterial: true });
     const s = get();
     const ctx = s.getCurriculumContext();
-    const mat = await aiProvider.generateMaterialSet(ctx, genreId);
+    if (!getUserKey()) reportGeneration('rule', '개인 API 키가 없어 규칙 기반 읽기자료를 생성했습니다.');
+    let mat: MaterialSet;
+    try { mat = await aiProvider.generateMaterialSet(ctx, genreId); }
+    catch (error) { reportGeneration('fallback', `생성 오류: ${String(error)}`); mat = generateMaterialSetMock(ctx, genreId); }
+    const generation = getGenerationResult();
+    // 새 읽기자료가 기존 지도안에 자동 반영되지는 않으므로 기본 지도안을 동기화합니다.
     const plan = generateGagnePlanMock({
       ctx,
       material: mat.variants[s.readingLevel],
@@ -458,6 +469,8 @@ export const useAppStore = create<AppState>((set, get) => ({
     set({
       materialSet: mat,
       isGeneratingMaterial: false,
+      aiGenerationStatus: generation.status,
+      aiGenerationMessage: generation.detail,
       lessonTitle: plan.lessonTitle,
       learningObjective: plan.learningObjective,
       events: plan.events,
@@ -733,7 +746,9 @@ export const useAppStore = create<AppState>((set, get) => ({
     set({ isGeneratingPlan: true });
     const ctx = s.getCurriculumContext();
     const prevBySeq = new Map(s.events.map((e) => [e.seq, e]));
-    const out = await aiProvider.composeGagnePlan({
+    if (!getUserKey()) reportGeneration('rule', '개인 API 키가 없어 규칙 기반 수업 지도안을 구성했습니다.');
+    let out;
+    try { out = await aiProvider.composeGagnePlan({
       ctx,
       material: s.getCurrentVariant(),
       genreLabel: getGenre(s.genreId).label,
@@ -743,7 +758,12 @@ export const useAppStore = create<AppState>((set, get) => ({
       totalMinutes: s.totalMinutes,
       profileId: s.timeProfileId,
       eventRules: s.strategyEventRules,
-    });
+    }); } catch (error) {
+      reportGeneration('fallback', `지도안 생성 오류: ${String(error)}`);
+      set({ isGeneratingPlan: false, aiGenerationStatus: 'fallback', aiGenerationMessage: getGenerationResult().detail });
+      return;
+    }
+    const generation = getGenerationResult();
     // 잠금(Locked) 사태의 활동 내용 및 시간 보존 후 미잠금 사태 비례 재분배
     const mergedSlots = out.events.map((ev) => {
       const prev = prevBySeq.get(ev.seq);
@@ -753,6 +773,8 @@ export const useAppStore = create<AppState>((set, get) => ({
     const redistributed = distributeMinutes(s.totalMinutes, mergedSlots, s.timeProfileId);
     set({
       isGeneratingPlan: false,
+      aiGenerationStatus: generation.status,
+      aiGenerationMessage: generation.detail,
       lessonTitle: out.lessonTitle,
       learningObjective: out.learningObjective,
       events: mergedSlots.map((ev, i) => ({ ...ev, minutes: redistributed[i] })),
